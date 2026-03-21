@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentilis — Agentic</title>
+  <link rel="stylesheet" href="/site.css">
+  <style>
+    .service-detail {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .service-detail:last-of-type { border-bottom: none; }
+    .service-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--accent);
+      opacity: 0.25;
+      line-height: 1;
+    }
+    .service-detail__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .service-detail__body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--text);
+      opacity: 0.75;
+      margin-bottom: 32px;
+    }
+    .service-detail__points { list-style: none; }
+    .service-detail__points li {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text);
+      opacity: 0.65;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+    }
+    .service-detail__points li::before {
+      content: '—';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-size: 12px;
+    }
+    @media (max-width: 760px) {
+      .service-detail { grid-template-columns: 1fr; gap: 24px; }
+      .service-num { font-size: 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/agentic/" class="active">Agentic</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div class="page-header__eyebrow">Agentic</div>
+      <h1 class="page-header__title">Not chatbots. Autonomous digital workers.</h1>
+      <p class="page-header__sub">We identify the work your people shouldn't be doing — and build agents that do it instead. At every level of the stack.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="service-detail">
+    <div class="service-num">I.</div>
+    <div>
+      <h2 class="service-detail__title">Intelligent Automation</h2>
+      <p class="service-detail__body">We identify the work your people shouldn't be doing and build agents that do it instead. Not chatbots. Autonomous digital workers that monitor, decide, and act — without being asked.</p>
+      <ul class="service-detail__points">
+        <li>Process analysis and automation candidate identification</li>
+        <li>Custom agent design and build</li>
+        <li>Integration with existing systems and workflows</li>
+        <li>Monitoring and continuous improvement</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service-detail">
+    <div class="service-num">II.</div>
+    <div>
+      <h2 class="service-detail__title">AI Strategy &amp; Readiness</h2>
+      <p class="service-detail__body">We've run operations at scale. We know where AI creates leverage and where it creates noise. We help you find the difference — and build a roadmap that survives contact with your real organization.</p>
+      <ul class="service-detail__points">
+        <li>Current-state assessment and opportunity mapping</li>
+        <li>Build vs. buy vs. integrate recommendations</li>
+        <li>Organizational readiness and change management</li>
+        <li>Executive education and leadership alignment</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service-detail">
+    <div class="service-num">III.</div>
+    <div>
+      <h2 class="service-detail__title">Agentic Infrastructure</h2>
+      <p class="service-detail__body">From first pilot to full deployment. We build the systems, the agents, and the workflows that keep them running — reliably, securely, and at scale. Infrastructure that earns its place.</p>
+      <ul class="service-detail__points">
+        <li>Agent platform architecture and deployment</li>
+        <li>Security, compliance, and data governance</li>
+        <li>Observability, alerting, and incident response</li>
+        <li>Ongoing operations and optimization</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Ready to move?</h2>
+    <p class="bottom-cta__sub">Agentilis works with leaders who are done waiting.</p>
+    <a href="#" class="btn-primary">Get in touch</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

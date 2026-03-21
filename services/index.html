@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentilis — Services</title>
+  <link rel="stylesheet" href="/site.css">
+  <style>
+    /* ── SERVICES PAGE ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+
+    .service-item {
+      background: var(--bg);
+      padding: 44px 40px 48px;
+      transition: background 0.15s;
+    }
+
+    .service-item:hover {
+      background: var(--card-bg);
+    }
+
+    /* Full-width last item if odd count — 7 cards, last one spans */
+    .service-item:last-child:nth-child(odd) {
+      grid-column: span 2;
+    }
+
+    .service-item__num {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .service-item__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .service-item__body {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: var(--text);
+      opacity: 0.72;
+      margin-bottom: 20px;
+    }
+
+    .service-item__body p + p {
+      margin-top: 12px;
+    }
+
+    .service-item__best {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--accent);
+      border-top: 1px solid var(--rule);
+      padding-top: 16px;
+    }
+
+    .services-intro {
+      max-width: 680px;
+      margin-bottom: 56px;
+    }
+
+    .services-intro p {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--text);
+      opacity: 0.72;
+    }
+
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .service-item:last-child:nth-child(odd) { grid-column: span 1; }
+      .service-item { padding: 36px 28px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/" class="active">Services</a></li>
+        <li><a href="/agentic/">Agentic</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div class="page-header__eyebrow">Services</div>
+      <h1 class="page-header__title">Intelligent Business Re-Engineering, Powered by AI</h1>
+      <p class="page-header__sub">You built a great operation. We help you run it with AI.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="services-intro">
+      <p>Every engagement starts with the same question: where is your business losing time, money, or competitive ground — and what would it look like if AI handled that instead?</p>
+      <p>We have run operations at scale. We know where automation creates leverage and where it creates noise. We bring that judgment to every engagement.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-item">
+        <span class="service-item__num">01</span>
+        <h2 class="service-item__title">CEO and Executive AI Advisory</h2>
+        <div class="service-item__body">
+          <p>The most important AI decisions your company will make will be made in the boardroom, not the server room.</p>
+          <p>We work directly with CEOs and senior executives to develop a clear-eyed AI strategy — what to pursue, what to ignore, and how to lead an organization through the transition. No hype. No jargon. Just the judgment of people who have been in your chair.</p>
+        </div>
+        <p class="service-item__best">Best for: C-suite leaders who need a trusted, experienced voice in the room before committing to an AI direction.</p>
+      </div>
+
+      <div class="service-item">
+        <span class="service-item__num">02</span>
+        <h2 class="service-item__title">Corporate and Enterprise AI Readiness Assessment</h2>
+        <div class="service-item__body">
+          <p>Before you automate, you need to know what you are working with.</p>
+          <p>Our AI Readiness Assessment gives you a complete picture of where your organization stands: your data infrastructure, your processes, your people, and the specific opportunities where AI can deliver the fastest and highest-value results. You leave with a prioritized roadmap — not a theoretical framework.</p>
+        </div>
+        <p class="service-item__best">Best for: Organizations early in their AI journey who want to move with confidence, not guesswork.</p>
+      </div>
+
+      <div class="service-item">
+        <span class="service-item__num">03</span>
+        <h2 class="service-item__title">Intelligent Enterprise Re-Engineering Discovery</h2>
+        <div class="service-item__body">
+          <p>Most companies do not need more software. They need to rethink how work gets done — and then build the AI systems that do it better.</p>
+          <p>Our Re-Engineering Discovery engagement maps your critical workflows end to end, identifies the processes that are candidates for agentic automation, and produces a concrete blueprint for implementation. This is where strategy becomes architecture.</p>
+        </div>
+        <p class="service-item__best">Best for: Mid-market and enterprise organizations ready to go beyond pilots and make AI structural.</p>
+      </div>
+
+      <div class="service-item">
+        <span class="service-item__num">04</span>
+        <h2 class="service-item__title">Departmental and Business Unit Optimization</h2>
+        <div class="service-item__body">
+          <p>AI transformation does not have to happen company-wide to deliver company-wide results.</p>
+          <p>We work at the department or business unit level — identifying high-friction, high-volume processes and building the agents that eliminate them. Sales ops. Finance. HR. Customer success. Legal review. Wherever the bottleneck is, we find it and fix it.</p>
+        </div>
+        <p class="service-item__best">Best for: Companies that want to prove the model in one area before scaling across the organization.</p>
+      </div>
+
+      <div class="service-item">
+        <span class="service-item__num">05</span>
+        <h2 class="service-item__title">Front Office AI Automation</h2>
+        <div class="service-item__body">
+          <p>Your front office is your first impression. It should never sleep, never forget, and never drop a lead.</p>
+          <p>We build AI agents that handle customer inquiry, lead qualification, appointment scheduling, follow-up sequences, and more — fully automated, always on, and indistinguishable from a great human team. The difference is they work around the clock and scale without headcount.</p>
+        </div>
+        <p class="service-item__best">Best for: Sales-led organizations and customer-facing teams looking to increase speed-to-lead and conversion without hiring.</p>
+      </div>
+
+      <div class="service-item">
+        <span class="service-item__num">06</span>
+        <h2 class="service-item__title">Back-Office AI Optimization</h2>
+        <div class="service-item__body">
+          <p>The back office is where margin lives. Most companies accept its inefficiency as the cost of doing business.</p>
+          <p>We do not. We identify the reporting cycles, approval chains, vendor communications, data entry loops, and reconciliation processes that eat your team's time — and we replace them with agents that handle the work automatically, accurately, and continuously.</p>
+        </div>
+        <p class="service-item__best">Best for: Operations leaders who know exactly where the friction is and are ready to eliminate it.</p>
+      </div>
+
+      <div class="service-item">
+        <span class="service-item__num">07</span>
+        <h2 class="service-item__title">AI-Based Lead Generation and Go-to-Market</h2>
+        <div class="service-item__body">
+          <p>The best product in the world does not sell itself.</p>
+          <p>We build AI-powered lead generation and go-to-market systems that identify your ideal customers, personalize outreach at scale, and keep prospects moving through the funnel — without a large sales team. From target identification to first conversation, we engineer the pipeline.</p>
+        </div>
+        <p class="service-item__best">Best for: Companies entering new markets or looking to scale revenue without proportional headcount growth.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Not sure where to start?</h2>
+    <p class="bottom-cta__sub">Start with the AI Readiness Assessment. It is the fastest way to go from "we should be doing something with AI" to "here is exactly what we should do first."</p>
+    <a href="#" class="btn-primary">Schedule a Conversation</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

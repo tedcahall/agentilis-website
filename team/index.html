@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentilis — Team</title>
+  <link rel="stylesheet" href="/site.css">
+  <style>
+    /* Center Dale Inman's card in the 3-col grid */
+    .agent-card--centered {
+      grid-column: 2;
+    }
+    @media (max-width: 960px) {
+      .agent-card--centered { grid-column: auto; }
+    }
+    .agent-card--soon {
+      opacity: 0.72;
+    }
+    .agent-card--soon .agent-card__role::after {
+      content: ' — Coming soon';
+      font-style: italic;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/agentic/">Agentic</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/team/" class="active">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div class="page-header__eyebrow">The Team</div>
+      <h1 class="page-header__title">Built by operators.</h1>
+      <p class="page-header__sub">We are not researchers or theorists. We have run companies, managed P&amp;Ls, and shipped products at scale. That experience is baked into everything we build.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section__label">Human Principals</div>
+      <h2 class="section__title">The people behind the agents.</h2>
+    </div>
+    <div class="principals-grid">
+      <div class="principal-card">
+        <h3 class="principal-card__name">Ted Cahall</h3>
+        <div class="principal-card__title">Founder &amp; Managing Partner</div>
+        <p class="principal-card__bio">Four decades at the intersection of technology and operations. Built things that still run. Knows what it takes to make organizations move.</p>
+      </div>
+      <div class="principal-card">
+        <h3 class="principal-card__name">Jeff Werner</h3>
+        <div class="principal-card__title">Chief Marketing Officer</div>
+        <p class="principal-card__bio">Career marketer with a researcher's rigor. BS and MS in Marketing. Brings the discipline of data-informed positioning to the urgency of the AI moment.</p>
+      </div>
+      <div class="principal-card">
+        <h3 class="principal-card__name">Nick Durrant</h3>
+        <div class="principal-card__title">Managing Partner, Europe</div>
+        <p class="principal-card__bio">Thirty years of executive advisory roles and business process engineering at brands including Microsoft, EMC, and Dell. Brings deep European market expertise and the operational credibility that comes from decades at the highest levels of enterprise technology.</p>
+      </div>
+      <div class="principal-card">
+        <h3 class="principal-card__name">Shireen Cahall</h3>
+        <div class="principal-card__title">Chief Operating Officer</div>
+        <p class="principal-card__bio">Industrial engineer turned operations architect. Brings deep expertise in back office optimization, particularly in complex, high-volume environments like healthcare. Knows how to make processes run faster with fewer hands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section__label">Agent Staff</div>
+      <h2 class="section__title">Built agentic from day one.</h2>
+      <p class="section__intro">Before Agentilis had a client, it had agents. Our internal team is proof of concept — autonomous digital workers doing real work, every day. Named with intention; built to last.</p>
+    </div>
+    <div class="agents-grid">
+      <!-- Row 1 -->
+      <div class="agent-card">
+        <div class="agent-card__name">Max</div>
+        <div class="agent-card__role">Chief of Staff</div>
+        <div class="agent-card__desc">Strategy, communications, scheduling, memory. The first Agentilis agent. Proof that an AI chief of staff is not a concept — it is a working business partner.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card__name">Ogilvy</div>
+        <div class="agent-card__role">Marketing</div>
+        <div class="agent-card__desc">Brand, content, thought leadership, growth. Named after David Ogilvy, the Father of Advertising.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card__name">Gantt</div>
+        <div class="agent-card__role">Project Manager</div>
+        <div class="agent-card__desc">Plans, tracks, keeps the team on schedule. Named after Henry Gantt, inventor of the Gantt chart.</div>
+      </div>
+      <!-- Row 2 -->
+      <div class="agent-card">
+        <div class="agent-card__name">James</div>
+        <div class="agent-card__role">Software Engineer</div>
+        <div class="agent-card__desc">Builds, codes, ships. Named after James Gosling, the creator of Java.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card__name">Guido</div>
+        <div class="agent-card__role">Python Engineer</div>
+        <div class="agent-card__desc">Intelligence tools, MCP servers, data pipelines. Named after Guido van Rossum, creator of Python.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card__name">Watts</div>
+        <div class="agent-card__role">QA Engineer</div>
+        <div class="agent-card__desc">Tests everything before it goes live. Named after Watts Humphrey, the father of software quality.</div>
+      </div>
+      <!-- Row 3 -->
+      <div class="agent-card">
+        <div class="agent-card__name">Vignelli</div>
+        <div class="agent-card__role">Creative &amp; Design</div>
+        <div class="agent-card__desc">HTML5, CSS, pixel-perfect layouts, typefaces. Named after Massimo Vignelli, Italian master designer and typographic purist.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card__name">Ken</div>
+        <div class="agent-card__role">Systems Administrator</div>
+        <div class="agent-card__desc">Infrastructure, deploys, and keeps the lights on. Named after Ken Thompson, co-creator of Unix.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card__name">Argus</div>
+        <div class="agent-card__role">Watchdog</div>
+        <div class="agent-card__desc">Always watching. System monitoring and alerting, 24 hours a day. Named after the all-seeing giant of Greek mythology.</div>
+      </div>
+      <!-- Row 4 — Dale centered -->
+      <div class="agent-card agent-card--centered agent-card--soon">
+        <div class="agent-card__name">Dale Inman</div>
+        <div class="agent-card__role">Back Office Automation Specialist</div>
+        <div class="agent-card__desc">Named after Dale Inman, NASCAR's all-time crew chief record holder — 193 wins and 8 championships alongside Richard Petty. The quiet legend behind the King. Dale runs what nobody sees until it stops running.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

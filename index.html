@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentilis — Characterized by Action</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/agentic/">Agentic</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__eyebrow">agere &middot; ilis &middot; characterized by action</div>
+    <h1 class="hero__headline">Characterized<br>by action.</h1>
+    <p class="hero__sub">We build AI agents that think, decide, and execute. Built by operators who have lived at the intersection of business and AI for decades.</p>
+    <a href="/agentic/" class="btn-primary">See How We Work</a>
+  </div>
+</section>
+
+<div class="proof-row">
+  <div class="proof-item">
+    <div class="proof-item__num">40+</div>
+    <div class="proof-item__label">Years building at scale</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-item__num">4×</div>
+    <div class="proof-item__label">COO experience</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-item__num">9</div>
+    <div class="proof-item__label">AI agents, running today</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-item__num">24/7</div>
+    <div class="proof-item__label">Autonomous, always on</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="home-teaser">
+    <div class="home-teaser__grid">
+      <div class="home-teaser__left">
+        <div class="section__label">Agentic</div>
+        <h2 class="section__title">Not tools.<br>Agents.</h2>
+        <p class="section__intro">We identify where AI creates real leverage — and build the systems that realize it.</p>
+        <a href="/agentic/" class="btn-ghost-link">Learn more →</a>
+      </div>
+      <ul class="home-teaser__list">
+        <li>
+          <a href="/agentic/">
+            <span class="teaser-service-name">Intelligent Automation</span>
+            <span class="teaser-service-desc">Agents that do the work your people shouldn't have to.</span>
+            <span class="teaser-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/agentic/">
+            <span class="teaser-service-name">AI Strategy &amp; Readiness</span>
+            <span class="teaser-service-desc">Find the leverage. Avoid the noise.</span>
+            <span class="teaser-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/agentic/">
+            <span class="teaser-service-name">Agentic Infrastructure</span>
+            <span class="teaser-service-desc">From first pilot to full deployment.</span>
+            <span class="teaser-arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Ready to move?</h2>
+    <p class="bottom-cta__sub">Agentilis works with leaders who are done waiting.<br>Let's talk about what's possible.</p>
+    <a href="#" class="btn-primary">Get in touch</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
