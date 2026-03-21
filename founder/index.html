@@ -109,7 +109,7 @@
 
     .founder-name-row {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       gap: 14px;
       flex-wrap: wrap;
     }
@@ -117,9 +117,10 @@
       display: inline-flex;
       align-items: center;
       flex-shrink: 0;
-      opacity: 0.85;
+      opacity: 0.9;
       transition: opacity 0.15s;
       text-decoration: none;
+      padding-bottom: 4px;
     }
     .founder-linkedin:hover { opacity: 1; }
     .founder-linkedin svg {
@@ -127,6 +128,7 @@
       height: 32px;
       fill: #0A66C2;
       display: block;
+      filter: drop-shadow(0 0 4px rgba(255,255,255,0.85));
     }
   </style>
 </head>
