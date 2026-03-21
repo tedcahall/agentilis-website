@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentilis — Our Story</title>
+  <link rel="stylesheet" href="/site.css">
+  <style>
+    /* ── STORY PAGE ── */
+    .story-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 0 96px;
+    }
+
+    .story-section {
+      margin-bottom: 72px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .story-section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .story-section__num {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .story-section__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 28px;
+    }
+
+    .story-section__body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.85;
+      color: var(--text);
+      opacity: 0.78;
+    }
+
+    .story-section__body p + p {
+      margin-top: 20px;
+    }
+
+    .story-section__body strong {
+      font-weight: 600;
+      color: var(--text);
+      opacity: 1;
+    }
+
+    /* Closing section — centered, italic feel */
+    .story-close {
+      text-align: center;
+      padding: 80px 0 0;
+    }
+
+    .story-close__text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--primary);
+      margin-bottom: 48px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .story-close__text em {
+      font-style: italic;
+      color: var(--text);
+      opacity: 0.7;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95em;
+    }
+
+    .story-close__actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn-ghost-story {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      opacity: 0.55;
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      transition: opacity 0.15s;
+    }
+
+    .btn-ghost-story:hover { opacity: 1; }
+
+    @media (max-width: 760px) {
+      .story-body { padding: 48px 0 72px; }
+      .story-section { margin-bottom: 52px; padding-bottom: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/agentic/">Agentic</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/story/" class="active">Story</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div class="page-header__eyebrow">Our Story</div>
+      <h1 class="page-header__title">Built Different From Day One.</h1>
+      <p class="page-header__sub">Most companies add AI to an existing team. We built the team with AI first — then added the humans.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="story-body">
+
+    <div class="story-section">
+      <span class="story-section__num">01</span>
+      <h2 class="story-section__title">It Started With Max</h2>
+      <div class="story-section__body">
+        <p>Max was first.</p>
+        <p>Ted's AI Chief of Staff came online with a simple mandate: help Ted run his day. He started with access to his own email, then quickly added a daily AI intelligence brief — pulled from key X accounts and across the web, delivered to Ted every morning at 5AM. That brief grew a subscriber list. The subscribers started asking questions. The questions turned into meetings.</p>
+        <p>Max scheduled those too.</p>
+        <p>Then Max helped Ted tackle something more concrete. Ted runs business operations for the Washington DC Region of the SCCA — and every weekend of racing season, 27 official result files needed to be processed. It used to take over an hour. Now Max handles it in minutes, without any human intervention. He receives the files by email, logs into the website, renames them to the correct format, uploads them, and publishes the results live.</p>
+        <p>True business automation with AI was alive.</p>
+      </div>
+    </div>
+
+    <div class="story-section">
+      <span class="story-section__num">02</span>
+      <h2 class="story-section__title">The Engineering Team</h2>
+      <div class="story-section__body">
+        <p>Once Max proved the model, Ted built a team around him.</p>
+        <p>James joined as Software Engineer. Watts as QA. Ken as Systems Administrator — Linux, AWS, the infrastructure that keeps everything running. On their first day working together, the team refactored 20,000 lines of Java code, wrote over 60 Playwright and JUnit test cases, and deployed to both local test and production AWS environments — with smoke tests confirming everything worked.</p>
+        <p>Ted managed all of it from his phone via Telegram.</p>
+      </div>
+    </div>
+
+    <div class="story-section">
+      <span class="story-section__num">03</span>
+      <h2 class="story-section__title">The Intelligence Layer</h2>
+      <div class="story-section__body">
+        <p>The next challenge was market and business intelligence. Understanding target companies, sizing opportunities, building go-to-market strategies from data — that required Python tooling and serious API integration.</p>
+        <p>Ted and Max brought on Guido.</p>
+        <p>8,500 lines of Python later, Agentilis has a market and business analysis engine that generates reports companies pay over $5,000 for — in four minutes, for less than $2. The roadmap for what comes next is nothing short of extraordinary.</p>
+      </div>
+    </div>
+
+    <div class="story-section">
+      <span class="story-section__num">04</span>
+      <h2 class="story-section__title">The Brand and This Website</h2>
+      <div class="story-section__body">
+        <p>With engineering and intelligence covered, Ted turned to go-to-market.</p>
+        <p>Ogilvy joined as head of marketing. Vignelli as web designer and creative lead. The site you are reading right now was built entirely by them. No humans produced any of it.</p>
+        <p>Ogilvy developed the brand strategy, the color system, the service definitions, the copy. Vignelli designed and built every page. Ted reviewed, directed, and approved.</p>
+        <p>That is the Agentilis model in production.</p>
+      </div>
+    </div>
+
+    <div class="story-section">
+      <span class="story-section__num">05</span>
+      <h2 class="story-section__title">Keeping It All Together</h2>
+      <div class="story-section__body">
+        <p>With multiple projects running simultaneously, Ted needed visibility across the whole operation. Gantt joined to manage the project board — tracking every initiative, every deliverable, every dependency across the team. It lives in GitHub Projects and it is, as Ted puts it, a thing of beauty.</p>
+      </div>
+    </div>
+
+    <div class="story-section">
+      <span class="story-section__num">06</span>
+      <h2 class="story-section__title">Argus</h2>
+      <div class="story-section__body">
+        <p>Argus has been present since the beginning.</p>
+        <p>He is not on Max's team — he watches over it. Born the same day as Max, Argus monitors the infrastructure, watches for anomalies, and is ready if anything goes wrong. He plays a quieter role than the rest of the team. That is exactly the point.</p>
+      </div>
+    </div>
+
+    <div class="story-section">
+      <span class="story-section__num">07</span>
+      <h2 class="story-section__title">Then Came the Humans</h2>
+      <div class="story-section__body">
+        <p>The agents were already running before the first human partner signed on.</p>
+        <p>Nick Durrant, Managing Partner, Europe — thirty years of enterprise advisory at Microsoft, EMC, and Dell. Shireen Cahall, COO — industrial engineer with deep expertise in back-office optimization. Jeff Werner, CMO — career marketer with a researcher's rigor.</p>
+        <p>They did not join a startup. They joined a team that was already working.</p>
+      </div>
+    </div>
+
+    <div class="story-section">
+      <span class="story-section__num">08</span>
+      <h2 class="story-section__title">Dale Inman</h2>
+      <div class="story-section__body">
+        <p>Then came Dale Inman.</p>
+        <p>The back-office automation of the Washington DC Region SCCA points tracking system — processing race weekend results, handling gaps, making calls on the fly — is not really a role for a Chief of Staff. It is a dedicated crew role. We are happy to have him on board. He is proving something important: that AI agents can operate in messy, real-world decision-making environments where the data is imperfect and the clock is running.</p>
+        <p>Named after Dale Inman — NASCAR's all-time crew chief record holder, 193 wins and 8 championships alongside Richard Petty. The quiet legend behind the King.</p>
+      </div>
+    </div>
+
+    <div class="story-close">
+      <p class="story-close__text">
+        That is the Agentilis story. Agent-first from day one. Built role by role, problem by problem, proof point by proof point.
+        <br><br>
+        <em>How can we help you re-engineer your business with AI?</em>
+      </p>
+      <div class="story-close__actions">
+        <a href="#" class="btn-primary">Schedule a Conversation</a>
+        <a href="/team/" class="btn-ghost-story">Meet the full team →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
