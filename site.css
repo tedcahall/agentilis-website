@@ -388,7 +388,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 18px;
   font-weight: 700;
   color: var(--primary);
-  margin-bottom: 3px;
+  margin-bottom: 0;
   line-height: 1.2;
 }
 
@@ -399,7 +399,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .agent-card__desc {
