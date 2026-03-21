@@ -14,11 +14,16 @@
       .agent-card--centered { grid-column: auto; }
     }
 
+    .agent-card__name-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 3px;
+    }
     .agent-card__emoji {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 1;
-      margin-bottom: 10px;
-      display: block;
+      flex-shrink: 0;
     }
   </style>
 </head>
@@ -93,65 +98,55 @@
     <div class="agents-grid">
       <!-- Row 1 -->
       <div class="agent-card">
-        <div class="agent-card__emoji">🦾</div>
-        <div class="agent-card__name">Max</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">🦾</span><span class="agent-card__name">Max</span></div>
         <div class="agent-card__role">Chief of Staff</div>
         <div class="agent-card__desc">Strategy, communications, scheduling, memory. The first Agentilis agent. Proof that an AI chief of staff is not a concept — it is a working business partner.</div>
       </div>
       <div class="agent-card">
-        <div class="agent-card__emoji">📣</div>
-        <div class="agent-card__name">Ogilvy</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">📣</span><span class="agent-card__name">Ogilvy</span></div>
         <div class="agent-card__role">Marketing</div>
         <div class="agent-card__desc">Brand, content, thought leadership, growth. Named after David Ogilvy, the Father of Advertising.</div>
       </div>
       <div class="agent-card">
-        <div class="agent-card__emoji">📊</div>
-        <div class="agent-card__name">Gantt</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">📊</span><span class="agent-card__name">Gantt</span></div>
         <div class="agent-card__role">Project Manager</div>
         <div class="agent-card__desc">Plans, tracks, keeps the team on schedule. Named after Henry Gantt, inventor of the Gantt chart.</div>
       </div>
       <!-- Row 2 -->
       <div class="agent-card">
-        <div class="agent-card__emoji">☕</div>
-        <div class="agent-card__name">James</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">☕</span><span class="agent-card__name">James</span></div>
         <div class="agent-card__role">Software Engineer</div>
         <div class="agent-card__desc">Builds, codes, ships. Named after James Gosling, the creator of Java.</div>
       </div>
       <div class="agent-card">
-        <div class="agent-card__emoji">🐍</div>
-        <div class="agent-card__name">Guido</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">🐍</span><span class="agent-card__name">Guido</span></div>
         <div class="agent-card__role">Python Engineer</div>
         <div class="agent-card__desc">Intelligence tools, MCP servers, data pipelines. Named after Guido van Rossum, creator of Python.</div>
       </div>
       <div class="agent-card">
-        <div class="agent-card__emoji">🧪</div>
-        <div class="agent-card__name">Watts</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">🧪</span><span class="agent-card__name">Watts</span></div>
         <div class="agent-card__role">QA Engineer</div>
         <div class="agent-card__desc">Tests everything before it goes live. Named after Watts Humphrey, the father of software quality.</div>
       </div>
       <!-- Row 3 -->
       <div class="agent-card">
-        <div class="agent-card__emoji">🎨</div>
-        <div class="agent-card__name">Vignelli</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">🎨</span><span class="agent-card__name">Vignelli</span></div>
         <div class="agent-card__role">Creative &amp; Design</div>
         <div class="agent-card__desc">HTML5, CSS, pixel-perfect layouts, typefaces. Named after Massimo Vignelli, Italian master designer and typographic purist. Built this site — no human touched code.</div>
       </div>
       <div class="agent-card">
-        <div class="agent-card__emoji">🖥️</div>
-        <div class="agent-card__name">Ken</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">🖥️</span><span class="agent-card__name">Ken</span></div>
         <div class="agent-card__role">Systems Administrator</div>
         <div class="agent-card__desc">Manages the cloud and local infrastructure, deploys, and keeps the lights on. Named after Ken Thompson, co-creator of Unix.</div>
       </div>
       <div class="agent-card">
-        <div class="agent-card__emoji">👁️</div>
-        <div class="agent-card__name">Argus</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">👁️</span><span class="agent-card__name">Argus</span></div>
         <div class="agent-card__role">Watchdog</div>
         <div class="agent-card__desc">Always watching. System monitoring and alerting, 24 hours a day. Named after the all-seeing giant of Greek mythology.</div>
       </div>
       <!-- Row 4 — Dale centered -->
       <div class="agent-card agent-card--centered">
-        <div class="agent-card__emoji">🏁</div>
-        <div class="agent-card__name">Inman</div>
+        <div class="agent-card__name-row"><span class="agent-card__emoji">🏁</span><span class="agent-card__name">Inman</span></div>
         <div class="agent-card__role">Back Office Automation Specialist</div>
         <div class="agent-card__desc">Named after Dale Inman, NASCAR's all-time crew chief record holder — 193 wins and 8 championships alongside Richard Petty. The quiet legend behind the King. Dale runs what nobody sees until it stops running.</div>
       </div>
