@@ -108,18 +108,16 @@
     }
 
     .founder-name-row {
-      display: flex;
-      align-items: flex-end;
-      gap: 14px;
-      flex-wrap: wrap;
+      display: inline;
     }
     .founder-linkedin {
-      display: inline-flex;
-      align-items: center;
-      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: text-bottom;
+      margin-left: 10px;
       opacity: 0.9;
       transition: opacity 0.15s;
       text-decoration: none;
+      line-height: 0;
     }
     .founder-linkedin:hover { opacity: 1; }
     .founder-linkedin svg {
