@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentilis — Contact</title>
+  <link rel="stylesheet" href="/site.css">
+  <style>
+    /* ── CONTACT PAGE ── */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+      padding: 80px 0 96px;
+      align-items: start;
+    }
+
+    .contact-intro__label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-intro__label::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .contact-intro__heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+    }
+
+    .contact-intro__sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text);
+      opacity: 0.72;
+      margin-bottom: 40px;
+    }
+
+    .contact-intro__note {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text);
+      opacity: 0.55;
+      padding-top: 40px;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ── FORM ── */
+    .contact-form {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 48px 44px;
+    }
+
+    .form-field {
+      margin-bottom: 28px;
+    }
+
+    .form-field:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .form-label {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      opacity: 0.55;
+      margin-bottom: 10px;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text);
+      background: var(--bg);
+      border: 1px solid var(--rule-strong);
+      border-radius: var(--radius);
+      padding: 13px 16px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--text);
+      opacity: 0.3;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+    }
+
+    .form-textarea {
+      height: 160px;
+      resize: vertical;
+      line-height: 1.6;
+    }
+
+    /* Honeypot — hidden from humans, visible to bots */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      overflow: hidden;
+      pointer-events: none;
+      tab-index: -1;
+    }
+
+    .form-submit {
+      margin-top: 32px;
+      width: 100%;
+    }
+
+    .form-submit .btn-primary {
+      width: 100%;
+      justify-content: center;
+      font-size: 13px;
+      padding: 16px 32px;
+    }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+    }
+
+    .form-success__icon {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .form-success__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .form-success__body {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      opacity: 0.65;
+      line-height: 1.65;
+    }
+
+    /* Error message */
+    .form-error {
+      display: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #C1392B;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 56px 0 72px;
+      }
+      .contact-form { padding: 36px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/agentic/">Agentic</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/founder/">Founder</a></li>
+        <li><a href="/story/">Story</a></li>
+        <li><a href="/contact/" class="active">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="contact-layout">
+
+    <!-- Left: intro copy -->
+    <div class="contact-intro">
+      <div class="contact-intro__label">Contact</div>
+      <h1 class="contact-intro__heading">Let's Talk.</h1>
+      <p class="contact-intro__sub">Tell us what you're working on. If we can help, we'll say so. If we can't, we'll tell you that too.</p>
+      <p class="contact-intro__note">Most engagements start with a single conversation. No pitch deck required.</p>
+    </div>
+
+    <!-- Right: form -->
+    <div class="contact-form" id="contactFormWrap">
+      <form id="contactForm" novalidate>
+        <!-- Honeypot — do not remove -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="hp_website">Website</label>
+          <input type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="contact_name">Name</label>
+          <input class="form-input" type="text" id="contact_name" name="name" placeholder="Your name" required autocomplete="name">
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="contact_email">Email</label>
+          <input class="form-input" type="email" id="contact_email" name="email" placeholder="you@company.com" required autocomplete="email">
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="contact_message">Message</label>
+          <textarea class="form-textarea" id="contact_message" name="message" placeholder="Tell us what you're working on..." required></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">Start the Conversation →</button>
+        </div>
+
+        <div class="form-error" id="formError">Something went wrong. Please try again or email us directly.</div>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="form-success__icon">✓</div>
+        <div class="form-success__title">Message received.</div>
+        <p class="form-success__body">We received your message. Expect to hear from us within one business day.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ── Mobile nav ──
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+
+  // ── Contact form ──
+  var form     = document.getElementById('contactForm');
+  var success  = document.getElementById('formSuccess');
+  var errorMsg = document.getElementById('formError');
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      // Honeypot check — if filled, silently do nothing
+      if(document.getElementById('hp_website').value !== '') return;
+
+      var name    = document.getElementById('contact_name').value.trim();
+      var email   = document.getElementById('contact_email').value.trim();
+      var message = document.getElementById('contact_message').value.trim();
+
+      // Basic validation
+      if(!name || !email || !message){
+        errorMsg.style.display = 'block';
+        errorMsg.textContent = 'Please fill in all fields.';
+        return;
+      }
+
+      // Email format check
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        errorMsg.style.display = 'block';
+        errorMsg.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      errorMsg.style.display = 'none';
+
+      // ── POST to backend handler (James builds /contact/submit) ──
+      // Falls back to mailto: if handler is not yet live
+      fetch('/contact/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, message: message })
+      })
+      .then(function(res){
+        if(res.ok){
+          showSuccess();
+        } else {
+          fallbackMailto(name, email, message);
+        }
+      })
+      .catch(function(){
+        fallbackMailto(name, email, message);
+      });
+    });
+  }
+
+  function showSuccess(){
+    form.style.display = 'none';
+    success.style.display = 'block';
+  }
+
+  function fallbackMailto(name, email, message){
+    // Temporary bridge until James wires the POST handler
+    var body = encodeURIComponent(
+      'Name: ' + name + '\nEmail: ' + email + '\n\n' + message
+    );
+    window.location.href = 'mailto:max@agentilis.ai'
+      + '?subject=' + encodeURIComponent('website-contact')
+      + '&body=' + body;
+    // Show success anyway — user sees the confirmation
+    setTimeout(showSuccess, 300);
+  }
+})();
+</script>
+</body>
+</html>
