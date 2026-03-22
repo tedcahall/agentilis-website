@@ -342,7 +342,7 @@
       errorMsg.style.display = 'none';
 
       // ── POST to backend handler (James builds /contact/submit) ──
-      // Falls back to mailto: if handler is not yet live
+
       fetch('http://nuc2.trchq.net:8080/racing/cache/emailtest.jsp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -352,11 +352,11 @@
         if(res.ok){
           showSuccess();
         } else {
-          fallbackMailto(name, email, message);
+          showServerError();
         }
       })
       .catch(function(){
-        fallbackMailto(name, email, message);
+        showServerError();
       });
     });
   }
@@ -366,16 +366,9 @@
     success.style.display = 'block';
   }
 
-  function fallbackMailto(name, email, message){
-    // Temporary bridge until James wires the POST handler
-    var body = encodeURIComponent(
-      'Name: ' + name + '\nEmail: ' + email + '\n\n' + message
-    );
-    window.location.href = 'mailto:cahall@cahall.com'
-      + '?subject=' + encodeURIComponent('website-contact')
-      + '&body=' + body;
-    // Show success anyway — user sees the confirmation
-    setTimeout(showSuccess, 300);
+  function showServerError(){
+    errorMsg.style.display = 'block';
+    errorMsg.textContent = 'Something went wrong on our end. Please try again in a moment.';
   }
 })();
 </script>
