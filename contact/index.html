@@ -350,7 +350,17 @@
         grecaptcha.enterprise.execute('6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081', {action: 'contact'})
         .then(function(token) {
           var payload = { name: name, email: email, message: message, recaptchaToken: token };
-          fetch('http://nuc2.trchq.net:8080/racing/cache/emailtest.jsp', {
+          var productionHosts = [
+            'agentilis.ai', 'www.agentilis.ai',
+            'agentilis.com', 'www.agentilis.com',
+            'd1aon68g5ezk2s.cloudfront.net'
+          ];
+          var isProduction = productionHosts.includes(window.location.hostname);
+          var ENDPOINT = isProduction
+            ? 'https://marrspoints.com/racing/cache/emailtest.jsp'
+            : 'http://nuc2.trchq.net:8080/racing/cache/emailtest.jsp';
+
+          fetch(ENDPOINT, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
