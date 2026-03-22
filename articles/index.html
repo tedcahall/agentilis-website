@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="/site.css">
   <style>
     /* ── ARTICLES PAGE ── */
-
-    /* Filter switch */
     .filter-bar {
       display: flex;
       gap: 4px;
@@ -17,7 +15,6 @@
       border-bottom: 1px solid var(--rule);
       margin-bottom: 48px;
     }
-
     .filter-btn {
       font-family: 'Inter', sans-serif;
       font-size: 12px;
@@ -32,18 +29,11 @@
       cursor: pointer;
       border-bottom: 2px solid transparent;
       margin-bottom: -1px;
-      transition: opacity 0.15s, border-color 0.15s, color 0.15s;
+      transition: opacity 0.15s, border-color 0.15s;
     }
-
     .filter-btn:hover { opacity: 0.8; }
+    .filter-btn.active { opacity: 1; color: var(--primary); border-bottom-color: var(--accent); }
 
-    .filter-btn.active {
-      opacity: 1;
-      color: var(--primary);
-      border-bottom-color: var(--accent);
-    }
-
-    /* Card grid */
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -51,7 +41,6 @@
       margin-bottom: 80px;
     }
 
-    /* Base card */
     .article-card {
       background: var(--bg);
       border: 1px solid var(--rule);
@@ -61,20 +50,17 @@
       flex-direction: column;
       transition: border-color 0.15s, box-shadow 0.15s;
     }
-
     .article-card:hover {
       border-color: var(--accent);
       box-shadow: 0 2px 12px color-mix(in srgb, var(--primary) 8%, transparent);
     }
 
-    /* Source badge row */
     .card-meta {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 14px;
     }
-
     .card-source {
       display: flex;
       align-items: center;
@@ -86,18 +72,8 @@
       text-transform: uppercase;
       color: var(--accent);
     }
-
-    .card-source svg {
-      width: 14px;
-      height: 14px;
-      fill: #0A66C2;
-      flex-shrink: 0;
-    }
-
-    .card-source.x-source svg {
-      fill: var(--text);
-    }
-
+    .card-source svg { width: 14px; height: 14px; fill: #0A66C2; flex-shrink: 0; }
+    .card-source.x-source svg { fill: var(--text); }
     .card-date {
       font-family: 'Inter', sans-serif;
       font-size: 11px;
@@ -105,10 +81,9 @@
       opacity: 0.4;
     }
 
-    /* Card title */
     .card-title {
       font-family: 'Playfair Display', serif;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--primary);
       line-height: 1.25;
@@ -116,10 +91,8 @@
       text-decoration: none;
       display: block;
     }
-
     .card-title:hover { opacity: 0.75; }
 
-    /* Card body */
     .card-body {
       font-family: 'Inter', sans-serif;
       font-size: 13px;
@@ -131,7 +104,6 @@
       margin-bottom: 18px;
     }
 
-    /* Card link */
     .card-link {
       font-family: 'Inter', sans-serif;
       font-size: 12px;
@@ -144,46 +116,27 @@
       align-items: center;
       gap: 4px;
     }
-
     .card-link:hover { opacity: 0.7; }
 
-    /* Placeholder card */
-    .article-card.placeholder {
-      border-style: dashed;
-      opacity: 0.6;
-    }
-
-    .article-card.placeholder .card-title {
-      font-style: italic;
-      opacity: 0.5;
-      font-size: 15px;
-    }
-
-    .placeholder-url {
+    /* Top performer badge */
+    .card-badge {
+      display: inline-block;
       font-family: 'Inter', sans-serif;
-      font-size: 10px;
-      color: var(--text);
-      opacity: 0.3;
-      word-break: break-all;
-      margin-top: 8px;
-      line-height: 1.4;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+      background: var(--accent);
+      color: var(--bg);
+      margin-left: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
     }
 
-    /* X post card special treatment */
-    .article-card.x-card {
-      background: var(--bg);
-      border-color: color-mix(in srgb, var(--text) 15%, var(--bg));
-    }
-
-    .x-logo {
-      width: 16px;
-      height: 16px;
-    }
-
-    @media (max-width: 960px) {
-      .articles-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
+    @media (max-width: 960px) { .articles-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 640px) {
       .articles-grid { grid-template-columns: 1fr; }
       .filter-btn { padding: 10px 14px; font-size: 11px; }
@@ -222,45 +175,156 @@
 </div>
 
 <div class="container">
-
-  <!-- Filter bar -->
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="business">Business &amp; AI</button>
     <button class="filter-btn" data-filter="tech">Tech Musings</button>
   </div>
 
-  <!-- BUSINESS & AI SECTION -->
+  <!-- ══════════════ BUSINESS & AI ══════════════ -->
   <div id="section-business" class="articles-grid">
 
-    <!-- LinkedIn placeholders (6) -->
+    <!-- 🦾 Max Is Earning His Tokens (X) -->
+    <div class="article-card">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Mar 11, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2031717815837741152" target="_blank" rel="noopener" class="card-title">🦾 Max Is Earning His Tokens</a>
+      <p class="card-body">🦾 I feel that Max, my OpenClaw AI Chief of Staff, is really beginning to earn his tokens. 🦾🦾🦾</p>
+      <a href="https://x.com/Ted_Cahall/status/2031717815837741152" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
 
-    <div class="article-card" data-category="business">
+    <!-- What Makes AI "Agentic"? (LinkedIn) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">
           <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </span>
-        <span class="card-date">2025</span>
+        <span class="card-date">Mar 2026</span>
+      </div>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7437123886590087168/" target="_blank" rel="noopener" class="card-title">What Makes AI "Agentic"?</a>
+      <p class="card-body">What makes AI "Agentic"? Autonomous and time based execution are the soul of Agentic AI. Does OpenClaw manage time efficiently with your LLM tokens? Click the article below to take a trip down the Rabbit Hole as I share some experience that increased throughput and lowered costs.</p>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7437123886590087168/" target="_blank" rel="noopener" class="card-link">View on LinkedIn →</a>
+    </div>
+
+    <!-- Down Alice's Rabbit Hole (LinkedIn article) -->
+    <div class="article-card">
+      <div class="card-meta">
+        <span class="card-source">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </span>
+        <span class="card-date">Mar 2026</span>
+      </div>
+      <a href="https://www.linkedin.com/pulse/down-alices-ai-rabbit-hole-time-making-your-agentic-ted-cahall-b6yae/" target="_blank" rel="noopener" class="card-title">Down Alice's AI Rabbit Hole of Time — Making Your AI "Agentic"</a>
+      <p class="card-body">The White Rabbit is the only character in Wonderland with somewhere to be — which makes him the perfect metaphor for an AI agent. Ted traces the evolution from chatbot to agentic AI, and the technical rabbit hole of building a cron system that doesn't burn tokens checking an empty inbox.</p>
+      <a href="https://www.linkedin.com/pulse/down-alices-ai-rabbit-hole-time-making-your-agentic-ted-cahall-b6yae/" target="_blank" rel="noopener" class="card-link">Read →</a>
+    </div>
+
+    <!-- Down Alice's Rabbit Hole (X thread) -->
+    <div class="article-card">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Mar 10, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2031176239537442887" target="_blank" rel="noopener" class="card-title">Down Alice's AI Rabbit Hole — X Thread</a>
+      <p class="card-body">Just published: Down Alice's AI Rabbit Hole of Time — teaching AI to be agentic. The White Rabbit is the most underrated character in Wonderland. The only one with a schedule. The only one who acts without being asked. That's an AI agent. 🧵👇 1/10</p>
+      <a href="https://x.com/Ted_Cahall/status/2031176239537442887" target="_blank" rel="noopener" class="card-link">Read thread on X →</a>
+    </div>
+
+    <!-- Saturday My AI Team (LinkedIn) -->
+    <div class="article-card">
+      <div class="card-meta">
+        <span class="card-source">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </span>
+        <span class="card-date">Mar 2026</span>
       </div>
       <a href="https://www.linkedin.com/feed/update/urn:li:activity:7436530442704429058/" target="_blank" rel="noopener" class="card-title">Saturday My AI Team Was Quite Busy</a>
-      <p class="card-body">Saturday my AI team was quite busy. Ken set up their local test environment using Ansible. Then James refactored over 20,000 lines of Java code plus some new features. Watts created over 40 JUnit and Playwright tests to be sure all the features still worked. Ken then deployed it all to the cloud via Ansible. Great teamwork. All done via Telegram.</p>
+      <p class="card-body">Saturday my AI team was quite busy. Ken set up their local test environment using Ansible. Then James refactored over 20,000 lines of Java code plus some new features. Watts created over 40 JUnit and Playwright tests. Ken then deployed it all to the cloud via Ansible. All done via Telegram. How we work has dramatically changed.</p>
       <a href="https://www.linkedin.com/feed/update/urn:li:activity:7436530442704429058/" target="_blank" rel="noopener" class="card-link">View on LinkedIn →</a>
     </div>
 
-    <div class="article-card" data-category="business">
+    <!-- A Big Day for the AI Team (X) -->
+    <div class="article-card">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Mar 8, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2030717382067429460" target="_blank" rel="noopener" class="card-title">A Big Day for the AI Team</a>
+      <p class="card-body">🦾🦾🦾 Yesterday was a big day for my 'team' of AI agents. James changed 20,500 lines of Java code. Watts created 31 separate test suites in Playwright and JUnit. Ken did several deployments to both the local test and AWS prod environments with Ansible. I managed all of it from my phone.</p>
+      <a href="https://x.com/Ted_Cahall/status/2030717382067429460" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+    <!-- The AI Team Confession (X) -->
+    <div class="article-card">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Mar 8, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2030704439447744626" target="_blank" rel="noopener" class="card-title">The AI Team Confession</a>
+      <p class="card-body">It's slightly embarrassing when you explain the work team you have been texting with — are AI agents, despite their common names and roles… 🦾🦾🦾</p>
+      <a href="https://x.com/Ted_Cahall/status/2030704439447744626" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+    <!-- 20,000 Lines of Code (X) -->
+    <div class="article-card">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Mar 8, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2030477207995355246" target="_blank" rel="noopener" class="card-title">20,000 Lines of Code and a Dinner Out</a>
+      <p class="card-body">Changed 20,000 lines of Java code today and got a great workout in as well as went to dinner with my wife. Thank you OpenClaw. 🦾</p>
+      <a href="https://x.com/Ted_Cahall/status/2030477207995355246" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+    <!-- Running AI Agents (LinkedIn) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">
           <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </span>
-        <span class="card-date">2025</span>
+        <span class="card-date">Mar 2026</span>
       </div>
       <a href="https://www.linkedin.com/feed/update/urn:li:activity:7435330834032656384/" target="_blank" rel="noopener" class="card-title">Running AI Agents for Real Business Problems</a>
       <p class="card-body">I have been running my AI Agent(s) for a little over a week now. I have had it solve real world business problems (OK some were part of my hobby — but it includes true AI operations management). I then went on to create a full team of AI agents that work together, share information, communicate in the background autonomously and help improve the product I built.</p>
       <a href="https://www.linkedin.com/feed/update/urn:li:activity:7435330834032656384/" target="_blank" rel="noopener" class="card-link">View on LinkedIn →</a>
     </div>
 
-    <div class="article-card" data-category="business">
+    <!-- Building AI Agent Team — X Thread -->
+    <div class="article-card">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Mar 5, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2029685203594031440" target="_blank" rel="noopener" class="card-title">Building My AI Agent Team — X Thread</a>
+      <p class="card-body">Just posted on LinkedIn about building my AI agent team. I've been running this AI team for a week. Here's what actually works. A thread: 🧵👇</p>
+      <a href="https://x.com/Ted_Cahall/status/2029685203594031440" target="_blank" rel="noopener" class="card-link">Read thread on X →</a>
+    </div>
+
+    <!-- Will Anthropic Blink? (LinkedIn) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">
           <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -273,7 +337,8 @@
       <a href="https://www.linkedin.com/feed/update/urn:li:activity:7432984621010546688/" target="_blank" rel="noopener" class="card-link">View on LinkedIn →</a>
     </div>
 
-    <div class="article-card" data-category="business">
+    <!-- Anthropic's Safety Bet (LinkedIn article) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">
           <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -286,7 +351,8 @@
       <a href="https://www.linkedin.com/pulse/anthropics-safety-bet-brilliant-differentiator-380b-ted-cahall-kgiie/" target="_blank" rel="noopener" class="card-link">Read →</a>
     </div>
 
-    <div class="article-card" data-category="business">
+    <!-- From Search to AI Chatbots (LinkedIn) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">
           <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -295,220 +361,54 @@
         <span class="card-date">Feb 22, 2026</span>
       </div>
       <a href="https://www.linkedin.com/feed/update/urn:li:activity:7429902618547720192/" target="_blank" rel="noopener" class="card-title">From Search to AI Chatbots: Do the Incumbent's Moats Matter?</a>
-      <p class="card-body">Over the past two decades, I've worked across every major phase of digital discovery — from the rise of search to its reinvention in the AI era. As CTO of CNET, COO of Classmates.com, head of AOL Search and MapQuest, and later global head of Microsoft's MSN where our mission was to grow Bing and challenge Google directly — I was inside the search wars. Today, we're entering the next great shift: from search to AI chat.</p>
+      <p class="card-body">Over the past two decades, I've worked across every major phase of digital discovery — from the rise of search to its reinvention in the AI era. As CTO of CNET, head of AOL Search and MapQuest, and later global head of MSN — I was inside the search wars. Today, we're entering the next great shift: from search to AI chat.</p>
       <a href="https://www.linkedin.com/feed/update/urn:li:activity:7429902618547720192/" target="_blank" rel="noopener" class="card-link">View on LinkedIn →</a>
     </div>
 
-    <div class="article-card placeholder" data-category="business">
+    <!-- From Search to AI Chatbots — X full article ⭐ top performer -->
+    <div class="article-card">
       <div class="card-meta">
-        <span class="card-source">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
         </span>
-        <span class="card-date">Coming soon</span>
+        <span class="card-date">Feb 18, 2026</span>
       </div>
-      <span class="card-title">LinkedIn post — content pending</span>
-      <p class="card-body">Ted's LinkedIn update — text to be added.</p>
-      <div class="placeholder-url">linkedin.com/feed/update/urn:li:activity:7427442109713973248/</div>
-      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7427442109713973248/" target="_blank" rel="noopener" class="card-link">View on LinkedIn →</a>
+      <a href="https://x.com/Ted_Cahall/status/2024117438380433748" target="_blank" rel="noopener" class="card-title">From Search to AI Chatbots: Do the Incumbent's Moats Matter <span class="card-badge">13,567 views</span></a>
+      <p class="card-body">Full long-form article on X — from CTO of CNET to global head of MSN, Ted was inside the search wars. Now he examines the next great shift: from search to AI chat, and whether the incumbents' moats still hold.</p>
+      <a href="https://x.com/Ted_Cahall/status/2024117438380433748" target="_blank" rel="noopener" class="card-link">Read article on X →</a>
     </div>
 
-    <div class="article-card" data-category="business">
+    <!-- I'll Have My AI Assistant (LinkedIn article) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">
           <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </span>
-        <span class="card-date">2025</span>
-      </div>
-      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7437123886590087168/" target="_blank" rel="noopener" class="card-title">What Makes AI "Agentic"?</a>
-      <p class="card-body">What makes AI "Agentic"? Autonomous and time based execution are the soul of Agentic AI. Does OpenClaw manage time efficiently with your LLM tokens? Click the article below to take a trip down the Rabbit Hole as I share some experience that increased throughput and lowered costs.</p>
-      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7437123886590087168/" target="_blank" rel="noopener" class="card-link">View on LinkedIn →</a>
-    </div>
-    <!-- Second LinkedIn long-form article -->
-    <div class="article-card" data-category="business">
-      <div class="card-meta">
-        <span class="card-source">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </span>
-        <span class="card-date">2025</span>
-      </div>
-      <a href="https://www.linkedin.com/pulse/down-alices-ai-rabbit-hole-time-making-your-agentic-ted-cahall-b6yae/" target="_blank" rel="noopener" class="card-title">Down Alice's AI Rabbit Hole of Time — Making Your AI "Agentic"</a>
-      <p class="card-body">The White Rabbit is the only character in Wonderland with somewhere to be — which makes him the perfect metaphor for an AI agent. Ted traces the evolution from chatbot to agentic AI, and the technical rabbit hole of building a cron system that doesn't burn tokens checking an empty inbox.</p>
-      <a href="https://www.linkedin.com/pulse/down-alices-ai-rabbit-hole-time-making-your-agentic-ted-cahall-b6yae/" target="_blank" rel="noopener" class="card-link">Read →</a>
-    </div>
-
-    <!-- Real LinkedIn article -->
-    <div class="article-card" data-category="business">
-      <div class="card-meta">
-        <span class="card-source">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </span>
-        <span class="card-date">2025</span>
+        <span class="card-date">Early 2026</span>
       </div>
       <a href="https://www.linkedin.com/pulse/ill-have-my-ai-assistant-call-your-set-up-lunch-next-week-ted-cahall-ph9ee/" target="_blank" rel="noopener" class="card-title">I'll Have My (AI) Assistant Call Your Assistant to Set Up Lunch Next Week</a>
       <p class="card-body">Ted's first published account of building an AI agent team — from Max's 5AM intelligence brief to automating SCCA race results while he slept. The post that started the Agentilis story.</p>
       <a href="https://www.linkedin.com/pulse/ill-have-my-ai-assistant-call-your-set-up-lunch-next-week-ted-cahall-ph9ee/" target="_blank" rel="noopener" class="card-link">Read →</a>
     </div>
 
-    <!-- X placeholder cards (10) -->
-    <div class="article-card x-card placeholder" data-category="business">
+    <!-- I Hired an Engineer for $20/Month (X) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
           X (Twitter)
         </span>
-        <span class="card-date">Coming soon</span>
+        <span class="card-date">Feb 11, 2026</span>
       </div>
-      <span class="card-title">X thread — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2029685203594031440</div>
-      <a href="https://x.com/Ted_Cahall/status/2029685203594031440" target="_blank" rel="noopener" class="card-link">View on X →</a>
-    </div>
-
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">X thread — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2031176239537442887</div>
-      <a href="https://x.com/Ted_Cahall/status/2031176239537442887" target="_blank" rel="noopener" class="card-link">View on X →</a>
-    </div>
-
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">X post — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2031717815837741152</div>
-      <a href="https://x.com/Ted_Cahall/status/2031717815837741152" target="_blank" rel="noopener" class="card-link">View on X →</a>
-    </div>
-
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">X post — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2030717382067429460</div>
-      <a href="https://x.com/Ted_Cahall/status/2030717382067429460" target="_blank" rel="noopener" class="card-link">View on X →</a>
-    </div>
-
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">X post — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2030704439447744626</div>
-      <a href="https://x.com/Ted_Cahall/status/2030704439447744626" target="_blank" rel="noopener" class="card-link">View on X →</a>
-    </div>
-
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">X post — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2030477207995355246</div>
-      <a href="https://x.com/Ted_Cahall/status/2030477207995355246" target="_blank" rel="noopener" class="card-link">View on X →</a>
-    </div>
-
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">X post — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2023063575401533747</div>
-      <a href="https://x.com/Ted_Cahall/status/2023063575401533747" target="_blank" rel="noopener" class="card-link">View on X →</a>
-    </div>
-
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">X post — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2021804081447104728</div>
-      <a href="https://x.com/Ted_Cahall/status/2021804081447104728" target="_blank" rel="noopener" class="card-link">View on X →</a>
-    </div>
-
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">X post — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2021783955595313615</div>
-      <a href="https://x.com/Ted_Cahall/status/2021783955595313615" target="_blank" rel="noopener" class="card-link">View on X →</a>
-    </div>
-
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">X post — content pending</span>
-      <p class="card-body">Ted's post on X — text to be added.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2021674209181671912</div>
+      <a href="https://x.com/Ted_Cahall/status/2021674209181671912" target="_blank" rel="noopener" class="card-title">I Hired an Engineer for $20/Month. His Name Is Claude.</a>
+      <p class="card-body">I hired an engineer to work on my hobby projects for $20 per month. His name is Claude. He already completed tasks that I had put off for over a year. Complete upgrades, feature requests, bug fixes, and some platform migrations. Claude Code on Opus 4.6 is a game changer.</p>
       <a href="https://x.com/Ted_Cahall/status/2021674209181671912" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
-    <div class="article-card x-card placeholder" data-category="business">
-      <div class="card-meta">
-        <span class="card-source x-source">
-          <svg class="x-logo" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
-          X (Twitter)
-        </span>
-        <span class="card-date">Coming soon</span>
-      </div>
-      <span class="card-title">From Search to AI Chatbots: The Full Article</span>
-      <p class="card-body">Long-form X thread — full article on the search-to-AI-chat transition. Content coming soon.</p>
-      <div class="placeholder-url">x.com/Ted_Cahall/status/2024117438380433748</div>
-      <a href="https://x.com/Ted_Cahall/status/2024117438380433748" target="_blank" rel="noopener" class="card-link">Read full article on X →</a>
-    </div>
 
-    <!-- Real blog posts (Business & AI) -->
-    <div class="article-card" data-category="business">
+    <!-- WDCR SCCA Award (blog) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">cahall-labs.com</span>
         <span class="card-date">2018</span>
@@ -518,17 +418,19 @@
       <a href="https://cahall-labs.com/ted-cahall-receives-wdcr-scca-regional-executive-award/" target="_blank" rel="noopener" class="card-link">Read →</a>
     </div>
 
-    <div class="article-card" data-category="business">
+    <!-- marrspoints Stats (blog) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">cahallracing.com</span>
-        <span class="card-date">2017</span>
+        <span class="card-date">2019–2020</span>
       </div>
       <a href="https://cahallracing.com/marrspoints-statistics-and-graphs/" target="_blank" rel="noopener" class="card-title">marrspoints Statistics and Graphs</a>
       <p class="card-body">A deep dive into the data analytics layer Ted built on top of marrspoints.com — race class participation trends, driver counts, and multi-year comparisons. Data engineering before it was called that.</p>
       <a href="https://cahallracing.com/marrspoints-statistics-and-graphs/" target="_blank" rel="noopener" class="card-link">Read →</a>
     </div>
 
-    <div class="article-card" data-category="business">
+    <!-- Intel NUC origin story (blog) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">cahall-labs.com</span>
         <span class="card-date">2016</span>
@@ -540,30 +442,47 @@
 
   </div><!-- /section-business -->
 
-  <!-- TECH MUSINGS SECTION -->
+  <!-- ══════════════ TECH MUSINGS ══════════════ -->
   <div id="section-tech" class="articles-grid" style="display:none">
 
-    <div class="article-card" data-category="tech">
+    <!-- 2022 Racing Season (blog) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">cahallracing.com</span>
         <span class="card-date">2022</span>
       </div>
       <a href="https://cahallracing.com/2022-was-a-pretty-good-year-for-cahall-racing/" target="_blank" rel="noopener" class="card-title">2022 Was a Pretty Good Year for Cahall Racing</a>
-      <p class="card-body">Ted's 2022 racing season recap: MARRS STL class champion, 4th in SM, Ironman award winner, and the Sunoco Hard Charger Award at the Runoffs. The person behind the technology.</p>
+      <p class="card-body">MARRS STL class champion, 4th in SM, Ironman award winner, and the Sunoco Hard Charger Award at the Runoffs — advancing from 48th to 14th at the SCCA National Championships. The person behind the technology.</p>
       <a href="https://cahallracing.com/2022-was-a-pretty-good-year-for-cahall-racing/" target="_blank" rel="noopener" class="card-link">Read →</a>
     </div>
 
-    <div class="article-card" data-category="tech">
+    <!-- Racing Videos, NAS, Tailscale (X) -->
+    <div class="article-card">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Feb 15, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2023063575401533747" target="_blank" rel="noopener" class="card-title">Racing Videos, a NAS, and Tailscale</a>
+      <p class="card-body">Race car drivers generate about 15-20GB of video files over a three day weekend. I have been saving mine for years on a Synology NAS on my home network. I may be the last person to learn that I can now browse them securely anywhere on earth from my phone with Tailscale.</p>
+      <a href="https://x.com/Ted_Cahall/status/2023063575401533747" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+    <!-- NAS Hot-Swap Love (blog) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">cahall-labs.com</span>
-        <span class="card-date">2020</span>
+        <span class="card-date">2019</span>
       </div>
       <a href="https://cahall-labs.com/nas-hot-swap-love/" target="_blank" rel="noopener" class="card-title">NAS Hot-Swap Love</a>
       <p class="card-body">A cheerful deep dive into replacing drives in Synology NAS units while they're still running. 30TB of RAID-5 storage, hot-swap procedures, and the kind of home infrastructure obsession that built a career.</p>
       <a href="https://cahall-labs.com/nas-hot-swap-love/" target="_blank" rel="noopener" class="card-link">Read →</a>
     </div>
 
-    <div class="article-card" data-category="tech">
+    <!-- AirPods (blog) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">cahall-labs.com</span>
         <span class="card-date">2019</span>
@@ -573,17 +492,19 @@
       <a href="https://cahall-labs.com/airpods-make-you-healthier-and-smarter/" target="_blank" rel="noopener" class="card-link">Read →</a>
     </div>
 
-    <div class="article-card" data-category="tech">
+    <!-- Digital Age Relocation (blog) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">cahall-labs.com</span>
-        <span class="card-date">2018</span>
+        <span class="card-date">2019</span>
       </div>
       <a href="https://cahall-labs.com/the-digital-age-has-made-relocation-to-a-new-home-so-much-simpler/" target="_blank" rel="noopener" class="card-title">The Digital Age Has Made Relocation to a New Home So Much Simpler</a>
       <p class="card-body">Written when Ted joined block.one and relocated to Virginia — a reflection on how digital infrastructure has transformed moving. From shipping CDs to cloud-everything.</p>
       <a href="https://cahall-labs.com/the-digital-age-has-made-relocation-to-a-new-home-so-much-simpler/" target="_blank" rel="noopener" class="card-link">Read →</a>
     </div>
 
-    <div class="article-card" data-category="tech">
+    <!-- New Tech Blog (blog) -->
+    <div class="article-card">
       <div class="card-meta">
         <span class="card-source">cahall-labs.com</span>
         <span class="card-date">2016</span>
@@ -609,7 +530,6 @@
 
 <script>
 (function(){
-  // Mobile nav
   var btn = document.getElementById('navToggle');
   var menu = document.querySelector('.nav-links');
   if(btn && menu){
@@ -632,18 +552,15 @@
     });
   }
 
-  // Filter switch
   var filterBtns = document.querySelectorAll('.filter-btn');
   var sectionBusiness = document.getElementById('section-business');
   var sectionTech = document.getElementById('section-tech');
 
-  filterBtns.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      filterBtns.forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
-
-      var filter = btn.dataset.filter;
-      if(filter === 'business'){
+  filterBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      filterBtns.forEach(function(x){ x.classList.remove('active'); });
+      b.classList.add('active');
+      if(b.dataset.filter === 'business'){
         sectionBusiness.style.display = 'grid';
         sectionTech.style.display = 'none';
       } else {
