@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agentilis — Contact</title>
-  <script src="https://www.google.com/recaptcha/api.js?render=6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081"></script>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081"></script>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/site.css">
   <style>
@@ -346,8 +346,8 @@
       var submitBtn = form.querySelector('button[type="submit"]');
       if(submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
 
-      grecaptcha.ready(function() {
-        grecaptcha.execute('6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081', {action: 'contact'})
+      grecaptcha.enterprise.ready(function() {
+        grecaptcha.enterprise.execute('6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081', {action: 'contact'})
         .then(function(token) {
           var payload = { name: name, email: email, message: message, recaptchaToken: token };
           fetch('http://nuc2.trchq.net:8080/racing/cache/emailtest.jsp', {
@@ -370,7 +370,7 @@
           });
         })
         .catch(function() {
-          // grecaptcha.execute failed
+          // grecaptcha.enterprise.execute failed
           if(submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Start the Conversation →'; }
           showServerError();
         });
