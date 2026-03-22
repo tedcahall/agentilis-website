@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agentilis — Contact</title>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081"></script>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/site.css">
   <style>
@@ -341,22 +342,26 @@
 
       errorMsg.style.display = 'none';
 
-      // ── POST to backend handler (James builds /contact/submit) ──
-
-      fetch('http://nuc2.trchq.net:8080/racing/cache/emailtest.jsp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name, email: email, message: message })
-      })
-      .then(function(res){
-        if(res.ok){
-          showSuccess();
-        } else {
-          showServerError();
-        }
-      })
-      .catch(function(){
-        showServerError();
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081', {action: 'contact'})
+        .then(function(token) {
+          fetch('http://nuc2.trchq.net:8080/racing/cache/emailtest.jsp', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: name, email: email, message: message, recaptchaToken: token })
+          })
+          .then(function(res) { return res.json(); })
+          .then(function(data) {
+            if(data.status === 'success') {
+              showSuccess();
+            } else {
+              showServerError();
+            }
+          })
+          .catch(function() {
+            showServerError();
+          });
+        });
       });
     });
   }
