@@ -342,16 +342,22 @@
 
       errorMsg.style.display = 'none';
 
+      // Disable submit to prevent double-fire
+      var submitBtn = form.querySelector('button[type="submit"]');
+      if(submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+
       grecaptcha.ready(function() {
         grecaptcha.execute('6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081', {action: 'contact'})
         .then(function(token) {
+          var payload = { name: name, email: email, message: message, recaptchaToken: token };
           fetch('http://nuc2.trchq.net:8080/racing/cache/emailtest.jsp', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: name, email: email, message: message, recaptchaToken: token })
+            body: JSON.stringify(payload)
           })
           .then(function(res) { return res.json(); })
           .then(function(data) {
+            if(submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Start the Conversation →'; }
             if(data.status === 'success') {
               showSuccess();
             } else {
@@ -359,8 +365,14 @@
             }
           })
           .catch(function() {
+            if(submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Start the Conversation →'; }
             showServerError();
           });
+        })
+        .catch(function() {
+          // grecaptcha.execute failed
+          if(submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Start the Conversation →'; }
+          showServerError();
         });
       });
     });
