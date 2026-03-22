@@ -343,7 +343,7 @@
 
       // ── POST to backend handler (James builds /contact/submit) ──
       // Falls back to mailto: if handler is not yet live
-      fetch('/contact/submit', {
+      fetch('http://nuc2.trchq.net:8080/racing/cache/emailtest.jsp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: name, email: email, message: message })
