@@ -512,7 +512,7 @@ a { color: inherit; text-decoration: none; }
 
 .proof-item {
   background: var(--bg);
-  padding: 32px 28px;
+  padding: 16px 28px;
 }
 
 .proof-item__num {
