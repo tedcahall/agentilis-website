@@ -143,7 +143,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.7;
   color: var(--bg);
   max-width: 580px;
-  margin-bottom: 56px;
+  margin-bottom: 16px;
   opacity: 0.72;
 }
 
