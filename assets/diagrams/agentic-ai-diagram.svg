@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7A9E8E"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D46B5E"/>
+    </marker>
+    <marker id="arr-cod" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7EC8A0"/>
+    </marker>
+    <marker id="arr-ret" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#70B0D0"/>
+    </marker>
+    <marker id="arr-cit" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#B090D8"/>
+    </marker>
+    <marker id="arr-back" markerWidth="6" markerHeight="5" refX="0" refY="2.5" orient="auto">
+      <polygon points="6 0, 0 2.5, 6 5" fill="#7A9E8E" opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <!-- ═══ BACKGROUND ═══ -->
+  <rect width="900" height="1200" fill="#2C3E4A"/>
+
+  <!-- ═══ TITLE ═══ -->
+  <text x="28" y="44" font-size="16" fill="#7A9E8E" font-weight="400">What is</text>
+  <text x="28" y="78" font-size="30" fill="#FAFAF7" font-weight="700">Agentic AI?</text>
+
+  <!-- ═══════════════════════════════════════
+       TOP PANEL — NOT Agentic AI
+       ═══════════════════════════════════════ -->
+  <rect x="18" y="96" width="864" height="440" rx="12" fill="#3A1818" stroke="#D46B5E" stroke-width="2.5"/>
+  <text x="450" y="126" font-size="17" fill="#D46B5E" font-weight="700" text-anchor="middle">These are  NOT  Agentic AI</text>
+
+  <!-- Separator lines between columns -->
+  <line x1="318" y1="140" x2="318" y2="526" stroke="#6B3030" stroke-width="1"/>
+  <line x1="600" y1="140" x2="600" y2="526" stroke="#6B3030" stroke-width="1"/>
+
+  <!-- ── LLM Chatbots column ── -->
+  <text x="168" y="158" font-size="13" fill="#E07868" font-weight="700" text-anchor="middle">LLM Chatbots</text>
+  <!-- Person + Query -->
+  <text x="168" y="190" font-size="11" fill="#C8B8B0" text-anchor="middle">👤 Query</text>
+  <line x1="168" y1="196" x2="168" y2="216" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- System Prompt -->
+  <rect x="90" y="220" width="156" height="40" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="168" y="245" font-size="11" fill="#1F1F1F" text-anchor="middle">System Prompt</text>
+  <line x1="168" y1="260" x2="168" y2="280" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- LLMs -->
+  <rect x="100" y="284" width="136" height="40" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="168" y="302" font-size="13" fill="#1F1F1F" font-weight="700" text-anchor="middle">LLMs</text>
+  <line x1="168" y1="324" x2="168" y2="344" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- Output -->
+  <rect x="100" y="348" width="136" height="38" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="168" y="372" font-size="11" fill="#1F1F1F" text-anchor="middle">Output</text>
+
+  <!-- ── RPA column ── -->
+  <text x="459" y="158" font-size="13" fill="#E07868" font-weight="700" text-anchor="middle">RPA</text>
+  <text x="459" y="190" font-size="11" fill="#C8B8B0" text-anchor="middle">👤 Query</text>
+  <line x1="459" y1="196" x2="459" y2="216" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <rect x="375" y="220" width="168" height="38" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="459" y="244" font-size="11" fill="#1F1F1F" text-anchor="middle">Script Trigger</text>
+  <line x1="459" y1="258" x2="459" y2="278" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- Two boxes side by side -->
+  <rect x="334" y="282" width="116" height="44" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="392" y="301" font-size="10" fill="#1F1F1F" text-anchor="middle">Only Execute</text>
+  <text x="392" y="316" font-size="10" fill="#1F1F1F" text-anchor="middle">Tools</text>
+  <rect x="468" y="282" width="116" height="44" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="526" y="308" font-size="12" fill="#1F1F1F" font-weight="700" text-anchor="middle">LLMs</text>
+  <line x1="459" y1="326" x2="459" y2="346" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <rect x="375" y="350" width="168" height="38" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="459" y="374" font-size="11" fill="#1F1F1F" text-anchor="middle">Use Tools</text>
+  <line x1="459" y1="388" x2="459" y2="408" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <rect x="375" y="412" width="168" height="38" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="459" y="436" font-size="11" fill="#1F1F1F" text-anchor="middle">Output</text>
+
+  <!-- ── RAG column ── -->
+  <text x="740" y="158" font-size="13" fill="#E07868" font-weight="700" text-anchor="middle">RAG</text>
+  <text x="740" y="190" font-size="11" fill="#C8B8B0" text-anchor="middle">👤 Query</text>
+  <line x1="740" y1="196" x2="740" y2="216" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <rect x="652" y="220" width="176" height="38" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="740" y="244" font-size="11" fill="#1F1F1F" text-anchor="middle">Embedding</text>
+  <line x1="740" y1="258" x2="740" y2="278" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- Three mini boxes -->
+  <rect x="616" y="282" width="85" height="48" rx="6" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.2"/>
+  <text x="658" y="303" font-size="9" fill="#1F1F1F" text-anchor="middle">Knowledge</text>
+  <text x="658" y="316" font-size="9" fill="#1F1F1F" text-anchor="middle">base</text>
+  <rect x="707" y="282" width="66" height="48" rx="6" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.2"/>
+  <text x="740" y="303" font-size="9" fill="#1F1F1F" text-anchor="middle">Vector</text>
+  <text x="740" y="316" font-size="9" fill="#1F1F1F" text-anchor="middle">Db</text>
+  <rect x="779" y="282" width="84" height="48" rx="6" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.2"/>
+  <text x="821" y="300" font-size="9" fill="#1F1F1F" text-anchor="middle">Web Search</text>
+  <text x="821" y="313" font-size="9" fill="#1F1F1F" text-anchor="middle">Data</text>
+  <line x1="740" y1="330" x2="740" y2="350" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <rect x="636" y="354" width="208" height="36" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="740" y="377" font-size="10" fill="#1F1F1F" text-anchor="middle">Data Augmentation</text>
+  <line x1="740" y1="390" x2="740" y2="410" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <rect x="660" y="414" width="160" height="38" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="740" y="436" font-size="12" fill="#1F1F1F" font-weight="700" text-anchor="middle">LLMs</text>
+  <line x1="740" y1="452" x2="740" y2="472" stroke="#D46B5E" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <rect x="660" y="476" width="160" height="36" rx="7" fill="#F8F5F0" stroke="#4A3030" stroke-width="1.5"/>
+  <text x="740" y="499" font-size="11" fill="#1F1F1F" text-anchor="middle">Output</text>
+
+  <!-- ═══════════════════════════════════════
+       BOTTOM PANEL — This IS Agentic AI
+       ═══════════════════════════════════════ -->
+  <rect x="18" y="552" width="864" height="632" rx="12" fill="#1A3020" stroke="#7EC8A0" stroke-width="2.5"/>
+  <text x="450" y="585" font-size="17" fill="#7EC8A0" font-weight="700" text-anchor="middle">This is an Agentic AI</text>
+
+  <!-- Three zone separators -->
+  <line x1="318" y1="596" x2="318" y2="1168" stroke="#2A4838" stroke-width="1"/>
+  <line x1="570" y1="596" x2="570" y2="1168" stroke="#2A4838" stroke-width="1"/>
+
+  <!-- Query + Output labels -->
+  <text x="28" y="810" font-size="11" fill="#FAFAF7">👤 Query</text>
+  <line x1="90" y1="808" x2="116" y2="808" stroke="#7A9E8E" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="28" y="1020" font-size="11" fill="#FAFAF7">Output</text>
+  <line x1="116" y1="1018" x2="90" y2="1018" stroke="#7A9E8E" stroke-width="2" marker-end="url(#arr-back)"/>
+
+  <!-- ── ORCHESTRATOR ZONE ── -->
+  <rect x="30" y="600" width="280" height="558" rx="10" fill="#1E3828" stroke="#3A5848" stroke-width="1"/>
+
+  <!-- Memory + Tools -->
+  <rect x="44" y="614" width="112" height="38" rx="7" fill="#F8F5F0" stroke="#7A9E8E" stroke-width="1.5"/>
+  <text x="100" y="638" font-size="11" fill="#1F1F1F" text-anchor="middle">Memory</text>
+  <rect x="168" y="614" width="112" height="38" rx="7" fill="#F8F5F0" stroke="#C8902A" stroke-width="1.5"/>
+  <text x="224" y="638" font-size="11" fill="#7A5010" text-anchor="middle">Tools</text>
+
+  <!-- Orchestrator box -->
+  <rect x="44" y="664" width="252" height="108" rx="9" fill="#F8F5F0" stroke="#2C3E4A" stroke-width="2"/>
+  <text x="170" y="686" font-size="12" fill="#2C3E4A" font-weight="700" text-anchor="middle">Orchestrator</text>
+  <rect x="70" y="693" width="200" height="68" rx="7" fill="#2C3E4A" stroke="#7A9E8E" stroke-width="2"/>
+  <text x="170" y="734" font-size="16" fill="#7A9E8E" font-weight="700" text-anchor="middle">LLM</text>
+
+  <!-- Planning + Feedback -->
+  <rect x="44" y="782" width="112" height="38" rx="7" fill="#F8F5F0" stroke="#7A9E8E" stroke-width="1.5"/>
+  <text x="100" y="806" font-size="11" fill="#1F1F1F" text-anchor="middle">Planning</text>
+  <rect x="168" y="782" width="112" height="38" rx="7" fill="#F8F5F0" stroke="#7A9E8E" stroke-width="1.5"/>
+  <text x="224" y="806" font-size="11" fill="#1F1F1F" text-anchor="middle">Feedback</text>
+
+  <!-- Agent 1 output -->
+  <rect x="74" y="900" width="192" height="44" rx="8" fill="#F8F5F0" stroke="#2C3E4A" stroke-width="2"/>
+  <text x="170" y="927" font-size="12" fill="#2C3E4A" font-weight="700" text-anchor="middle">Agent 1</text>
+
+  <!-- Loop arrow: Agent 1 → Orchestrator -->
+  <path d="M 170 900 L 170 872 L 74 872 L 74 772" stroke="#7A9E8E" stroke-width="1.2" stroke-dasharray="4,3" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Arrow: Orchestrator → MCP -->
+  <line x1="310" y1="768" x2="354" y2="768" stroke="#7A9E8E" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── MCP ZONE ── -->
+  <rect x="328" y="600" width="234" height="558" rx="10" fill="#1E3828" stroke="#3A5848" stroke-width="1"/>
+  <text x="445" y="626" font-size="11" fill="#7A9E8E" font-weight="700" text-anchor="middle">Model Context</text>
+  <text x="445" y="643" font-size="11" fill="#7A9E8E" font-weight="700" text-anchor="middle">Protocol (MCP)</text>
+
+  <!-- MCP boxes -->
+  <rect x="344" y="658" width="202" height="56" rx="8" fill="#F8F5F0" stroke="#7A9E8E" stroke-width="1.5"/>
+  <text x="445" y="682" font-size="10" fill="#1F1F1F" text-anchor="middle">Discover Agent</text>
+  <text x="445" y="697" font-size="10" fill="#1F1F1F" text-anchor="middle">Capabilities</text>
+
+  <rect x="344" y="726" width="202" height="44" rx="8" fill="#F8F5F0" stroke="#7A9E8E" stroke-width="1.5"/>
+  <text x="445" y="753" font-size="10" fill="#1F1F1F" text-anchor="middle">Share tasks</text>
+
+  <rect x="344" y="782" width="202" height="56" rx="8" fill="#F8F5F0" stroke="#7A9E8E" stroke-width="1.5"/>
+  <text x="445" y="806" font-size="10" fill="#1F1F1F" text-anchor="middle">Update Task</text>
+  <text x="445" y="821" font-size="10" fill="#1F1F1F" text-anchor="middle">Information</text>
+
+  <!-- ── AGENTS ZONE ── -->
+  <rect x="582" y="600" width="285" height="558" rx="10" fill="#1E3828" stroke="#3A5848" stroke-width="1"/>
+
+  <!-- Coding Agent -->
+  <rect x="596" y="618" width="257" height="118" rx="9" fill="#1A3025" stroke="#7EC8A0" stroke-width="2"/>
+  <text x="724" y="684" font-size="13" fill="#FAFAF7" font-weight="700" text-anchor="middle">Coding Agent</text>
+  <!-- Arrow MCP → Coding -->
+  <line x1="546" y1="686" x2="582" y2="686" stroke="#7EC8A0" stroke-width="2" marker-end="url(#arr-cod)"/>
+  <!-- Feedback arrow back -->
+  <line x1="582" y1="706" x2="546" y2="706" stroke="#7EC8A0" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- Retrieval Agent -->
+  <rect x="596" y="754" width="257" height="118" rx="9" fill="#1A2C38" stroke="#70B0D0" stroke-width="2"/>
+  <text x="724" y="820" font-size="13" fill="#FAFAF7" font-weight="700" text-anchor="middle">Retrieval Agent</text>
+  <!-- Arrow MCP → Retrieval -->
+  <line x1="546" y1="748" x2="582" y2="820" stroke="#70B0D0" stroke-width="2" marker-end="url(#arr-ret)"/>
+  <line x1="582" y1="840" x2="546" y2="780" stroke="#70B0D0" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- Citation Agent -->
+  <rect x="596" y="890" width="257" height="118" rx="9" fill="#251A38" stroke="#B090D8" stroke-width="2"/>
+  <text x="724" y="956" font-size="13" fill="#FAFAF7" font-weight="700" text-anchor="middle">Citation Agent</text>
+  <!-- Arrow MCP → Citation -->
+  <line x1="546" y1="810" x2="596" y2="956" stroke="#B090D8" stroke-width="2" marker-end="url(#arr-cit)"/>
+  <line x1="596" y1="976" x2="546" y2="826" stroke="#B090D8" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- ── FOOTER NOTE ── -->
+  <text x="450" y="1190" font-size="10" fill="#5A7A6A" text-anchor="middle" font-style="italic">agentilis.ai — Characterized by action.</text>
+</svg>
