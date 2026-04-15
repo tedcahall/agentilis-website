@@ -1270,16 +1270,16 @@
       filterBtns.forEach(function(x){ x.classList.remove('active'); });
       b.classList.add('active');
       
-      sectionBusiness.style.display = 'none';
-      sectionTech.style.display = 'none';
-      sectionAgentic.style.display = 'none';
-      sectionStory.style.display = 'none';
+      if(sectionBusiness) sectionBusiness.style.display = 'none';
+      if(sectionTech) sectionTech.style.display = 'none';
+      if(sectionAgentic) sectionAgentic.style.display = 'none';
+      if(sectionStory) sectionStory.style.display = 'none';
       
       var filter = b.dataset.filter;
-      if(filter === 'business') sectionBusiness.style.display = 'grid';
-      else if(filter === 'tech') sectionTech.style.display = 'grid';
-      else if(filter === 'agentic') sectionAgentic.style.display = 'block';
-      else if(filter === 'story') sectionStory.style.display = 'block';
+      if(filter === 'business' && sectionBusiness) sectionBusiness.style.display = 'grid';
+      else if(filter === 'tech' && sectionTech) sectionTech.style.display = 'grid';
+      else if(filter === 'agentic' && sectionAgentic) sectionAgentic.style.display = 'block';
+      else if(filter === 'story' && sectionStory) sectionStory.style.display = 'block';
     });
   });
 })();
