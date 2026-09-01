@@ -181,6 +181,10 @@
       color: var(--accent);
     }
 
+    .form-success--declined .form-success__icon {
+      color: var(--text-muted);
+    }
+
     .form-success__title {
       font-family: 'Playfair Display', serif;
       font-size: 24px;
@@ -280,7 +284,7 @@
       </form>
 
       <div class="form-success" id="formSuccess" aria-live="polite">
-        <div class="form-success__icon">&#10003;</div>
+        <div class="form-success__icon" id="formSuccessIcon">&#10003;</div>
         <div class="form-success__title" id="formSuccessTitle">SMS preference received.</div>
         <p class="form-success__body" id="formSuccessBody">Thanks. Your SMS preference has been recorded.</p>
       </div>
@@ -330,6 +334,7 @@
   var form     = document.getElementById('smsForm');
   var success  = document.getElementById('formSuccess');
   var errorMsg = document.getElementById('formError');
+  var successIcon = document.getElementById('formSuccessIcon');
   var successTitle = document.getElementById('formSuccessTitle');
   var successBody  = document.getElementById('formSuccessBody');
 
@@ -359,9 +364,13 @@
       // Simulate submission (no backend needed)
       setTimeout(function(){
         if(consent){
+          success.classList.remove('form-success--declined');
+          successIcon.innerHTML = '&#10003;';
           successTitle.textContent = "You're opted in.";
           successBody.textContent = "Thanks. You have been opted into SMS appointment reminders at the mobile number you provided.";
         } else {
+          success.classList.add('form-success--declined');
+          successIcon.innerHTML = '&times;';
           successTitle.textContent = "You are not opted in.";
           successBody.textContent = "Because you did not check the SMS consent box, you have not been opted into SMS messages. No SMS reminders will be sent to the mobile number you provided.";
         }
