@@ -267,22 +267,22 @@
 
         <div class="consent-field">
           <div class="consent-row">
-            <input class="consent-checkbox" type="checkbox" id="sms_consent" name="consent" required>
+            <input class="consent-checkbox" type="checkbox" id="sms_consent" name="consent">
             <label class="consent-text" for="sms_consent">I agree to receive SMS appointment reminders from Agentilis. Message and data rates may apply. Message frequency varies. Reply STOP to unsubscribe at any time. Reply HELP for help.</label>
           </div>
         </div>
 
         <div class="form-submit">
-          <button type="submit" class="btn-primary">Sign Up for Reminders</button>
+          <button type="submit" class="btn-primary">Submit SMS Preference</button>
         </div>
 
-        <div class="form-error" id="formError">Please complete all fields and check the consent box.</div>
+        <div class="form-error" id="formError">Please enter your full name and a valid mobile phone number.</div>
       </form>
 
-      <div class="form-success" id="formSuccess">
+      <div class="form-success" id="formSuccess" aria-live="polite">
         <div class="form-success__icon">&#10003;</div>
-        <div class="form-success__title">You're signed up.</div>
-        <p class="form-success__body">Thanks &mdash; check your phone for a confirmation text. You'll receive appointment reminders at the number you provided.</p>
+        <div class="form-success__title" id="formSuccessTitle">SMS preference received.</div>
+        <p class="form-success__body" id="formSuccessBody">Thanks. Your SMS preference has been recorded.</p>
       </div>
     </div>
 
@@ -330,6 +330,13 @@
   var form     = document.getElementById('smsForm');
   var success  = document.getElementById('formSuccess');
   var errorMsg = document.getElementById('formError');
+  var successTitle = document.getElementById('formSuccessTitle');
+  var successBody  = document.getElementById('formSuccessBody');
+
+  function isValidPhone(value){
+    var digits = value.replace(/\D/g, '');
+    return digits.length === 10 || (digits.length === 11 && digits.charAt(0) === '1');
+  }
 
   if(form){
     form.addEventListener('submit', function(e){
@@ -339,7 +346,7 @@
       var phone   = document.getElementById('sms_phone').value.trim();
       var consent = document.getElementById('sms_consent').checked;
 
-      if(!name || !phone || !consent){
+      if(!name || !isValidPhone(phone)){
         errorMsg.style.display = 'block';
         return;
       }
@@ -351,6 +358,13 @@
 
       // Simulate submission (no backend needed)
       setTimeout(function(){
+        if(consent){
+          successTitle.textContent = "You're opted in.";
+          successBody.textContent = "Thanks. You have been opted into SMS appointment reminders at the mobile number you provided.";
+        } else {
+          successTitle.textContent = "You are not opted in.";
+          successBody.textContent = "Because you did not check the SMS consent box, you have not been opted into SMS messages. No SMS reminders will be sent to the mobile number you provided.";
+        }
         form.style.display = 'none';
         success.style.display = 'block';
       }, 800);
