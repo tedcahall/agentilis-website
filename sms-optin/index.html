@@ -373,8 +373,31 @@
       var submitBtn = form.querySelector('button[type="submit"]');
       if(submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
 
-      grecaptcha.enterprise.ready(function(){
-        grecaptcha.enterprise.execute('6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081', {action: 'sms_optin'})
+      var recaptchaPromise = new Promise(function(resolve, reject){
+        var timeoutId = window.setTimeout(function(){
+          reject(new Error('reCAPTCHA timed out'));
+        }, 15000);
+
+        try {
+          grecaptcha.enterprise.ready(function(){
+            Promise.resolve(grecaptcha.enterprise.execute(
+              '6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081',
+              {action: 'sms_optin'}
+            )).then(function(token){
+              window.clearTimeout(timeoutId);
+              resolve(token);
+            }, function(error){
+              window.clearTimeout(timeoutId);
+              reject(error);
+            });
+          });
+        } catch(error) {
+          window.clearTimeout(timeoutId);
+          reject(error);
+        }
+      });
+
+      recaptchaPromise
         .then(function(token){
           var payload = {name: name, email: email, phone: phone, optin: consent, recaptchaToken: token};
           var productionHosts = [
@@ -413,14 +436,14 @@
           form.style.display = 'none';
           success.style.display = 'block';
         })
-        .catch(function(){
+        .catch(function(error){
+          console.error('SMS preference submission failed:', error);
           errorMsg.style.display = 'block';
           errorMsg.textContent = 'Something went wrong on our end. Please try again in a moment.';
         })
         .finally(function(){
           if(submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit SMS Preference'; }
         });
-      });
     });
   }
 })();
