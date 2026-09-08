@@ -407,7 +407,7 @@
           ];
           var endpoint = productionHosts.includes(window.location.hostname)
             ? 'https://marrspoints.com/racing/cache/smsoptin.jsp'
-            : 'http://nuc2.trchq.net:8080/racing/cache/smsoptin.jsp';
+            : 'http://' + window.location.hostname + ':8080/racing/cache/smsoptin.jsp';
 
           return fetch(endpoint, {
             method: 'POST',
