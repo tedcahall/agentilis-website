@@ -8,7 +8,7 @@ The official website for **[Agentilis](https://agentilis.ai)** — a business op
 
 ## What This Is
 
-This repository contains the complete front-end source for agentilis.ai — every page, every stylesheet, every line of markup. It is a static HTML + CSS + JavaScript site with no build step, no framework, and no dependencies beyond Google Fonts. It loads fast, renders beautifully, and works on every device.
+This repository contains the complete front-end source for agentilis.ai — every page, every stylesheet, every line of markup. It is a static HTML + CSS + JavaScript site with no build step and no framework. Most pages depend only on Google Fonts; the Contact and SMS Opt-In forms also use Google reCAPTCHA Enterprise and the marrspoints.com `/racing/cache/*` API. It loads fast, renders beautifully, and works on every device.
 
 It was designed and built entirely by **Vignelli** — the Agentilis creative and design agent — under the direction of Ted Cahall and with copy written by **Ogilvy**, the Agentilis marketing agent. No human wrote a line of production code. That is the point.
 
@@ -66,6 +66,14 @@ Ted Cahall's story. Four decades at the intersection of technology and operation
 ### 📖 Story — `/story/`
 Eight chapters on how Agentilis was built — agent by agent, problem by problem, proof point by proof point. It starts with Max scheduling meetings at 5AM and ends with human partners joining a team that was already working. The story of a company that built its own proof of concept before it had its first client.
 
+### ✉️ Contact — `/contact/`
+A public contact form that collects a name, email address, and message. The browser obtains a Google reCAPTCHA Enterprise token and posts JSON to the Java backend, which validates the request and sends an internal notification through SendGrid.
+
+### 📱 SMS Opt-In — `/sms-optin/`
+An SMS preference form that collects a name, email address, phone number, and explicit Yes/No consent choice. The browser posts the preference to the Java backend, which validates it and sends a confirmation email to the submitted address through SendGrid. It does not send an SMS; SMS delivery remains disabled until the application is approved.
+
+Additional pages include `/agents/`, `/articles/`, `/privacy-policy/`, and `/terms-conditions/`.
+
 ---
 
 ## File Structure
@@ -90,6 +98,18 @@ agentilis-website/
 │
 ├── story/
 │   └── index.html          # Story — 8-chapter origin narrative
+├── contact/
+│   └── index.html          # Contact form — reCAPTCHA + email notification
+├── sms-optin/
+│   └── index.html          # SMS preference form — email confirmation
+├── agents/
+│   └── index.html          # Agent profiles
+├── articles/
+│   └── index.html          # Articles and social posts
+├── privacy-policy/
+│   └── index.html          # Privacy policy
+├── terms-conditions/
+│   └── index.html          # Terms and conditions
 │
 └── ted-cahall.jpg          # Founder photo
 ```
@@ -105,12 +125,33 @@ This is intentional. No Webpack, no Vite, no npm, no node_modules. Every file is
 All styles live in `site.css`. Design tokens are defined as CSS custom properties on `:root` — colors, spacing units, border radii. Components are organized with clearly labeled sections. Responsive overrides live at the bottom in a single `@media` block.
 
 ### JavaScript
-Minimal and purposeful. One small inline script per page handles the mobile navigation toggle. No libraries. No frameworks. No third-party scripts of any kind.
+Minimal and purposeful. Inline scripts handle navigation and form behavior; there are no JavaScript frameworks. The Contact and SMS Opt-In pages load Google reCAPTCHA Enterprise as their only form-related third-party browser script.
+
+### Contact and SMS Preference APIs
+
+Both public forms submit JSON from `agentilis.ai` to JSP endpoints in the separate `tedcahall/racing` application:
+
+| Form | Production endpoint | reCAPTCHA action | Email result |
+|------|---------------------|------------------|--------------|
+| Contact | `/racing/cache/emailtest.jsp` | `contact` | Internal contact notification |
+| SMS Opt-In | `/racing/cache/smsoptin.jsp` | `sms_optin` | Confirmation to the submitted email address |
+
+When the page is served from a recognized Agentilis production host, the JavaScript uses the production endpoint at `https://marrspoints.com`. Preview and development hosts use the nuc2 test endpoint.
+
+Requests use `Content-Type: application/json`, so browsers perform a CORS preflight. The racing application's `CorsFilter` handles `OPTIONS` and CORS headers for all `/cache/*` endpoints; no page-specific CORS code is needed in this repository. CORS headers must be emitted by only one layer—do not duplicate them in Apache or CloudFront.
+
+### Google reCAPTCHA Enterprise
+
+The Contact and SMS Opt-In pages use the same public reCAPTCHA Enterprise site key. Each submission calls `grecaptcha.enterprise.execute(...)` with its form-specific action and sends the resulting short-lived token as `recaptchaToken` in the JSON request. The Java backend performs the authoritative assessment and verifies the expected action. The public site key belongs in the HTML; the server-side Google API key must remain in protected backend configuration and must never be committed here.
+
+### SendGrid
+
+SendGrid is called only by the Java backend; the browser never receives SendGrid credentials. The Contact form sends an internal notification, while SMS Opt-In sends one of two email-confirmation bodies according to the submitted boolean preference. SMTP/API credentials and message implementation live in the racing application, not this repository.
 
 ### Performance
 - No render-blocking resources beyond Google Fonts (loaded with `display=swap`)
-- No JavaScript on initial render
-- Images: single JPEG for the founder photo
+- Minimal JavaScript on initial render; reCAPTCHA Enterprise loads only on the two public forms
+- Optimized static image assets
 - Target: Lighthouse 90+ across all four categories
 
 ### Hosting
@@ -124,6 +165,7 @@ Production target: **AWS S3 + CloudFront**. Ken (the Agentilis systems administr
 |-----|------|--------------------|
 | **Ogilvy** | Marketing Agent | Brand strategy, color system, all copy, service definitions |
 | **Vignelli** | Creative & Design Agent | Design system, all HTML + CSS, layout, typography, mobile |
+| **James** | Software Engineering Agent | Form/API integration, validation, CORS contract, Java backend |
 | **Ted Cahall** | Founder | Direction, decisions, approvals |
 
 Ogilvy is named after David Ogilvy, the Father of Advertising.
@@ -144,7 +186,12 @@ Vignelli is named after Massimo Vignelli, Italian master designer — who design
 | Team | ✅ Live |
 | Founder | ✅ Live |
 | Story | ✅ Live |
-| Contact | 🔲 Planned |
+| Contact | ✅ Live |
+| SMS Opt-In | 🟡 Email integration in progress |
+| Agents | ✅ Live |
+| Articles | ✅ Live |
+| Privacy Policy | ✅ Live |
+| Terms & Conditions | ✅ Live |
 | AI Brief / Subscribe | 🔲 Planned |
 
 ---
