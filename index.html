@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agentilis | Characterized by Action</title>
+  <title>Agentilis | Executive AI Advisory</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/site.css">
   <!-- Google tag (gtag.js) -->
@@ -14,6 +14,57 @@
     gtag('js', new Date());
     gtag('config', 'G-JR2JH7LK2F');
   </script>
+  <style>
+    /* Home page styles */
+    .alt-hero__headline { font-size: clamp(44px, 5.6vw, 68px); line-height: 1.05; max-width: 900px; margin-bottom: 28px; }
+    .alt-hero .hero__sub { max-width: 720px; opacity: 0.8; }
+    .alt-founder { display: flex; align-items: center; gap: 22px; margin-top: 36px; max-width: 760px; }
+    .alt-founder img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 2px solid #c8ddd8; flex-shrink: 0; }
+    .alt-founder p { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; color: var(--bg); opacity: 0.85; }
+    .alt-founder strong { color: var(--bg); font-weight: 600; }
+    .alt-ctas { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; }
+    .btn-ghost { display: inline-flex; align-items: center; padding: 14px 34px; border: 1px solid #c8ddd8; color: var(--bg); font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-radius: var(--radius); transition: background 0.18s; }
+    .btn-ghost:hover { background: color-mix(in srgb, var(--bg) 10%, transparent); }
+
+    .alt-help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+    .alt-help-col { background: var(--bg); padding: 24px 24px 8px; }
+    .alt-help-col__group { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; line-height: 1.1; color: var(--primary); margin-bottom: 4px; }
+    .alt-help-col__tag { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
+    .alt-service { display: block; border-top: 1px solid var(--rule); padding: 16px 0; transition: opacity 0.15s; }
+    .alt-service:hover { opacity: 0.65; }
+    .alt-service__name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .alt-service__name span { color: var(--accent); font-size: 16px; margin-left: 6px; }
+    .alt-service__desc { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.65; color: var(--text); opacity: 0.75; }
+
+    .alt-body { max-width: 760px; }
+    .alt-body p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.8; color: var(--text); opacity: 0.78; margin-bottom: 20px; }
+    .alt-body p:last-child { margin-bottom: 0; }
+    .alt-body__sub { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--primary); margin: 32px 0 12px; }
+
+    .alt-why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    .alt-why h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+    .alt-why p { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.75; color: var(--text); opacity: 0.78; }
+
+    .alt-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .alt-card { background: var(--card-bg); border: 1px solid var(--rule); padding: 28px; display: flex; flex-direction: column; }
+    .alt-card__meta { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .alt-card__title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; line-height: 1.3; color: var(--primary); margin-bottom: 12px; }
+    .alt-card__body { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.65; color: var(--text); opacity: 0.75; flex-grow: 1; }
+    .alt-card__link { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--primary); margin-top: 20px; border-bottom: 1px solid var(--accent); align-self: flex-start; padding-bottom: 2px; }
+    .alt-more { margin-top: 28px; }
+
+    @media (min-width: 961px) {
+      .alt-wide { max-width: 1400px; }
+    }
+    @media (max-width: 960px) {
+      .alt-help-grid, .alt-cards { grid-template-columns: 1fr; }
+      .alt-why-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 640px) {
+      .alt-founder { align-items: flex-start; }
+      .alt-founder img { width: 64px; height: 64px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -35,81 +86,189 @@
   </div>
 </nav>
 
-<section class="hero">
+<!-- 1. OPENING -->
+<section class="hero alt-hero">
   <div class="container">
-    <div class="hero__eyebrow">Latin: <em>agere &middot; ilis</em> &middot; characterized by action</div>
-    <h1 class="hero__headline">AI Agents that grow your business.</h1>
-    <p class="hero__sub">Business Optimization and Revenue Growth through Agentic AI. Built for operators by operators.</p>
-    <p class="hero__qualifier">We work with mid-market through enterprise organizations, from first AI pilot to full operational deployment.</p>
+    <div class="hero__eyebrow">Executive AI Advisory &middot; AI Transformation &middot; Agentic and Private AI</div>
+    <h1 class="hero__headline alt-hero__headline">AI advisory for executives, from operators who build it.</h1>
+    <p class="hero__sub">Agentilis helps CEOs and senior leaders decide where AI belongs in their business, and then helps them make it work. Our own company runs on AI agents in production every day, so our counsel comes from practice rather than theory.</p>
+    <div class="alt-founder">
+      <img src="/ted-cahall.jpg" alt="Ted Cahall">
+      <p>Founded by <strong>Ted Cahall</strong>, with 20+ years as a C-level executive, including Corporate Vice President at Microsoft, COO at Digital River, and CTO at CNET Networks.</p>
+    </div>
+    <div class="alt-ctas">
+      <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
+      <a href="/articles/" class="btn-ghost">Read Ted's AI Articles</a>
+    </div>
   </div>
 </section>
 
+<!-- 2. CREDIBILITY STRIP -->
 <div class="proof-row">
   <div class="proof-item">
-    <div class="proof-item__num">4×</div>
-    <div class="proof-item__label">Founder, 4× COO</div>
+    <div class="proof-item__num">20+</div>
+    <div class="proof-item__label">Years as a C-level executive</div>
   </div>
   <div class="proof-item">
     <div class="proof-item__num">$1.1B</div>
-    <div class="proof-item__label">Founder, 2× P&amp;L</div>
+    <div class="proof-item__label">P&amp;L responsibility</div>
   </div>
   <div class="proof-item">
-    <div class="proof-item__num">12</div>
-    <div class="proof-item__label">AI agents, running today</div>
+    <div class="proof-item__num">30+</div>
+    <div class="proof-item__label">AI agents in production</div>
   </div>
   <div class="proof-item">
-    <div class="proof-item__num">24/7</div>
-    <div class="proof-item__label">Autonomous, always on</div>
+    <div class="proof-item__num">70%</div>
+    <div class="proof-item__label">Reduction in AI API costs by moving workloads to open-source models</div>
   </div>
 </div>
 
+<!-- 3. HOW WE HELP -->
+<section class="section">
+  <div class="container alt-wide">
+    <div class="section-head">
+      <div class="section__label">How We Help</div>
+      <h2 class="section__title">Three ways to work together.</h2>
+    </div>
+    <div class="alt-help-grid">
+      <div class="alt-help-col">
+        <div class="alt-help-col__group">Advise</div>
+        <p class="alt-help-col__tag">Build your personal command of AI.</p>
+        <a href="/services/#executive-ai-advisory" class="alt-service">
+          <div class="alt-service__name">Executive AI Advisory<span>&rarr;</span></div>
+          <p class="alt-service__desc">Scheduled one-on-one sessions, weekly, biweekly, or monthly, that build your personal command of AI.</p>
+        </a>
+        <a href="/services/#ai-on-call" class="alt-service">
+          <div class="alt-service__name">AI On Call<span>&rarr;</span></div>
+          <p class="alt-service__desc">Direct access to a team that works in AI every day, for urgent questions and special projects.</p>
+        </a>
+      </div>
+      <div class="alt-help-col">
+        <div class="alt-help-col__group">Transform</div>
+        <p class="alt-help-col__tag">Move your organization, not just your tools.</p>
+        <a href="/services/#ai-transformation" class="alt-service">
+          <div class="alt-service__name">AI Transformation<span>&rarr;</span></div>
+          <p class="alt-service__desc">Leading your organization, people, and operating model through the shift to AI.</p>
+        </a>
+        <a href="/services/#ai-process-re-engineering" class="alt-service">
+          <div class="alt-service__name">AI Process Re-Engineering<span>&rarr;</span></div>
+          <p class="alt-service__desc">Redesigning specific workflows end to end so AI removes cost and delay.</p>
+        </a>
+      </div>
+      <div class="alt-help-col">
+        <div class="alt-help-col__group">Build</div>
+        <p class="alt-help-col__tag">Put working AI into production.</p>
+        <a href="/services/#agentic-ai-projects" class="alt-service">
+          <div class="alt-service__name">Agentic AI Projects<span>&rarr;</span></div>
+          <p class="alt-service__desc">Design and delivery of agent solutions on OpenClaw, Hermes Agent, and other frameworks.</p>
+        </a>
+        <a href="/services/#private-and-local-ai" class="alt-service">
+          <div class="alt-service__name">Private and Local AI<span>&rarr;</span></div>
+          <p class="alt-service__desc">Hardware selection, pricing, and setup of AI models that run on your servers. Sensitive data stays in-house.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PROOF -->
 <section class="section">
   <div class="container">
     <div class="section-head">
       <div class="section__label">Proof Before Pitch</div>
-      <h2 class="section__title">A working system, all run by AI Agents right now.</h2>
+      <h2 class="section__title">We run our own business on AI.</h2>
     </div>
-    <div style="max-width:760px">
-      <p style="font-family:'Inter',sans-serif;font-size:16px;line-height:1.8;color:var(--text);opacity:0.75;margin-bottom:20px;">Before Agentilis took on its first client, they automated a real business back-office process for the Washington DC Region of the SCCA.</p>
-      <p style="font-family:'Inter',sans-serif;font-size:16px;line-height:1.8;color:var(--text);opacity:0.75;margin-bottom:20px;">The service, <a href="https://marrspoints.com" target="_blank" rel="noopener" class="inline-link">marrspoints.com</a>, is an Auto Racing Points Scoring system running in the Cloud. The system has been running for over 11 years continuously and is now supported and operated entirely by the Agentilis agent team. James refactored and upgraded the two Java applications and added several new features. Watts tested all those changes to ensure quality. Ken keeps it running in the test environment as well as AWS. But most importantly for complex, real-time business operations, Inman manages the live feed in the back-office tool on race weekends.</p>
-      <p style="font-family:'Inter',sans-serif;font-size:16px;line-height:1.8;color:var(--text);opacity:0.75;margin-bottom:20px;"><strong>Not a demo. Not a proof of concept. A working system, all run by AI Agents right now.</strong></p>
-      <p style="font-family:'Inter',sans-serif;font-size:16px;line-height:1.8;color:var(--text);opacity:0.75;">That is what we build for our clients.</p>
+    <div class="alt-body">
+      <p>AI agents handle our accounts receivable, accounts payable, scheduling, engineering, and cloud operations on AWS and GCP. Every day, in production. We helped our clients run on agents too.</p>
+      <h3 class="alt-body__sub">Client Showcase: Washington DC Region of the SCCA</h3>
+      <p>Our first client was the Washington DC Region of the SCCA. Their points scoring system, <a href="https://marrspoints.com" target="_blank" rel="noopener" class="inline-link">marrspoints.com</a>, has run in the cloud for over 11 years. Our agent team took it over end to end. They upgraded the code, test every change, run the infrastructure on AWS, and manage the live results feed on race weekends.</p>
+      <p><strong>Not a demo. A client system, run by AI agents in production right now.</strong></p>
+      <p>We bring that operating experience to every engagement.</p>
     </div>
   </div>
 </section>
 
-<div class="container">
-  <div class="home-teaser">
-    <div class="home-teaser__grid">
-      <div class="home-teaser__left">
-        <div class="section__label">Agentic</div>
-        <h2 class="section__title">Agentic AI Business Optimization</h2>
-        <p class="section__intro">We identify where AI creates real leverage, and build the systems that realize it.</p>
+<!-- 5. WHY AGENTILIS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section__label">Why Agentilis</div>
+      <h2 class="section__title">Operators who still build.</h2>
+    </div>
+    <div class="alt-why-grid">
+      <div class="alt-why">
+        <h3>Deep operating experience</h3>
+        <p>We have run companies, managed $1B+ P&amp;Ls, and led business operations, product &amp; technology at Microsoft, Digital River, AOL, and CNET Networks. We know what it takes to change how a business actually works, and what a board expects to see when it does.</p>
       </div>
-      <ul class="home-teaser__list">
-        <li>
-          <span class="teaser-service-name">AI Strategy &amp; Readiness</span>
-          <span class="teaser-service-desc">Find the leverage. Avoid the noise.</span>
-        </li>
-        <li>
-          <span class="teaser-service-name">Intelligent Automation</span>
-          <span class="teaser-service-desc">Leverage Agents to elevate your staff expertise.</span>
-        </li>
-        <li>
-          <span class="teaser-service-name">Agentic Infrastructure</span>
-          <span class="teaser-service-desc">From first pilot to full deployment.</span>
-        </li>
-      </ul>
+      <div class="alt-why">
+        <h3>Practical technical depth</h3>
+        <p>We build and run AI systems ourselves, every day. Agents in production, open-source and frontier models, private hardware on our own racks. Our advice comes from what we shipped last week, not from a slide deck.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
+<!-- 6. SELECTED WORK -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section__label">Selected Work</div>
+      <h2 class="section__title">Results that matter to the business.</h2>
+    </div>
+    <div class="alt-cards">
+      <div class="alt-card">
+        <div class="alt-card__meta">Advise</div>
+        <div class="alt-card__title">Executive Advisory Calls</div>
+        <p class="alt-card__body">Calls with executives to advise on their AI strategy and implementation including a real estate hardware &amp; software firm and a national hospitality company.</p>
+      </div>
+      <div class="alt-card">
+        <div class="alt-card__meta">Transform</div>
+        <div class="alt-card__title">DC Region SCCA Automation</div>
+        <p class="alt-card__body">Used agentic coding to refactor points scoring solution and add multiple features. Automated race weekend processing of live results through agentic workflows.</p>
+      </div>
+      <div class="alt-card">
+        <div class="alt-card__meta">Build</div>
+        <div class="alt-card__title">Built AgentREboost</div>
+        <p class="alt-card__body">Used agentic product management, engineering, marketing, and legal workflows to develop the real estate lead management platform that created <a href="https://agentreboost.com" target="_blank" rel="noopener" class="inline-link">AgentREboost.com</a> in record time.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- 7. EXECUTIVE INSIGHTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section__label">Executive Insights</div>
+      <h2 class="section__title">Ted's thinking on AI.</h2>
+    </div>
+    <div class="alt-cards">
+      <div class="alt-card">
+        <div class="alt-card__meta">LinkedIn Article &middot; Apr 13, 2026</div>
+        <div class="alt-card__title">Open Source vs Frontier LLMs: A Framework for Cutting Agentic AI Costs Without Cutting Corners</div>
+        <a href="https://www.linkedin.com/pulse/open-source-vs-frontier-llms-framework-cutting-agentic-ted-cahall-bsrne/" target="_blank" rel="noopener" class="alt-card__link">Read the article</a>
+      </div>
+      <div class="alt-card">
+        <div class="alt-card__meta">LinkedIn Article &middot; Apr 15, 2026</div>
+        <div class="alt-card__title">The Benchmark Minefield: What AI Evaluations Actually Measure and Why Most Reported Scores Deserve Skepticism</div>
+        <a href="https://www.linkedin.com/pulse/benchmark-minefield-what-ai-evaluations-actually-measure-ted-cahall-ivwye/" target="_blank" rel="noopener" class="alt-card__link">Read the article</a>
+      </div>
+      <div class="alt-card">
+        <div class="alt-card__meta">LinkedIn Article &middot; Apr 9, 2026</div>
+        <div class="alt-card__title">Web 4.0: A Guide to the Coming AI Bust</div>
+        <a href="https://www.linkedin.com/pulse/web-40-guide-coming-ai-bust-ted-cahall-rjpke/" target="_blank" rel="noopener" class="alt-card__link">Read the article</a>
+      </div>
+    </div>
+    <div class="alt-more"><a href="/articles/" class="btn-ghost-link">All articles &rarr;</a></div>
+  </div>
+</section>
+
+<!-- 8. CLOSING INVITATION -->
 <div class="container">
   <div class="bottom-cta">
-    <h2 class="bottom-cta__title">Curious what this looks like for your business?</h2>
-    <p class="bottom-cta__sub">It starts with a conversation.</p>
-    <a href="/contact/" class="btn-primary">Set Up A Free Intro Call</a>
+    <h2 class="bottom-cta__title">Bring us a question, a project, or a business challenge.</h2>
+    <p class="bottom-cta__sub">Thirty minutes with Ted. No pitch deck. Just a straight conversation about where AI fits in your business.</p>
+    <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
   </div>
 </div>
 

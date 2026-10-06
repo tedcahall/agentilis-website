@@ -6,107 +6,6 @@
   <title>Agentilis | Services</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/site.css">
-  <style>
-    /* ── SERVICES PAGE ── */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-      border-radius: var(--radius);
-      overflow: hidden;
-      margin-bottom: 0;
-    }
-
-    .service-item {
-      background: var(--bg);
-      padding: 44px 40px 48px;
-      transition: background 0.15s;
-    }
-
-    .service-item:hover {
-      background: var(--card-bg);
-    }
-
-    /* Full-width last item if odd count: 7 cards, last one spans */
-    .service-item:last-child:nth-child(odd) {
-      grid-column: span 2;
-    }
-
-    .service-item__num {
-      font-family: 'Playfair Display', serif;
-      font-size: 12px;
-      font-weight: 400;
-      font-style: italic;
-      color: var(--accent);
-      letter-spacing: 0.08em;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .service-item__title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--primary);
-      line-height: 1.2;
-      margin-bottom: 20px;
-      letter-spacing: -0.01em;
-    }
-
-    .service-item__body {
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.75;
-      color: var(--text);
-      opacity: 0.72;
-      margin-bottom: 20px;
-    }
-
-    .service-item__body p + p {
-      margin-top: 12px;
-    }
-
-    .service-item__best {
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.6;
-      color: var(--text);
-      opacity: 0.85;
-      border-top: 1px solid var(--rule);
-      padding-top: 16px;
-    }
-
-    .service-item__best strong {
-      color: var(--accent);
-      font-weight: 700;
-      font-style: normal;
-      letter-spacing: 0.01em;
-    }
-
-    .services-intro {
-      max-width: 680px;
-      margin-bottom: 56px;
-    }
-
-    .services-intro p {
-      font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.8;
-      color: var(--text);
-      opacity: 0.72;
-    }
-
-    @media (max-width: 900px) {
-      .services-grid { grid-template-columns: 1fr; }
-      .service-item:last-child:nth-child(odd) { grid-column: span 1; }
-      .service-item { padding: 36px 28px 40px; }
-    }
-  </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR2JH7LK2F"></script>
   <script>
@@ -115,6 +14,52 @@
     gtag('js', new Date());
     gtag('config', 'G-JR2JH7LK2F');
   </script>
+  <style>
+    /* Services page styles */
+    .alt-wide { max-width: 1400px; }
+    .page-header__sub { max-width: 720px; }
+
+    /* Jump path: Advise > Transform > Build */
+    .svc-path { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); border-bottom: 1px solid var(--rule); }
+    .svc-path a { background: var(--bg); padding: 22px 28px; display: block; transition: background 0.15s; }
+    .svc-path a:hover { background: var(--card-bg); }
+    .svc-path__step { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .svc-path__name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--primary); line-height: 1.1; }
+    .svc-path__name span { color: var(--accent); font-size: 18px; margin-left: 6px; }
+    .svc-path__desc { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+
+    .svc-intro { max-width: 760px; }
+    .svc-intro p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.8; color: var(--text); opacity: 0.75; margin-bottom: 16px; }
+
+    /* Group sections */
+    .svc-group { scroll-margin-top: 110px; }
+    .svc-group__head { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: end; margin-bottom: 32px; }
+    .svc-group__name { font-family: 'Playfair Display', serif; font-size: clamp(48px, 6vw, 72px); font-weight: 700; line-height: 1; letter-spacing: -0.02em; color: var(--primary); }
+    .svc-group__lede { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; font-style: italic; color: var(--primary); margin-bottom: 10px; line-height: 1.35; }
+    .svc-group__intro { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.75; color: var(--text); opacity: 0.75; }
+
+    .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+    .svc { background: var(--bg); padding: 36px 36px 32px; scroll-margin-top: 110px; display: flex; flex-direction: column; }
+    .svc__title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.15; margin-bottom: 14px; }
+    .svc__hook { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.55; color: var(--primary); margin-bottom: 16px; }
+    .svc__body p { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.75; color: var(--text); opacity: 0.75; margin-bottom: 14px; }
+    .svc__label { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin: 8px 0 4px; }
+    .svc__list { list-style: none; margin-bottom: 20px; }
+    .svc__list li { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text); opacity: 0.75; padding: 8px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 12px; }
+    .svc__list li::before { content: ''; width: 5px; height: 5px; background: var(--accent); flex-shrink: 0; margin-top: 9px; }
+    .svc__best { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text); opacity: 0.85; margin-top: auto; padding-top: 4px; }
+    .svc__best strong { color: var(--accent); font-weight: 700; }
+
+    .svc-proof { margin-top: 20px; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--accent); font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.65; color: var(--text); }
+    .svc-proof strong { color: var(--primary); }
+
+    @media (max-width: 960px) {
+      .svc-path { grid-template-columns: 1fr; }
+      .svc-group__head { grid-template-columns: 1fr; gap: 12px; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .svc { padding: 28px 24px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -140,102 +85,182 @@
   <div class="container">
     <div class="page-header">
       <div class="page-header__eyebrow">Services</div>
-      <h1 class="page-header__title">Intelligent Business Re-Engineering, Powered by AI</h1>
-      <p class="page-header__sub">You built a great operation. We help you grow your margins with AI. We work with mid-market through enterprise organizations, from first pilot to full deployment.</p>
+      <h1 class="page-header__title">Advise. Transform. Build.</h1>
+      <p class="page-header__sub">Three ways to work together. Start with advice, change how your organization works, or put agents into production. Most clients start with a conversation and end up doing all three.</p>
     </div>
   </div>
 </div>
 
-<section class="section">
+<nav class="svc-path" aria-label="Service groups">
+  <a href="#advise">
+    <div class="svc-path__step">01</div>
+    <div class="svc-path__name">Advise<span>&darr;</span></div>
+    <div class="svc-path__desc">Build your personal command of AI.</div>
+  </a>
+  <a href="#transform">
+    <div class="svc-path__step">02</div>
+    <div class="svc-path__name">Transform<span>&darr;</span></div>
+    <div class="svc-path__desc">Move your organization, not just your tools.</div>
+  </a>
+  <a href="#build">
+    <div class="svc-path__step">03</div>
+    <div class="svc-path__name">Build<span>&darr;</span></div>
+    <div class="svc-path__desc">Put working AI into production.</div>
+  </a>
+</nav>
+
+<section class="section" style="border-top:none">
   <div class="container">
-    <div class="services-intro">
+    <div class="svc-intro">
       <p>Every engagement starts with the same question: where is your business losing time, money, or competitive ground, and what would it look like if AI handled that instead?</p>
-      <p>We have run operations at scale. We know where automation creates leverage and where it creates noise. We bring that judgment to every engagement.</p>
+      <p>We have run operations at scale, and our own company runs on AI agents every day. We know where AI creates leverage and where it creates noise. We bring that judgment to every engagement.</p>
     </div>
+  </div>
+</section>
 
-    <div class="services-grid">
-
-      <div class="service-item">
-        <h2 class="service-item__title">AI Developer Strategy and Token Budget Planning</h2>
-        <div class="service-item__body">
-          <p>Due to AI, your engineers are now one of the highest-leverage employees in your organization. Are you equipping them to perform at their highest levels of ROI?</p>
-          <p>We help companies define their AI API strategy for engineering teams: benchmarking token spend, building the cost-benefit model, and creating the governance framework before your board asks the question.</p>
-        </div>
-        <p class="service-item__best"><strong>Best for:</strong> CEOs, CTOs and CFOs who need to get ahead of AI infrastructure spend decisions before the next budget planning cycle.</p>
+<!-- ADVISE -->
+<section class="section svc-group" id="advise">
+  <div class="container alt-wide">
+    <div class="svc-group__head">
+      <div class="svc-group__name">Advise</div>
+      <div>
+        <p class="svc-group__lede">The most important AI decisions your company will make will be made in the boardroom, not the server room.</p>
+        <p class="svc-group__intro">We give senior leaders a trusted, experienced voice on AI with no hype and no jargon. Just straight answers from people who build and run it.</p>
       </div>
-
-      <div class="service-item">
-        <h2 class="service-item__title">CEO and Executive AI Advisory</h2>
-        <div class="service-item__body">
-          <p>The most important AI decisions your company will make will be made in the boardroom, not the server room.</p>
-          <p>We work directly with CEOs and senior executives to develop a clear-eyed AI strategy: what to pursue, what to ignore, and how to lead an organization through the transition. No hype. No jargon.</p>
-        </div>
-        <p class="service-item__best"><strong>Best for:</strong> C-suite leaders who need a trusted, experienced voice in the room before committing to an AI direction.</p>
-      </div>
-
-      <div class="service-item">
-        <h2 class="service-item__title">Corporate and Enterprise AI Readiness Assessment</h2>
-        <div class="service-item__body">
-          <p>Before you automate, you need to know what you are working with.</p>
-          <p>Our AI Readiness Assessment gives you a complete picture of where your organization stands: your data infrastructure, your processes, your people, and the specific opportunities where AI can deliver the fastest and highest-value results. You leave with a prioritized roadmap, not a theoretical framework.</p>
-        </div>
-        <p class="service-item__best"><strong>Best for:</strong> Organizations early in their AI journey who want to move with confidence, not guesswork.</p>
-      </div>
-
-      <div class="service-item">
-        <h2 class="service-item__title">Intelligent Enterprise Re-Engineering Discovery</h2>
-        <div class="service-item__body">
-          <p>Most companies do not need more software. They need to rethink how work gets done, and then build the AI systems that do it better.</p>
-          <p>Our Re-Engineering Discovery engagement maps your critical workflows end to end, identifies the processes that are candidates for agentic automation, and produces a concrete blueprint for implementation. This is where strategy becomes architecture.</p>
-        </div>
-        <p class="service-item__best"><strong>Best for:</strong> Mid-market and enterprise organizations ready to go beyond pilots and make AI structural.</p>
-      </div>
-
-      <div class="service-item">
-        <h2 class="service-item__title">Departmental and Business Unit Optimization</h2>
-        <div class="service-item__body">
-          <p>AI transformation does not have to happen company-wide to deliver company-wide results.</p>
-          <p>We work at the department or business unit level: identifying high-friction, high-volume processes and building the agents that eliminate them. Sales ops. Finance. HR. Customer success. Legal review. Wherever the bottleneck is, we find it and fix it.</p>
-        </div>
-        <p class="service-item__best"><strong>Best for:</strong> Companies that want to prove the model in one area before scaling across the organization.</p>
-      </div>
-
-      <div class="service-item">
-        <h2 class="service-item__title">Front Office AI Automation</h2>
-        <div class="service-item__body">
-          <p>Your front office is your first impression. It should never sleep, never forget, and never drop a lead.</p>
-          <p>We build AI agents that handle customer inquiry, lead qualification, appointment scheduling, follow-up sequences, and more: fully automated, always on, and indistinguishable from a great human team. The difference is they work around the clock and scale without headcount.</p>
-        </div>
-        <p class="service-item__best"><strong>Best for:</strong> Sales-led organizations and customer-facing teams looking to increase speed-to-lead and conversion without hiring.</p>
-      </div>
-
-      <div class="service-item">
-        <h2 class="service-item__title">Back-Office AI Optimization</h2>
-        <div class="service-item__body">
-          <p>The back office is where margin lives. Most companies accept its inefficiency as the cost of doing business.</p>
-          <p>We do not. We identify the reporting cycles, approval chains, vendor communications, data entry loops, and reconciliation processes that eat your team's time, and we replace them with agents that handle the work automatically, accurately, and continuously.</p>
-        </div>
-        <p class="service-item__best"><strong>Best for:</strong> Operations leaders who know exactly where the friction is and are ready to eliminate it.</p>
-      </div>
-
-      <div class="service-item">
-        <h2 class="service-item__title">AI-Based Lead Generation and Go-to-Market</h2>
-        <div class="service-item__body">
-          <p>The best product in the world does not sell itself.</p>
-          <p>We build AI-powered lead generation and go-to-market systems that identify your ideal customers, personalize outreach at scale, and keep prospects moving through the funnel, without a large sales team. From target identification to first conversation, we engineer the pipeline.</p>
-        </div>
-        <p class="service-item__best"><strong>Best for:</strong> Companies entering new markets or looking to scale revenue without proportional headcount growth.</p>
-      </div>
-
     </div>
+    <div class="svc-grid">
+      <div class="svc" id="executive-ai-advisory">
+        <h2 class="svc__title">Executive AI Advisory</h2>
+        <p class="svc__hook">Scheduled one-on-one sessions, weekly, biweekly, or monthly, that build your personal command of AI.</p>
+        <div class="svc__body">
+          <p>AI changes every week. Your board, your team, and your competitors all have opinions about it. We help you form your own. Each session covers what changed, what it means for your business, and what you should do about it.</p>
+          <p>You bring the questions. The vendor pitch on your desk. The article your board chair forwarded. The project that is over budget. You leave with a clear point of view and the confidence to lead the conversation.</p>
+        </div>
+        <div class="svc__label">What you get</div>
+        <ul class="svc__list">
+          <li>A standing session on your calendar, at the cadence you choose</li>
+          <li>A short briefing on what changed in AI since last time, and why it matters to you</li>
+          <li>A sounding board for strategy, vendors, budgets, and hiring</li>
+        </ul>
+        <p class="svc__best"><strong>Best for:</strong> CEOs and senior executives who want a trusted voice in the room before committing to an AI direction.</p>
+      </div>
+      <div class="svc" id="ai-on-call">
+        <h2 class="svc__title">AI On Call</h2>
+        <p class="svc__hook">Direct access to a team that works in AI every day, for urgent questions and special projects.</p>
+        <div class="svc__body">
+          <p>Some questions cannot wait for the next scheduled meeting. When a deal depends on an AI claim, a project hits a wall, or a competitor announces something that sounds alarming, you get a fast answer from people who run agents in production.</p>
+          <p>For bigger questions, we take on special projects: model and vendor selection, due diligence on an AI acquisition or partner, or a second opinion on a plan before you fund it.</p>
+        </div>
+        <div class="svc__label">What you get</div>
+        <ul class="svc__list">
+          <li>A direct line to our team for urgent AI questions</li>
+          <li>Second opinions on vendor proposals and AI plans</li>
+          <li>Special projects, scoped and priced as they come up</li>
+        </ul>
+        <p class="svc__best"><strong>Best for:</strong> Leadership teams that need AI expertise on call without hiring a full-time AI executive.</p>
+      </div>
+    </div>
+    <div class="svc-proof"><strong>In practice:</strong> ongoing advisory calls with executives at a real estate hardware &amp; software firm and a national hospitality company.</div>
+  </div>
+</section>
+
+<!-- TRANSFORM -->
+<section class="section svc-group" id="transform">
+  <div class="container alt-wide">
+    <div class="svc-group__head">
+      <div class="svc-group__name">Transform</div>
+      <div>
+        <p class="svc-group__lede">Most companies do not need more software. They need to rethink how work gets done.</p>
+        <p class="svc-group__intro">Buying AI tools is easy. Changing how a company works is the hard part. We have led organizations through big technology shifts before. This one is bigger.</p>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc" id="ai-transformation">
+        <h2 class="svc__title">AI Transformation</h2>
+        <p class="svc__hook">Leading your organization, people, and operating model through the shift to AI.</p>
+        <div class="svc__body">
+          <p>It starts with an honest readiness assessment: your data, your processes, your people, and the specific places where AI can deliver the fastest, highest-value results. You get a prioritized roadmap, not a theoretical framework.</p>
+          <p>Then we help you execute it. We set the governance, reshape roles and teams, and help your leaders bring the organization along. AI that people resist does not deliver results.</p>
+        </div>
+        <div class="svc__label">What you get</div>
+        <ul class="svc__list">
+          <li>AI Readiness Assessment across data, process, and people</li>
+          <li>A prioritized roadmap tied to business results</li>
+          <li>Operating model, governance, and change leadership</li>
+        </ul>
+        <p class="svc__best"><strong>Best for:</strong> Mid-market and enterprise organizations ready to go beyond pilots and make AI structural.</p>
+      </div>
+      <div class="svc" id="ai-process-re-engineering">
+        <h2 class="svc__title">AI Process Re-Engineering</h2>
+        <p class="svc__hook">Redesigning specific workflows end to end so AI removes cost and delay.</p>
+        <div class="svc__body">
+          <p>AI transformation does not have to happen company-wide to deliver company-wide results. We pick the workflows that matter most and map how the work really happens today: the handoffs, approval chains, data entry loops, and reconciliation cycles that eat your team's time.</p>
+          <p>Then we redesign the process around agents and people working together. Sales ops. Finance. HR. Customer success. Legal review. Wherever the bottleneck is, we find it and fix it.</p>
+        </div>
+        <div class="svc__label">What you get</div>
+        <ul class="svc__list">
+          <li>End-to-end maps of your critical workflows</li>
+          <li>A before and after model of cost and cycle time</li>
+          <li>A redesigned process, ready to build and pilot in one department</li>
+        </ul>
+        <p class="svc__best"><strong>Best for:</strong> Operations leaders who know where the friction is and want to prove the model in one area before scaling.</p>
+      </div>
+    </div>
+    <div class="svc-proof"><strong>In practice:</strong> for the Washington DC Region of the SCCA, we refactored a points scoring system with agentic coding and automated race weekend processing of live results through agentic workflows.</div>
+  </div>
+</section>
+
+<!-- BUILD -->
+<section class="section svc-group" id="build">
+  <div class="container alt-wide">
+    <div class="svc-group__head">
+      <div class="svc-group__name">Build</div>
+      <div>
+        <p class="svc-group__lede">Agentic AI is not a chatbot. It is a team that does the work.</p>
+        <p class="svc-group__intro">We do not hand you a slide deck and leave. We build it, run it, and stand behind it. We know how because our own company runs on it.</p>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc" id="agentic-ai-projects">
+        <h2 class="svc__title">Agentic AI Projects</h2>
+        <p class="svc__hook">Design and delivery of agent solutions on OpenClaw, Hermes Agent, and other frameworks.</p>
+        <div class="svc__body">
+          <p>Your front office should never sleep, never forget, and never drop a lead. Your back office is where margin lives. Agents can do the work in both, around the clock, and scale without adding headcount.</p>
+          <p>We design the agents, connect them to your systems, test them, and keep them running. They escalate to a human when judgment is needed.</p>
+        </div>
+        <div class="svc__label">Where agents work</div>
+        <ul class="svc__list">
+          <li><strong>Front office:</strong> inquiries, lead qualification, scheduling, and follow-up</li>
+          <li><strong>Back office:</strong> reporting, approvals, vendor communications, invoices, and reconciliation</li>
+          <li><strong>Go-to-market:</strong> prospect research, personalized outreach, and pipeline follow-through</li>
+        </ul>
+        <p class="svc__best"><strong>Best for:</strong> Companies ready to move from a pilot to agents that run in production every day.</p>
+      </div>
+      <div class="svc" id="private-and-local-ai">
+        <h2 class="svc__title">Private and Local AI</h2>
+        <p class="svc__hook">Hardware selection, pricing, and setup of AI models that run on your servers. Sensitive data stays in-house.</p>
+        <div class="svc__body">
+          <p>Some data should never leave the building. Open-source models have closed much of the gap with frontier models, and they run on hardware you own, at a fraction of the cost of public APIs.</p>
+          <p>We help you decide which workloads belong on your own hardware and which belong in the cloud. Then we size it, price it, and set it up. We run large open-source models on our own hardware every day, so we know what works and what does not.</p>
+        </div>
+        <div class="svc__label">What you get</div>
+        <ul class="svc__list">
+          <li>A workload review: what runs locally and what stays in the cloud</li>
+          <li>Hardware selection and pricing</li>
+          <li>Setup, model deployment, and hybrid routing between private and frontier models</li>
+        </ul>
+        <p class="svc__best"><strong>Best for:</strong> Healthcare, finance, legal, government, and other regulated industries, plus any company whose data is too sensitive for a public AI service. Lower API costs come as a bonus.</p>
+      </div>
+    </div>
+    <div class="svc-proof"><strong>In practice:</strong> We run three different local models on Nvidia DGX Spark clusters and Mac Studio servers. We can help run dedicated cloud instances or local AI on consumer-grade hardware. Our agents handle research, newsletters, scheduling, billing, software development, and cloud operations.</div>
   </div>
 </section>
 
 <div class="container">
   <div class="bottom-cta">
     <h2 class="bottom-cta__title">Not sure where to start?</h2>
-    <p class="bottom-cta__sub">Start with the AI Readiness Assessment. It is the fastest way to go from "we should be doing something with AI" to "here is exactly what we should do first."</p>
-    <a href="/contact/" class="btn-primary">Set Up A Free Intro Call</a>
+    <p class="bottom-cta__sub">Start with a conversation. Bring a question, a project, or a business challenge.</p>
+    <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
   </div>
 </div>
 
@@ -245,6 +270,11 @@
       <span class="footer-wordmark">Agentilis</span>
       <span class="footer-tagline">Characterized by action.</span>
       <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+    <div class="footer-legal">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <span>&nbsp;|&nbsp;</span>
+      <a href="/terms-conditions/">Terms and Conditions</a>
     </div>
   </div>
 </footer>
