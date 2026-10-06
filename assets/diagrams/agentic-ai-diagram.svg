@@ -28,7 +28,7 @@
   <text x="28" y="78" font-size="30" fill="#FAFAF7" font-weight="700">Agentic AI?</text>
 
   <!-- ═══════════════════════════════════════
-       TOP PANEL — NOT Agentic AI
+       TOP PANEL: NOT Agentic AI
        ═══════════════════════════════════════ -->
   <rect x="18" y="96" width="864" height="440" rx="12" fill="#3A1818" stroke="#D46B5E" stroke-width="2.5"/>
   <text x="450" y="126" font-size="17" fill="#D46B5E" font-weight="700" text-anchor="middle">These are  NOT  Agentic AI</text>
@@ -102,7 +102,7 @@
   <text x="740" y="499" font-size="11" fill="#1F1F1F" text-anchor="middle">Output</text>
 
   <!-- ═══════════════════════════════════════
-       BOTTOM PANEL — This IS Agentic AI
+       BOTTOM PANEL: This IS Agentic AI
        ═══════════════════════════════════════ -->
   <rect x="18" y="552" width="864" height="632" rx="12" fill="#1A3020" stroke="#7EC8A0" stroke-width="2.5"/>
   <text x="450" y="585" font-size="17" fill="#7EC8A0" font-weight="700" text-anchor="middle">This is an Agentic AI</text>
@@ -191,5 +191,5 @@
   <line x1="596" y1="976" x2="546" y2="826" stroke="#B090D8" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
 
   <!-- ── FOOTER NOTE ── -->
-  <text x="450" y="1190" font-size="10" fill="#5A7A6A" text-anchor="middle" font-style="italic">agentilis.ai — Characterized by action.</text>
+  <text x="450" y="1190" font-size="10" fill="#5A7A6A" text-anchor="middle" font-style="italic">agentilis.ai: Characterized by action.</text>
 </svg>

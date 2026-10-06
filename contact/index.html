@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agentilis — Contact</title>
+  <title>Agentilis | Contact</title>
   <script src="https://www.google.com/recaptcha/enterprise.js?render=6Le8s5MsAAAAALRkg2ipPgxFzA7V8g87Ra71Y081"></script>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/site.css">
@@ -131,7 +131,7 @@
       line-height: 1.6;
     }
 
-    /* Honeypot — hidden from humans, visible to bots */
+    /* Honeypot: hidden from humans, visible to bots */
     .hp-field {
       position: absolute;
       left: -9999px;
@@ -244,7 +244,7 @@
     <!-- Right: form -->
     <div class="contact-form" id="contactFormWrap">
       <form id="contactForm" novalidate>
-        <!-- Honeypot — do not remove -->
+        <!-- Honeypot: do not remove -->
         <div class="hp-field" aria-hidden="true">
           <label for="hp_website">Website</label>
           <input type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off">
@@ -326,7 +326,7 @@
     form.addEventListener('submit', function(e){
       e.preventDefault();
 
-      // Honeypot check — if filled, silently do nothing
+      // Honeypot check: if filled, silently do nothing
       if(document.getElementById('hp_website').value !== '') return;
 
       var name    = document.getElementById('contact_name').value.trim();
