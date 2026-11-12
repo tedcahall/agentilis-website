@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Not linked from the nav yet. Remove noindex when the page launches. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Agentilis | Case Study: Washington DC Region SCCA</title>
+  <meta name="description" content="How an AI agent team took over marrspoints.com, the 11-year-old points scoring system for the Washington DC Region of the SCCA, end to end.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/experience/experience.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR2JH7LK2F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JR2JH7LK2F');
+  </script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/agents/">Agents</a></li>
+        <li><a href="/founder/">Founder</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- 1. Header -->
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div class="page-header__eyebrow"><a href="/experience/" style="color:inherit;text-decoration:none">Experience</a> &middot; Case Study</div>
+      <h1 class="page-header__title">An 11-year-old racing system, now run by AI agents.</h1>
+      <p class="page-header__sub">The Washington DC Region of the SCCA scores every race in its Mid-Atlantic Road Racing Series on marrspoints.com. Our agent team took the system over end to end: the code, the testing, the cloud, and the live results feed on race weekends.</p>
+      <!-- TED TO REVIEW: client vs. "proving ground before our first client" (homepage and /founder disagree). This page avoids the word "client". -->
+      <div class="cs-tags">
+        <span class="cs-tag">Transform</span>
+        <span class="cs-tag">Club motorsports</span>
+        <span class="cs-tag">Back-office automation</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="cs-hero-shot">
+    <img src="/assets/experience/marrspoints-home.png" alt="The marrspoints.com home page with 2026 MARRS season announcements and the race schedule" width="1440" height="900">
+    <p class="cs-caption">marrspoints.com today: official results for the 2026 MARRS season, published by the agent team.</p>
+  </div>
+
+  <!-- 2. At a glance -->
+  <div class="cs-glance">
+    <div class="cs-glance__item">
+      <div class="cs-glance__num">11+</div>
+      <div class="cs-glance__label">Years in production on AWS, since 2015</div>
+    </div>
+    <div class="cs-glance__item">
+      <div class="cs-glance__num">20,000</div>
+      <div class="cs-glance__label">Lines of Java refactored on the team's first day</div>
+    </div>
+    <div class="cs-glance__item">
+      <div class="cs-glance__num">60+</div>
+      <div class="cs-glance__label">Automated Playwright and JUnit tests on every change</div>
+    </div>
+    <div class="cs-glance__item">
+      <div class="cs-glance__num">27</div>
+      <div class="cs-glance__label">Result files per race weekend, processed with no human touch</div>
+    </div>
+  </div>
+
+  <!-- 3. The situation -->
+  <div class="cs-section">
+    <div class="cs-section__label">The Situation</div>
+    <div>
+      <h2 class="cs-section__title">A system that worked, and a weekend chore that never went away.</h2>
+      <div class="cs-body">
+        <p>In 2015, Ted built marrspoints.com, a cloud points scoring system for the Washington DC Region of the SCCA. It tracks every driver, class and race in the Mid-Atlantic Road Racing Series: eight race weekends in 2026, at Summit Point, NJMP, VIR and Mid-Ohio. In 2018 the region gave Ted its Regional Executive Award for building and running it.</p>
+        <p>The system worked. The work around it was the problem. After every race weekend, 27 official result files had to be renamed to the right format, uploaded one at a time through an admin tool, published, and confirmed. It took more than an hour each time, by hand. Behind it sat two Java applications that had been running for over a decade.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Rules vs. judgment -->
+  <div class="cs-section">
+    <div class="cs-section__label">Rules vs. Judgment</div>
+    <div>
+      <h2 class="cs-section__title">Some of it has to be exact every time. Some of it takes a call.</h2>
+      <div class="cs-split">
+        <div class="cs-split__col">
+          <div class="cs-split__head">Rules: exact, every time</div>
+          <ul>
+            <li>Rename all 27 result files to the required format</li>
+            <li>Upload every file and publish the results</li>
+            <li>Score points the same way for every driver and class</li>
+            <li>Test every code change before it ships</li>
+            <li>Send a confirmation when the job is done</li>
+          </ul>
+        </div>
+        <div class="cs-split__col cs-split__col--judgment">
+          <div class="cs-split__head">Judgment: a call on the fly</div>
+          <ul>
+            <li>Process live results during the day, while racing is still going on</li>
+            <li>Handle gaps and imperfect data as they arrive</li>
+            <li>Tell provisional results from official ones</li>
+            <li>Process the official results after the race</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-body" style="margin-top:24px">
+        <p>The rules column is where agents are most dependable. The judgment column is the real test, and it is the job Inman does on every race weekend.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. What we did -->
+  <div class="cs-section">
+    <div class="cs-section__label">What We Did</div>
+    <div>
+      <h2 class="cs-section__title">Five agents, one system, managed from a phone.</h2>
+      <ol class="cs-steps">
+        <li><div><div class="cs-steps__who">Max automated the back office.</div><div class="cs-steps__what">He receives the 27 result files by email, logs into the admin tool, renames and uploads every file, publishes the results and sends a confirmation. More than an hour of work became minutes.</div></div></li>
+        <li><div><div class="cs-steps__who">James upgraded the code.</div><div class="cs-steps__what">He refactored and upgraded the two Java applications, starting with 20,000 lines on day one, and has since added several new features.</div></div></li>
+        <li><div><div class="cs-steps__who">Watts tests everything.</div><div class="cs-steps__what">He wrote more than 60 Playwright and JUnit test cases. Every change James makes is tested before it goes live.</div></div></li>
+        <li><div><div class="cs-steps__who">Ken runs the infrastructure.</div><div class="cs-steps__what">He keeps the test environment and production on AWS running, deploys updates, and confirms each release with smoke tests.</div></div></li>
+        <li><div><div class="cs-steps__who">Inman runs race weekends.</div><div class="cs-steps__what">He manages the live results feed in the back-office tool during the day and processes the official results after the race.</div></div></li>
+      </ol>
+      <div class="cs-body" style="margin-top:12px"><p>Ted managed all of it from his phone, over Telegram.</p></div>
+      <div class="cs-agents">
+        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">🦾</span><span><span class="cs-agent__name">Max</span><br><span class="cs-agent__role">Chief of Staff</span></span></a>
+        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">☕</span><span><span class="cs-agent__name">James</span><br><span class="cs-agent__role">Java Engineer</span></span></a>
+        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">🕵️</span><span><span class="cs-agent__name">Watts</span><br><span class="cs-agent__role">QA Engineer</span></span></a>
+        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">🖥️</span><span><span class="cs-agent__name">Ken</span><br><span class="cs-agent__role">Systems Administrator</span></span></a>
+        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">🏁</span><span><span class="cs-agent__name">Inman</span><br><span class="cs-agent__role">Back Office Automation</span></span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Under the hood -->
+  <div class="cs-section">
+    <div class="cs-section__label">Under the Hood</div>
+    <div>
+      <h2 class="cs-section__title">The system the agents run.</h2>
+      <video class="cs-video" controls muted playsinline preload="metadata" poster="/assets/experience/marrspoints-home.png">
+        <source src="/media/experience/marrspoints-walkthrough.webm" type="video/webm">
+      </video>
+      <p class="cs-caption">A walk through marrspoints.com: season announcements, race results, and a full-season class leaderboard. Every result on these pages was processed and published by the agent team.</p>
+      <div class="cs-hero-shot" style="padding-top:24px">
+        <img src="/assets/experience/marrspoints-leaderboard.png" alt="A MARRS season points leaderboard on marrspoints.com, with points for every heat and feature race" width="1440" height="900" loading="lazy">
+        <p class="cs-caption">A class leaderboard: net and gross points for every heat and feature race of the season, for every driver.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Results -->
+  <div class="cs-section">
+    <div class="cs-section__label">Results</div>
+    <div>
+      <h2 class="cs-section__title">Before and after.</h2>
+      <table class="cs-ba">
+        <thead><tr><th>Before</th><th class="cs-ba__after">After</th></tr></thead>
+        <tbody>
+          <tr><td>More than an hour of manual work after every race weekend</td><td>Minutes, with no human touching the files</td></tr>
+          <tr><td>27 files renamed and uploaded by hand</td><td>Max receives, renames, uploads, publishes and confirms</td></tr>
+          <tr><td>Java code dating to 2015</td><td>Refactored, upgraded, and extended with new features</td></tr>
+          <tr><td>A system that ran on Ted's own time</td><td>Five agents, each with a defined job, managed by Ted from his phone</td></tr>
+          <tr><td>Live race-day results handled by a person</td><td>Inman runs the live feed, gaps and all</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 8. In their words -->
+  <div class="cs-section">
+    <div class="cs-section__label">In Their Words</div>
+    <div>
+      <!-- PENDING: quote from a Washington DC Region SCCA official (Jeff, November 12, 2026). Ted to review and request it. -->
+      <blockquote class="cs-quote cs-quote--pending">
+        Quote from a Washington DC Region SCCA official, to come.
+        <cite>Name, title, Washington DC Region SCCA</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- 9. What it means for you -->
+  <div class="cs-section">
+    <div class="cs-section__label">What It Means for You</div>
+    <div>
+      <h2 class="cs-section__title">Every business has a marrspoints.</h2>
+      <div class="cs-body">
+        <p>A system that works, that only a few people understand, with a recurring chore around it that eats someone's evenings. That is where agents earn their keep first: clear rules, a little judgment, and a person who stays in charge.</p>
+        <p>This is not a demo or a proof of concept. It is a working system, run by AI agents right now.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sources -->
+  <div class="cs-section">
+    <div class="cs-section__label">Read More</div>
+    <div>
+      <ul class="cs-sources">
+        <li><a class="inline-link" href="https://marrspoints.com" target="_blank" rel="noopener">marrspoints.com</a><span>The live system</span></li>
+        <li><a class="inline-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7442182612107878400/" target="_blank" rel="noopener">Max Automates the marrspoints Back-Office</a><span>LinkedIn, March 2026</span></li>
+        <li><a class="inline-link" href="/story/">Our story: how the agent team came together</a><span>Agentilis</span></li>
+        <li><a class="inline-link" href="https://cahall-labs.com/the-intel-nuc-computers-aws-and-racing-cars/" target="_blank" rel="noopener">The Intel NUC Computers, AWS, and Racing Cars</a><span>The 2016 origin story</span></li>
+        <li><a class="inline-link" href="https://cahall-labs.com/ted-cahall-receives-wdcr-scca-regional-executive-award/" target="_blank" rel="noopener">Ted Cahall Receives WDCR SCCA Regional Executive Award</a><span>2018</span></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- 10. Call to action -->
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Where is your marrspoints?</h2>
+    <p class="bottom-cta__sub">Thirty minutes with Ted. No pitch deck. Just a straight conversation about where AI fits in your business.</p>
+    <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+    <div class="footer-legal">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <span>&nbsp;|&nbsp;</span>
+      <a href="/terms-conditions/">Terms and Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

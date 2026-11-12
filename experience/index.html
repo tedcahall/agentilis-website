@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Not linked from the nav yet. Remove noindex when the page launches. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Agentilis | Experience</title>
+  <meta name="description" content="Case studies: AI agent systems Agentilis built and runs in production, from the problem to the result.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/experience/experience.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR2JH7LK2F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JR2JH7LK2F');
+  </script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/agents/">Agents</a></li>
+        <li><a href="/founder/">Founder</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div class="page-header__eyebrow">Experience</div>
+      <h1 class="page-header__title">AI work in production. Not on slides.</h1>
+      <p class="page-header__sub">Systems we built and run with AI agents, told from the problem to the result. Each one shows what the agents do, where the rules end and judgment begins, and what changed for the business.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="cs-cards">
+    <a class="cs-card" href="/experience/scca-marrspoints/">
+      <img src="/assets/experience/marrspoints-home.png" alt="The marrspoints.com home page, showing the 2026 MARRS season results and schedule" width="1440" height="900" loading="lazy">
+      <div class="cs-card__body">
+        <div class="cs-card__tag">Transform &middot; Club motorsports</div>
+        <div class="cs-card__title">Washington DC Region SCCA: an 11-year-old system, now run by AI agents</div>
+        <p class="cs-card__sub">Our agent team took over marrspoints.com end to end. They upgraded the code, test every change, run the cloud, and process live race results on race weekends with no human touching the files.</p>
+        <span class="cs-card__link">Read the case study &rarr;</span>
+      </div>
+    </a>
+    <a class="cs-card" href="/experience/agentreboost/">
+      <img src="/assets/experience/agentreboost-home.png" alt="The AgentREBoost home page: Every lead answered in 60 seconds. Even mid-showing." width="1440" height="900" loading="lazy">
+      <div class="cs-card__body">
+        <div class="cs-card__tag">Build &middot; Real estate</div>
+        <div class="cs-card__title">AgentREBoost: a real estate product built with an agent team</div>
+        <p class="cs-card__sub">Every real estate lead answered in under 60 seconds, in the agent's own name. Product, engineering, testing and marketing all ran through agentic workflows.</p>
+        <span class="cs-card__link">Read the case study &rarr;</span>
+      </div>
+    </a>
+  </div>
+  <p class="cs-hub-note">More case studies will follow as client engagements finish.</p>
+</div>
+
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Want AI agents doing this kind of work at your company?</h2>
+    <p class="bottom-cta__sub">Thirty minutes with Ted. No pitch deck. Just a straight conversation about where AI fits in your business.</p>
+    <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+    <div class="footer-legal">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <span>&nbsp;|&nbsp;</span>
+      <a href="/terms-conditions/">Terms and Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

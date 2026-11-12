@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Not linked from the nav yet. Remove noindex when the page launches. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Agentilis | Case Study: AgentREBoost</title>
+  <meta name="description" content="How AgentREBoost, a real estate lead-response product, was built with agentic product, engineering, testing and marketing workflows.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/experience/experience.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR2JH7LK2F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JR2JH7LK2F');
+  </script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/agents/">Agents</a></li>
+        <li><a href="/founder/">Founder</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- 1. Header -->
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div class="page-header__eyebrow"><a href="/experience/" style="color:inherit;text-decoration:none">Experience</a> &middot; Case Study</div>
+      <h1 class="page-header__title">A real estate product, built with an agent team.</h1>
+      <p class="page-header__sub">AgentREBoost answers every real estate lead in under 60 seconds, in the agent's own name, even mid-showing. It is our own product, and agents did the work across product, engineering, testing and marketing.</p>
+      <!-- TED TO REVIEW: described as our own product, not client work. Build timeline ("record time" on the homepage) not yet sourced. -->
+      <div class="cs-tags">
+        <span class="cs-tag">Build</span>
+        <span class="cs-tag">Real estate</span>
+        <span class="cs-tag">Our own product</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="cs-hero-shot">
+    <img src="/assets/experience/agentreboost-home.png" alt="The AgentREBoost home page: Every lead answered in 60 seconds. Even mid-showing." width="1440" height="900">
+    <p class="cs-caption">agentreboost.com. The site, its copy and its explainer video were produced by our marketing agents.</p>
+  </div>
+
+  <!-- 2. At a glance -->
+  <div class="cs-glance">
+    <div class="cs-glance__item">
+      <div class="cs-glance__num">&lt;60 sec</div>
+      <div class="cs-glance__label">From a lead landing in the inbox to a reply in the agent's name</div>
+    </div>
+    <div class="cs-glance__item">
+      <div class="cs-glance__num">4</div>
+      <div class="cs-glance__label">Lead sources with matching rules: Zillow, Homes.com, Rent.com and Nestfully</div>
+    </div>
+    <div class="cs-glance__item">
+      <div class="cs-glance__num">3</div>
+      <div class="cs-glance__label">Ways for a broker to route leads: round-robin, weighted or manual</div>
+    </div>
+    <div class="cs-glance__item">
+      <div class="cs-glance__num">35</div>
+      <div class="cs-glance__label">Merge fields that personalize every text and email</div>
+    </div>
+  </div>
+
+  <!-- 3. The situation -->
+  <div class="cs-section">
+    <div class="cs-section__label">The Situation</div>
+    <div>
+      <h2 class="cs-section__title">The harder an agent works, the more leads go cold.</h2>
+      <div class="cs-body">
+        <p>Real estate leads arrive by email from Zillow, Homes.com and other sites, usually while the agent is out doing the job: at a showing, in the car, at a closing. Industry studies put the average agent's response time to a new lead at 11 hours, and find that 78 percent of buyers choose the first agent who responds.</p>
+        <p>Brokerages have a second problem on top of the first. With agents spread across showings and closings, getting each lead to the right agent quickly is a distribution job, and most brokerages still do it by hand.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Rules vs. judgment -->
+  <div class="cs-section">
+    <div class="cs-section__label">Rules vs. Judgment</div>
+    <div>
+      <h2 class="cs-section__title">Fast where it can be exact. Careful where it can't.</h2>
+      <div class="cs-split">
+        <div class="cs-split__col">
+          <div class="cs-split__head">Rules: exact, every time</div>
+          <ul>
+            <li>Match a lead email by sender, subject and body</li>
+            <li>Reply with the agent's own template, phone number and booking link</li>
+            <li>Text the agent the lead's number right away</li>
+            <li>Route by rotation, by weight, or to the home's listing agent</li>
+          </ul>
+        </div>
+        <div class="cs-split__col cs-split__col--judgment">
+          <div class="cs-split__head">Judgment: where a person stays in the loop</div>
+          <ul>
+            <li>Tell a real lead from a newsletter, receipt or duplicate</li>
+            <li>Read lead emails that don't follow the usual format</li>
+            <li>Send anything it can't read cleanly to a Needs Review queue for a person</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. What we did -->
+  <div class="cs-section">
+    <div class="cs-section__label">What We Did</div>
+    <div>
+      <h2 class="cs-section__title">Every role a startup hires first, covered by agents.</h2>
+      <ol class="cs-steps">
+        <li><div><div class="cs-steps__who">Product.</div><div class="cs-steps__what">Turned the idea into four steps a busy agent understands: monitor the inbox, detect a real lead, respond in the agent's name, and connect them by text. Then added what brokers need: lead routing, listing-agent rules and company-wide templates.</div></div></li>
+        <li><div><div class="cs-steps__who">Engineering.</div><div class="cs-steps__what">Ted and his engineering agents built the application: Gmail inbox monitoring, lead matching and extraction, text and email outreach, an operations console, and separate portals for brokers and agents.</div></div></li>
+        <li><div><div class="cs-steps__who">Testing.</div><div class="cs-steps__what">A built-in test harness sends simulated leads from each listing site. Our agents ran end-to-end tests, confirmed delivery of every text template at every level, and filed each problem they found as a tracked issue.</div></div></li>
+        <li><div><div class="cs-steps__who">Marketing.</div><div class="cs-steps__what">Agents wrote and built the marketing site and produced an 81-second explainer video: script, voice, illustration, animation and captions.</div></div></li>
+      </ol>
+      <!-- TED TO REVIEW: homepage card also credits "legal workflows". Add a step here once confirmed what they covered. -->
+    </div>
+  </div>
+
+  <!-- 6. Under the hood -->
+  <div class="cs-section">
+    <div class="cs-section__label">Under the Hood</div>
+    <div>
+      <h2 class="cs-section__title">How it works, in 81 seconds.</h2>
+      <video class="cs-video" controls playsinline preload="metadata" poster="/assets/experience/agentreboost-explainer-poster.png">
+        <source src="/media/experience/agentreboost-explainer.mp4" type="video/mp4">
+      </video>
+      <p class="cs-caption">The AgentREBoost explainer, produced end to end by our agents. Captions are built in.</p>
+    </div>
+  </div>
+
+  <!-- 7. Results -->
+  <div class="cs-section">
+    <div class="cs-section__label">Results</div>
+    <div>
+      <h2 class="cs-section__title">Before and after.</h2>
+      <table class="cs-ba">
+        <thead><tr><th>Before</th><th class="cs-ba__after">After</th></tr></thead>
+        <tbody>
+          <tr><td>Leads answered in hours (11 on average across the industry)</td><td>Every lead answered in under 60 seconds, in the agent's name</td></tr>
+          <tr><td>The agent finds out about the lead later</td><td>The agent gets a text right away and can call with one tap</td></tr>
+          <tr><td>The broker hands out leads by hand</td><td>Round-robin, weighted or manual routing, plus listing-agent rules</td></tr>
+          <tr><td>Building a product means hiring product, QA and marketing first</td><td>Agents covered those roles, with people making the calls</td></tr>
+        </tbody>
+      </table>
+      <p class="cs-caption">Industry figures are from the BoomTown Lead Response Benchmark Report and California Association of Realtors / NAR studies, as cited on agentreboost.com.</p>
+    </div>
+  </div>
+
+  <!-- 8. In their words -->
+  <div class="cs-section">
+    <div class="cs-section__label">In Their Words</div>
+    <div>
+      <!-- PENDING: quote from a broker or agent using AgentREBoost. Ted to review. -->
+      <blockquote class="cs-quote cs-quote--pending">
+        Quote from an AgentREBoost broker or agent, to come.
+        <cite>Name, title, brokerage</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- 9. What it means for you -->
+  <div class="cs-section">
+    <div class="cs-section__label">What It Means for You</div>
+    <div>
+      <h2 class="cs-section__title">A small team can now ship like a big one.</h2>
+      <div class="cs-body">
+        <p>If you have a product idea and a small team, agents can now fill the roles you used to hire for first: product, QA and marketing. What stays with you is judgment: what to build, what good looks like, and when to say no.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sources -->
+  <div class="cs-section">
+    <div class="cs-section__label">Read More</div>
+    <div>
+      <ul class="cs-sources">
+        <li><a class="inline-link" href="https://agentreboost.com" target="_blank" rel="noopener">agentreboost.com</a><span>The product</span></li>
+        <li><a class="inline-link" href="/agents/">Meet the agent team</a><span>Agentilis</span></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- 10. Call to action -->
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Have a product your team doesn't have time to build?</h2>
+    <p class="bottom-cta__sub">Thirty minutes with Ted. No pitch deck. Just a straight conversation about where AI fits in your business.</p>
+    <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+    <div class="footer-legal">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <span>&nbsp;|&nbsp;</span>
+      <a href="/terms-conditions/">Terms and Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
