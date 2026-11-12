@@ -1,5 +1,10 @@
 /* Case study pages (/experience). Builds on /site.css. */
 
+/* Titles stay on one line on desktop; the subtitle uses the full header width. */
+.page-header__title { font-size: clamp(30px, 3.6vw, 46px); }
+.page-header__sub { max-width: none; }
+.bottom-cta__title { font-size: clamp(24px, 2.9vw, 38px); }
+
 .cs-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 .cs-tag {
   font-family: 'Inter', sans-serif;
@@ -74,7 +79,7 @@
 }
 .cs-section__title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(24px, 2.6vw, 32px);
+  font-size: clamp(18px, 2.15vw, 28px);
   font-weight: 600;
   color: var(--primary);
   line-height: 1.25;

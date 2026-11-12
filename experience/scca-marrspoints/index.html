@@ -6,7 +6,7 @@
   <!-- Not linked from the nav yet. Remove noindex when the page launches. -->
   <meta name="robots" content="noindex, nofollow">
   <title>Agentilis | Case Study: Washington DC Region SCCA</title>
-  <meta name="description" content="How an AI agent team took over marrspoints.com, the 11-year-old points scoring system for the Washington DC Region of the SCCA, end to end.">
+  <meta name="description" content="How an AI agent team now operates marrspoints.com, the 11-year-old points scoring system for the Washington DC Region of the SCCA, end to end.">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/site.css">
   <link rel="stylesheet" href="/experience/experience.css">
@@ -45,7 +45,7 @@
     <div class="page-header">
       <div class="page-header__eyebrow"><a href="/experience/" style="color:inherit;text-decoration:none">Experience</a> &middot; Case Study</div>
       <h1 class="page-header__title">An 11-year-old racing system, now run by AI agents.</h1>
-      <p class="page-header__sub">The Washington DC Region of the SCCA scores every race in its Mid-Atlantic Road Racing Series on marrspoints.com. Our agent team took the system over end to end: the code, the testing, the cloud, and the live results feed on race weekends.</p>
+      <p class="page-header__sub">The Washington DC Region of the SCCA scores every race in its Mid-Atlantic Road Racing Series on marrspoints.com. An AI agent team now operates the system end to end: code, testing, cloud infrastructure, and live results on race weekends.</p>
       <!-- TED TO REVIEW: client vs. "proving ground before our first client" (homepage and /founder disagree). This page avoids the word "client". -->
       <div class="cs-tags">
         <span class="cs-tag">Transform</span>
@@ -79,7 +79,7 @@
     </div>
     <div class="cs-glance__item">
       <div class="cs-glance__num">27</div>
-      <div class="cs-glance__label">Result files per race weekend, processed with no human touch</div>
+      <div class="cs-glance__label">Result files per race weekend, processed automatically</div>
     </div>
   </div>
 
@@ -87,10 +87,10 @@
   <div class="cs-section">
     <div class="cs-section__label">The Situation</div>
     <div>
-      <h2 class="cs-section__title">A system that worked, and a weekend chore that never went away.</h2>
+      <h2 class="cs-section__title">A reliable system with a costly manual process.</h2>
       <div class="cs-body">
         <p>In 2015, Ted built marrspoints.com, a cloud points scoring system for the Washington DC Region of the SCCA. It tracks every driver, class and race in the Mid-Atlantic Road Racing Series: eight race weekends in 2026, at Summit Point, NJMP, VIR and Mid-Ohio. In 2018 the region gave Ted its Regional Executive Award for building and running it.</p>
-        <p>The system worked. The work around it was the problem. After every race weekend, 27 official result files had to be renamed to the right format, uploaded one at a time through an admin tool, published, and confirmed. It took more than an hour each time, by hand. Behind it sat two Java applications that had been running for over a decade.</p>
+        <p>The system was reliable. The process around it was not efficient. After every race weekend, 27 official result files had to be renamed to the required format, uploaded one at a time through an admin tool, published, and confirmed. Each weekend took more than an hour of manual work. Underneath were two Java applications that had been in production for more than a decade.</p>
       </div>
     </div>
   </div>
@@ -122,31 +122,23 @@
         </div>
       </div>
       <div class="cs-body" style="margin-top:24px">
-        <p>The rules column is where agents are most dependable. The judgment column is the real test, and it is the job Inman does on every race weekend.</p>
+        <p>Agents are most dependable on the rules. The judgment calls are the harder test, and the agent team now handles them on every race weekend.</p>
       </div>
     </div>
   </div>
 
   <!-- 5. What we did -->
   <div class="cs-section">
-    <div class="cs-section__label">What We Did</div>
+    <div class="cs-section__label">What Was Solved</div>
     <div>
-      <h2 class="cs-section__title">Five agents, one system, managed from a phone.</h2>
+      <h2 class="cs-section__title">Five problems, each solved in production.</h2>
       <ol class="cs-steps">
-        <li><div><div class="cs-steps__who">Max automated the back office.</div><div class="cs-steps__what">He receives the 27 result files by email, logs into the admin tool, renames and uploads every file, publishes the results and sends a confirmation. More than an hour of work became minutes.</div></div></li>
-        <li><div><div class="cs-steps__who">James upgraded the code.</div><div class="cs-steps__what">He refactored and upgraded the two Java applications, starting with 20,000 lines on day one, and has since added several new features.</div></div></li>
-        <li><div><div class="cs-steps__who">Watts tests everything.</div><div class="cs-steps__what">He wrote more than 60 Playwright and JUnit test cases. Every change James makes is tested before it goes live.</div></div></li>
-        <li><div><div class="cs-steps__who">Ken runs the infrastructure.</div><div class="cs-steps__what">He keeps the test environment and production on AWS running, deploys updates, and confirms each release with smoke tests.</div></div></li>
-        <li><div><div class="cs-steps__who">Inman runs race weekends.</div><div class="cs-steps__what">He manages the live results feed in the back-office tool during the day and processes the official results after the race.</div></div></li>
+        <li><div><div class="cs-steps__who">Race-weekend processing is automated.</div><div class="cs-steps__what">All 27 result files are received, renamed, uploaded, published and confirmed with no manual handling. More than an hour of work per weekend now takes minutes.</div></div></li>
+        <li><div><div class="cs-steps__who">Legacy code is modernized.</div><div class="cs-steps__what">Both Java applications were refactored and upgraded, starting with 20,000 lines on the first day. New features have shipped since.</div></div></li>
+        <li><div><div class="cs-steps__who">Every change is tested before release.</div><div class="cs-steps__what">More than 60 automated Playwright and JUnit tests run on each change before it reaches production.</div></div></li>
+        <li><div><div class="cs-steps__who">Infrastructure is maintained.</div><div class="cs-steps__what">The AWS test and production environments are kept current, and every release is verified with smoke tests.</div></div></li>
+        <li><div><div class="cs-steps__who">Live race-day results are handled.</div><div class="cs-steps__what">Provisional results are processed while racing is under way, including gaps and imperfect data. Official results are published after the race.</div></div></li>
       </ol>
-      <div class="cs-body" style="margin-top:12px"><p>Ted managed all of it from his phone, over Telegram.</p></div>
-      <div class="cs-agents">
-        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">🦾</span><span><span class="cs-agent__name">Max</span><br><span class="cs-agent__role">Chief of Staff</span></span></a>
-        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">☕</span><span><span class="cs-agent__name">James</span><br><span class="cs-agent__role">Java Engineer</span></span></a>
-        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">🕵️</span><span><span class="cs-agent__name">Watts</span><br><span class="cs-agent__role">QA Engineer</span></span></a>
-        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">🖥️</span><span><span class="cs-agent__name">Ken</span><br><span class="cs-agent__role">Systems Administrator</span></span></a>
-        <a class="cs-agent" href="/agents/"><span class="cs-agent__emoji">🏁</span><span><span class="cs-agent__name">Inman</span><br><span class="cs-agent__role">Back Office Automation</span></span></a>
-      </div>
     </div>
   </div>
 
@@ -174,11 +166,11 @@
       <table class="cs-ba">
         <thead><tr><th>Before</th><th class="cs-ba__after">After</th></tr></thead>
         <tbody>
-          <tr><td>More than an hour of manual work after every race weekend</td><td>Minutes, with no human touching the files</td></tr>
-          <tr><td>27 files renamed and uploaded by hand</td><td>Max receives, renames, uploads, publishes and confirms</td></tr>
+          <tr><td>More than an hour of manual work after every race weekend</td><td>Minutes, fully automated</td></tr>
+          <tr><td>27 files renamed and uploaded by hand</td><td>Received, renamed, uploaded, published and confirmed automatically</td></tr>
           <tr><td>Java code dating to 2015</td><td>Refactored, upgraded, and extended with new features</td></tr>
-          <tr><td>A system that ran on Ted's own time</td><td>Five agents, each with a defined job, managed by Ted from his phone</td></tr>
-          <tr><td>Live race-day results handled by a person</td><td>Inman runs the live feed, gaps and all</td></tr>
+          <tr><td>A system dependent on one person's time</td><td>An agent team with defined responsibilities, overseen by Ted</td></tr>
+          <tr><td>Live race-day results handled by a person</td><td>Handled by the agent team, including incomplete data</td></tr>
         </tbody>
       </table>
     </div>
@@ -202,8 +194,8 @@
     <div>
       <h2 class="cs-section__title">Every business has a marrspoints.</h2>
       <div class="cs-body">
-        <p>A system that works, that only a few people understand, with a recurring chore around it that eats someone's evenings. That is where agents earn their keep first: clear rules, a little judgment, and a person who stays in charge.</p>
-        <p>This is not a demo or a proof of concept. It is a working system, run by AI agents right now.</p>
+        <p>Most organizations run a system like this: it works, few people understand it, and a recurring manual process surrounds it. That is where agents deliver value first: clear rules, bounded judgment, and accountable human oversight.</p>
+        <p>This is not a pilot or a proof of concept. It is a production system, operated by AI agents today.</p>
       </div>
     </div>
   </div>
@@ -227,7 +219,7 @@
 <!-- 10. Call to action -->
 <div class="container">
   <div class="bottom-cta">
-    <h2 class="bottom-cta__title">Where is your marrspoints?</h2>
+    <h2 class="bottom-cta__title">Which of your systems is ready for agents?</h2>
     <p class="bottom-cta__sub">Thirty minutes with Ted. No pitch deck. Just a straight conversation about where AI fits in your business.</p>
     <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
   </div>
