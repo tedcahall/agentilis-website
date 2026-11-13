@@ -278,3 +278,9 @@
 @media (max-width: 520px) {
   .cs-ba td { padding: 12px 10px; font-size: 14px; }
 }
+
+/* Template v2: the one surprising detail, pulled out of the steps */
+.cs-callout { display: flex; gap: 24px; align-items: baseline; background: var(--card-bg); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 22px 28px; margin: 0 0 32px; }
+.cs-callout__num { font-family: 'Playfair Display', serif; font-size: clamp(24px, 2.6vw, 32px); font-weight: 600; color: var(--primary); white-space: nowrap; }
+.cs-callout__text { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: var(--text); }
+@media (max-width: 640px) { .cs-callout { flex-direction: column; gap: 6px; } }

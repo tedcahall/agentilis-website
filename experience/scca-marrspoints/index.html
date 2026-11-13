@@ -44,7 +44,7 @@
   <div class="container">
     <div class="page-header">
       <div class="page-header__eyebrow"><a href="/experience/" style="color:inherit;text-decoration:none">Experience</a> &middot; Case Study</div>
-      <h1 class="page-header__title">An 11-year-old racing system, now run by AI agents.</h1>
+      <h1 class="page-header__title">Race-weekend results, from an hour by hand to minutes.</h1>
       <p class="page-header__sub">The Washington DC Region of the SCCA scores every race in its Mid-Atlantic Road Racing Series on marrspoints.com. An AI agent team now operates the system end to end: code, testing, cloud infrastructure, and live results on race weekends.</p>
       <!-- TED TO REVIEW: client vs. "proving ground before our first client" (homepage and /founder disagree). This page avoids the word "client". -->
       <div class="cs-tags">
@@ -83,19 +83,41 @@
     </div>
   </div>
 
-  <!-- 3. The situation -->
+  <!-- 3. The person -->
   <div class="cs-section">
-    <div class="cs-section__label">The Situation</div>
+    <div class="cs-section__label">The Person</div>
     <div>
-      <h2 class="cs-section__title">A reliable system with a costly manual process.</h2>
+      <h2 class="cs-section__title">Ted built it in 2015. Then he ran it by hand.</h2>
       <div class="cs-body">
         <p>In 2015, Ted built marrspoints.com, a cloud points scoring system for the Washington DC Region of the SCCA. It tracks every driver, class and race in the Mid-Atlantic Road Racing Series: eight race weekends in 2026, at Summit Point, NJMP, VIR and Mid-Ohio. In 2018 the region gave Ted its Regional Executive Award for building and running it.</p>
-        <p>The system was reliable. The process around it was not efficient. After every race weekend, 27 official result files had to be renamed to the required format, uploaded one at a time through an admin tool, published, and confirmed. Each weekend took more than an hour of manual work. Underneath were two Java applications that had been in production for more than a decade.</p>
       </div>
     </div>
   </div>
 
-  <!-- 4. Rules vs. judgment -->
+  <!-- 4. The stakes -->
+  <div class="cs-section">
+    <div class="cs-section__label">The Stakes</div>
+    <div>
+      <h2 class="cs-section__title">More than an hour, every race weekend, on one person's time.</h2>
+      <div class="cs-body">
+        <p>The system was reliable. The process around it was not. After every race weekend, 27 official result files had to be renamed to the required format, uploaded one at a time through an admin tool, published, and confirmed. Each weekend took more than an hour of manual work, and all of it depended on one person.</p>
+        <p>Underneath were two Java applications that had been in production for more than a decade.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. The low point -->
+  <div class="cs-section">
+    <div class="cs-section__label">The Low Point</div>
+    <div>
+      <!-- TED TO REVIEW: the weekend it nearly went wrong (a late file, a bad upload, a weekend away). Jeff approved v2 structure, TG 26184, November 13, 2026. -->
+      <blockquote class="cs-quote cs-quote--pending">
+        The race weekend that nearly went wrong, to come.
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- 6. Rules vs. judgment -->
   <div class="cs-section">
     <div class="cs-section__label">Rules vs. Judgment</div>
     <div>
@@ -127,11 +149,12 @@
     </div>
   </div>
 
-  <!-- 5. What we did -->
+  <!-- 7. What we did -->
   <div class="cs-section">
-    <div class="cs-section__label">What Was Solved</div>
+    <div class="cs-section__label">What We Did</div>
     <div>
       <h2 class="cs-section__title">Five problems, each solved in production.</h2>
+      <div class="cs-callout"><div class="cs-callout__num">Day one</div><div class="cs-callout__text">The agent team refactored 20,000 lines of Java on its first day on the job.</div></div>
       <ol class="cs-steps">
         <li><div><div class="cs-steps__who">Race-weekend processing is automated.</div><div class="cs-steps__what">All 27 result files are received, renamed, uploaded, published and confirmed with no manual handling. More than an hour of work per weekend now takes minutes.</div></div></li>
         <li><div><div class="cs-steps__who">Legacy code is modernized.</div><div class="cs-steps__what">Both Java applications were refactored and upgraded, starting with 20,000 lines on the first day. New features have shipped since.</div></div></li>
@@ -142,11 +165,11 @@
     </div>
   </div>
 
-  <!-- 6. Under the hood -->
+  <!-- 8. Under the hood -->
   <div class="cs-section">
     <div class="cs-section__label">Under the Hood</div>
     <div>
-      <h2 class="cs-section__title">The system the agents run.</h2>
+      <h2 class="cs-section__title">Every result on these pages was published by the agents.</h2>
       <video class="cs-video" controls muted playsinline preload="metadata" poster="/assets/experience/marrspoints-home.png">
         <source src="/media/experience/marrspoints-walkthrough.webm" type="video/webm">
       </video>
@@ -158,11 +181,11 @@
     </div>
   </div>
 
-  <!-- 7. Results -->
+  <!-- 9. Before and after -->
   <div class="cs-section">
-    <div class="cs-section__label">Results</div>
+    <div class="cs-section__label">Before and After</div>
     <div>
-      <h2 class="cs-section__title">Before and after.</h2>
+      <h2 class="cs-section__title">An hour by hand became minutes.</h2>
       <table class="cs-ba">
         <thead><tr><th>Before</th><th class="cs-ba__after">After</th></tr></thead>
         <tbody>
@@ -176,19 +199,25 @@
     </div>
   </div>
 
-  <!-- 8. In their words -->
+  <!-- 10. In their words -->
   <div class="cs-section">
     <div class="cs-section__label">In Their Words</div>
     <div>
       <!-- PENDING: quote from a Washington DC Region SCCA official (Jeff, November 12, 2026). Ted to review and request it. -->
+      <!-- Two quotes per template v2: one on how it felt, one on what changed. -->
       <blockquote class="cs-quote cs-quote--pending">
-        Quote from a Washington DC Region SCCA official, to come.
+        Quote on how it felt, from a Washington DC Region SCCA official, to come.
         <cite>Name, title, Washington DC Region SCCA</cite>
+      </blockquote>
+      <div style="height:28px"></div>
+      <blockquote class="cs-quote cs-quote--pending">
+        Quote on what changed, to come.
+        <cite>Name, title</cite>
       </blockquote>
     </div>
   </div>
 
-  <!-- 9. What it means for you -->
+  <!-- 11. What it means for you -->
   <div class="cs-section">
     <div class="cs-section__label">What It Means for You</div>
     <div>
@@ -216,7 +245,7 @@
 
 </div>
 
-<!-- 10. Call to action -->
+<!-- 12. Call to action -->
 <div class="container">
   <div class="bottom-cta">
     <h2 class="bottom-cta__title">Which of your systems is ready for agents?</h2>
