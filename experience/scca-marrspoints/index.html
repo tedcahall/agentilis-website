@@ -39,33 +39,34 @@
   </div>
 </nav>
 
-<!-- 1. Header -->
+<!-- 1. Header: hook on the left, video on the right (desktop); stacked on mobile -->
 <div class="page-header-band">
   <div class="container">
-    <div class="page-header">
-      <div class="page-header__eyebrow"><a href="/experience/" style="color:inherit;text-decoration:none">Experience</a> &middot; Case Study</div>
-      <h1 class="page-header__title">Race-weekend results, from an hour by hand to minutes.</h1>
-      <p class="page-header__sub">For eleven years, one volunteer kept the scoreboard for an entire racing series. This is the story of how an AI agent team took the job over, and what happened on race day.</p>
-      <!-- TED TO REVIEW: client vs. "proving ground before our first client" (homepage and /founder disagree). This page avoids the word "client". Story rewritten as a narrative arc per Jeff, November 15, 2026. -->
-      <div class="cs-tags">
-        <span class="cs-tag">Transform</span>
-        <span class="cs-tag">Club motorsports</span>
-        <span class="cs-tag">Back-office automation</span>
+    <div class="page-header cs-hero-split">
+      <div class="cs-hero-split__text">
+        <div class="page-header__eyebrow"><a href="/experience/" style="color:inherit;text-decoration:none">Experience</a> &middot; Case Study</div>
+        <h1 class="page-header__title">Race-weekend results, from an hour by hand to minutes.</h1>
+        <p class="page-header__sub">For eleven years, one volunteer kept the scoreboard for an entire racing series. After every race weekend, 27 result files waited on him, and so did every driver in the region.</p>
+        <p class="page-header__sub">Then he handed the job to a team of AI agents. This is what happened, right up to race day.</p>
+        <!-- TED TO REVIEW: client vs. "proving ground before our first client" (homepage and /founder disagree). This page avoids the word "client". Story arc per Jeff, November 15, 2026. -->
+        <div class="cs-tags">
+          <span class="cs-tag">Transform</span>
+          <span class="cs-tag">Club motorsports</span>
+          <span class="cs-tag">Back-office automation</span>
+        </div>
+      </div>
+      <div class="cs-hero-split__media">
+        <video class="cs-video" controls muted playsinline preload="metadata" poster="/assets/experience/marrspoints-home.png">
+          <source src="/media/experience/marrspoints-walkthrough.mp4" type="video/mp4">
+          <source src="/media/experience/marrspoints-walkthrough.webm" type="video/webm">
+        </video>
+        <p class="cs-caption cs-caption--on-dark">marrspoints.com today. Every result on these pages was processed and published by the agent team.</p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container">
-
-  <!-- Video first: show, then tell -->
-  <div class="cs-hero-shot">
-    <video class="cs-video" controls muted playsinline preload="metadata" poster="/assets/experience/marrspoints-home.png">
-      <source src="/media/experience/marrspoints-walkthrough.mp4" type="video/mp4">
-      <source src="/media/experience/marrspoints-walkthrough.webm" type="video/webm">
-    </video>
-    <p class="cs-caption">marrspoints.com today: season announcements, race results and a full-season class leaderboard. Every result on these pages was processed and published by the agent team.</p>
-  </div>
 
   <!-- At a glance -->
   <div class="cs-glance">

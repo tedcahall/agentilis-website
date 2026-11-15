@@ -284,3 +284,13 @@
 .cs-callout__num { font-family: 'Playfair Display', serif; font-size: clamp(24px, 2.6vw, 32px); font-weight: 600; color: var(--primary); white-space: nowrap; }
 .cs-callout__text { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: var(--text); }
 @media (max-width: 640px) { .cs-callout { flex-direction: column; gap: 6px; } }
+
+/* Split hero: hook text left, video right on desktop; stacked on tablet and phone */
+.cs-hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.cs-hero-split__text .page-header__title { font-size: clamp(32px, 3.4vw, 48px); }
+.cs-hero-split__text .page-header__sub + .page-header__sub { margin-top: 14px; }
+.cs-hero-split__media .cs-video { border-color: color-mix(in srgb, var(--bg) 25%, transparent); box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6); }
+.cs-caption--on-dark { color: var(--bg); opacity: 0.7; }
+@media (max-width: 960px) {
+  .cs-hero-split { grid-template-columns: 1fr; gap: 32px; }
+}
