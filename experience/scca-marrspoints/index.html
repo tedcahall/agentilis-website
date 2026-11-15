@@ -45,8 +45,8 @@
     <div class="page-header">
       <div class="page-header__eyebrow"><a href="/experience/" style="color:inherit;text-decoration:none">Experience</a> &middot; Case Study</div>
       <h1 class="page-header__title">Race-weekend results, from an hour by hand to minutes.</h1>
-      <p class="page-header__sub">The Washington DC Region of the SCCA scores every race in its Mid-Atlantic Road Racing Series on marrspoints.com. An AI agent team now operates the system end to end: code, testing, cloud infrastructure, and live results on race weekends.</p>
-      <!-- TED TO REVIEW: client vs. "proving ground before our first client" (homepage and /founder disagree). This page avoids the word "client". -->
+      <p class="page-header__sub">For eleven years, one volunteer kept the scoreboard for an entire racing series. This is the story of how an AI agent team took the job over, and what happened on race day.</p>
+      <!-- TED TO REVIEW: client vs. "proving ground before our first client" (homepage and /founder disagree). This page avoids the word "client". Story rewritten as a narrative arc per Jeff, November 15, 2026. -->
       <div class="cs-tags">
         <span class="cs-tag">Transform</span>
         <span class="cs-tag">Club motorsports</span>
@@ -58,16 +58,24 @@
 
 <div class="container">
 
+  <!-- Video first: show, then tell -->
   <div class="cs-hero-shot">
-    <img src="/assets/experience/marrspoints-home.png" alt="The marrspoints.com home page with 2026 MARRS season announcements and the race schedule" width="1440" height="900">
-    <p class="cs-caption">marrspoints.com today: official results for the 2026 MARRS season, published by the agent team.</p>
+    <video class="cs-video" controls muted playsinline preload="metadata" poster="/assets/experience/marrspoints-home.png">
+      <source src="/media/experience/marrspoints-walkthrough.mp4" type="video/mp4">
+      <source src="/media/experience/marrspoints-walkthrough.webm" type="video/webm">
+    </video>
+    <p class="cs-caption">marrspoints.com today: season announcements, race results and a full-season class leaderboard. Every result on these pages was processed and published by the agent team.</p>
   </div>
 
-  <!-- 2. At a glance -->
+  <!-- At a glance -->
   <div class="cs-glance">
     <div class="cs-glance__item">
       <div class="cs-glance__num">11+</div>
       <div class="cs-glance__label">Years in production on AWS, since 2015</div>
+    </div>
+    <div class="cs-glance__item">
+      <div class="cs-glance__num">27</div>
+      <div class="cs-glance__label">Result files every race weekend, now handled with no human touch</div>
     </div>
     <div class="cs-glance__item">
       <div class="cs-glance__num">20,000</div>
@@ -75,156 +83,113 @@
     </div>
     <div class="cs-glance__item">
       <div class="cs-glance__num">60+</div>
-      <div class="cs-glance__label">Automated Playwright and JUnit tests on every change</div>
-    </div>
-    <div class="cs-glance__item">
-      <div class="cs-glance__num">27</div>
-      <div class="cs-glance__label">Result files per race weekend, processed automatically</div>
+      <div class="cs-glance__label">Automated tests on every change</div>
     </div>
   </div>
 
-  <!-- 3. The person -->
+  <!-- Chapter 1: the setup -->
   <div class="cs-section">
-    <div class="cs-section__label">The Person</div>
+    <div class="cs-section__label">Chapter 1 &middot; 2015</div>
     <div>
-      <h2 class="cs-section__title">Ted built it in 2015. Then he ran it by hand.</h2>
+      <h2 class="cs-section__title">A weekend project becomes the official scoreboard.</h2>
       <div class="cs-body">
-        <p>In 2015, Ted built marrspoints.com, a cloud points scoring system for the Washington DC Region of the SCCA. It tracks every driver, class and race in the Mid-Atlantic Road Racing Series: eight race weekends in 2026, at Summit Point, NJMP, VIR and Mid-Ohio. In 2018 the region gave Ted its Regional Executive Award for building and running it.</p>
+        <p>Ted Cahall races cars, and he builds software. In 2015 he wanted to learn Amazon's cloud, so he picked a project he cared about: tracking points for his own races in the Mid-Atlantic Road Racing Series, the club series run by the Washington DC Region of the SCCA.</p>
+        <p>It didn't stay small. Other drivers wanted their points too. Ted wired it to the timing system's feed, then to the club's registration system to match every driver to an SCCA number. By 2016, marrspoints.com was the official points system for every class in the series. In 2018 the region gave him its Regional Executive Award for building and running it.</p>
       </div>
     </div>
   </div>
 
-  <!-- 4. The stakes -->
+  <!-- Chapter 2: the stakes -->
   <div class="cs-section">
-    <div class="cs-section__label">The Stakes</div>
+    <div class="cs-section__label">Chapter 2 &middot; The catch</div>
     <div>
-      <h2 class="cs-section__title">More than an hour, every race weekend, on one person's time.</h2>
+      <h2 class="cs-section__title">Every race weekend, an hour of work only one person could do.</h2>
       <div class="cs-body">
-        <p>The system was reliable. The process around it was not. After every race weekend, 27 official result files had to be renamed to the required format, uploaded one at a time through an admin tool, published, and confirmed. Each weekend took more than an hour of manual work, and all of it depended on one person.</p>
-        <p>Underneath were two Java applications that had been in production for more than a decade.</p>
+        <p>The system worked. The process around it didn't scale. After every race weekend, 27 official result files had to be renamed to the right format, uploaded one at a time through an admin tool, published and checked. That took more than an hour, every weekend, for years.</p>
+        <p>And it all ran through one person. Underneath sat two Java applications that had been in production for more than a decade, written by the same person who was now spending his weekends feeding them files.</p>
+      </div>
+      <!-- TED TO REVIEW: a real low-point moment would strengthen this chapter (a weekend results ran late, a file went missing, a weekend away). -->
+    </div>
+  </div>
+
+  <!-- Chapter 3: the turning point -->
+  <div class="cs-section">
+    <div class="cs-section__label">Chapter 3 &middot; Early 2026</div>
+    <div>
+      <h2 class="cs-section__title">The first agent clocks in.</h2>
+      <div class="cs-body">
+        <p>In January 2026, Ted brought his first AI agent online, a chief of staff named Max. A few weeks later he gave Max the race-weekend job: receive the 27 result files, log into the admin tool, rename and upload every file, publish the results and send a confirmation.</p>
+        <p>Max did it. No human touched a file. The hour of hand work was gone, and the question changed from "can an agent help with this?" to "how much of this system can agents run?"</p>
       </div>
     </div>
   </div>
 
-  <!-- 5. The low point -->
+  <!-- Chapter 4: rising action -->
   <div class="cs-section">
-    <div class="cs-section__label">The Low Point</div>
+    <div class="cs-section__label">Chapter 4 &middot; The team forms</div>
     <div>
-      <!-- TED TO REVIEW: the weekend it nearly went wrong (a late file, a bad upload, a weekend away). Jeff approved v2 structure, TG 26184, November 13, 2026. -->
-      <blockquote class="cs-quote cs-quote--pending">
-        The race weekend that nearly went wrong, to come.
-      </blockquote>
-    </div>
-  </div>
-
-  <!-- 6. Rules vs. judgment -->
-  <div class="cs-section">
-    <div class="cs-section__label">Rules vs. Judgment</div>
-    <div>
-      <h2 class="cs-section__title">Some of it has to be exact every time. Some of it takes a call.</h2>
-      <div class="cs-split">
-        <div class="cs-split__col">
-          <div class="cs-split__head">Rules: exact, every time</div>
-          <ul>
-            <li>Rename all 27 result files to the required format</li>
-            <li>Upload every file and publish the results</li>
-            <li>Score points the same way for every driver and class</li>
-            <li>Test every code change before it ships</li>
-            <li>Send a confirmation when the job is done</li>
-          </ul>
-        </div>
-        <div class="cs-split__col cs-split__col--judgment">
-          <div class="cs-split__head">Judgment: a call on the fly</div>
-          <ul>
-            <li>Process live results during the day, while racing is still going on</li>
-            <li>Handle gaps and imperfect data as they arrive</li>
-            <li>Tell provisional results from official ones</li>
-            <li>Process the official results after the race</li>
-          </ul>
-        </div>
-      </div>
-      <div class="cs-body" style="margin-top:24px">
-        <p>Agents are most dependable on the rules. The judgment calls are the harder test, and the agent team now handles them on every race weekend.</p>
+      <h2 class="cs-section__title">A team of agents takes over the code itself.</h2>
+      <div class="cs-callout"><div class="cs-callout__num">Day one</div><div class="cs-callout__text">James, the Java engineer, refactored 20,000 lines of decade-old code on his first day on the job.</div></div>
+      <div class="cs-body">
+        <p>James went on to upgrade both Java applications and ship new features. Watts, the QA engineer, wrote more than 60 automated tests, so nothing reaches production without being checked first. Ken, the systems administrator, keeps the test environment and the AWS production servers current, and verifies every release.</p>
+        <p>Each agent has a defined job. Ted sets the direction and reviews the work, the way a manager would.</p>
       </div>
     </div>
   </div>
 
-  <!-- 7. What we did -->
+  <!-- Chapter 5: the climax -->
   <div class="cs-section">
-    <div class="cs-section__label">What We Did</div>
+    <div class="cs-section__label">Chapter 5 &middot; Race day</div>
     <div>
-      <h2 class="cs-section__title">Five problems, each solved in production.</h2>
-      <div class="cs-callout"><div class="cs-callout__num">Day one</div><div class="cs-callout__text">The agent team refactored 20,000 lines of Java on its first day on the job.</div></div>
-      <ol class="cs-steps">
-        <li><div><div class="cs-steps__who">Race-weekend processing is automated.</div><div class="cs-steps__what">All 27 result files are received, renamed, uploaded, published and confirmed with no manual handling. More than an hour of work per weekend now takes minutes.</div></div></li>
-        <li><div><div class="cs-steps__who">Legacy code is modernized.</div><div class="cs-steps__what">Both Java applications were refactored and upgraded, starting with 20,000 lines on the first day. New features have shipped since.</div></div></li>
-        <li><div><div class="cs-steps__who">Every change is tested before release.</div><div class="cs-steps__what">More than 60 automated Playwright and JUnit tests run on each change before it reaches production.</div></div></li>
-        <li><div><div class="cs-steps__who">Infrastructure is maintained.</div><div class="cs-steps__what">The AWS test and production environments are kept current, and every release is verified with smoke tests.</div></div></li>
-        <li><div><div class="cs-steps__who">Live race-day results are handled.</div><div class="cs-steps__what">Provisional results are processed while racing is under way, including gaps and imperfect data. Official results are published after the race.</div></div></li>
-      </ol>
-    </div>
-  </div>
-
-  <!-- 8. Under the hood -->
-  <div class="cs-section">
-    <div class="cs-section__label">Under the Hood</div>
-    <div>
-      <h2 class="cs-section__title">Every result on these pages was published by the agents.</h2>
-      <video class="cs-video" controls muted playsinline preload="metadata" poster="/assets/experience/marrspoints-home.png">
-        <source src="/media/experience/marrspoints-walkthrough.webm" type="video/webm">
-      </video>
-      <p class="cs-caption">A walk through marrspoints.com: season announcements, race results, and a full-season class leaderboard. Every result on these pages was processed and published by the agent team.</p>
-      <div class="cs-hero-shot" style="padding-top:24px">
-        <img src="/assets/experience/marrspoints-leaderboard.png" alt="A MARRS season points leaderboard on marrspoints.com, with points for every heat and feature race" width="1440" height="900" loading="lazy">
-        <p class="cs-caption">A class leaderboard: net and gross points for every heat and feature race of the season, for every driver.</p>
+      <h2 class="cs-section__title">The real test: live results while the cars are still on track.</h2>
+      <div class="cs-body">
+        <p>Processing official results after the race follows clear rules. Race day doesn't. Provisional results come in while racing is under way, with gaps and imperfect data, and someone has to decide what to publish, what to hold, and what's provisional rather than final.</p>
+        <p>That job now belongs to Inman, the agent named after NASCAR's most decorated crew chief. During the 2026 season, eight race weekends at Summit Point, NJMP, VIR and Mid-Ohio, Inman handles the live feed during the day and the official results after the checkered flag.</p>
+        <p>This is where agents usually fall down: not the repetitive work, but the judgment calls in a live environment with real people waiting on the answer.</p>
       </div>
     </div>
   </div>
 
-  <!-- 9. Before and after -->
+  <!-- Chapter 6: resolution -->
   <div class="cs-section">
-    <div class="cs-section__label">Before and After</div>
+    <div class="cs-section__label">Chapter 6 &middot; Today</div>
     <div>
-      <h2 class="cs-section__title">An hour by hand became minutes.</h2>
+      <h2 class="cs-section__title">The checkered flag falls. Minutes later, the results are up.</h2>
       <table class="cs-ba">
         <thead><tr><th>Before</th><th class="cs-ba__after">After</th></tr></thead>
         <tbody>
-          <tr><td>More than an hour of manual work after every race weekend</td><td>Minutes, fully automated</td></tr>
-          <tr><td>27 files renamed and uploaded by hand</td><td>Received, renamed, uploaded, published and confirmed automatically</td></tr>
-          <tr><td>Java code dating to 2015</td><td>Refactored, upgraded, and extended with new features</td></tr>
-          <tr><td>A system dependent on one person's time</td><td>An agent team with defined responsibilities, overseen by Ted</td></tr>
-          <tr><td>Live race-day results handled by a person</td><td>Handled by the agent team, including incomplete data</td></tr>
+          <tr><td>More than an hour of hand work after every race weekend</td><td>Minutes, with no human touching a file</td></tr>
+          <tr><td>Java code dating to 2015</td><td>Refactored, upgraded and extended with new features</td></tr>
+          <tr><td>Changes shipped on trust</td><td>More than 60 automated tests on every change</td></tr>
+          <tr><td>Everything waited on one person's time</td><td>An agent team with defined jobs, overseen by Ted</td></tr>
         </tbody>
       </table>
+      <div class="cs-body" style="margin-top:24px">
+        <p>Eleven years after it started as a weekend project, marrspoints.com is a production system run by AI agents, and its builder oversees it instead of running it by hand.</p>
+      </div>
     </div>
   </div>
 
-  <!-- 10. In their words -->
+  <!-- In their words -->
   <div class="cs-section">
     <div class="cs-section__label">In Their Words</div>
     <div>
       <!-- PENDING: quote from a Washington DC Region SCCA official (Jeff, November 12, 2026). Ted to review and request it. -->
-      <!-- Two quotes per template v2: one on how it felt, one on what changed. -->
       <blockquote class="cs-quote cs-quote--pending">
-        Quote on how it felt, from a Washington DC Region SCCA official, to come.
+        Quote from a Washington DC Region SCCA official, to come.
         <cite>Name, title, Washington DC Region SCCA</cite>
-      </blockquote>
-      <div style="height:28px"></div>
-      <blockquote class="cs-quote cs-quote--pending">
-        Quote on what changed, to come.
-        <cite>Name, title</cite>
       </blockquote>
     </div>
   </div>
 
-  <!-- 11. What it means for you -->
+  <!-- What it means for you -->
   <div class="cs-section">
     <div class="cs-section__label">What It Means for You</div>
     <div>
       <h2 class="cs-section__title">Every business has a marrspoints.</h2>
       <div class="cs-body">
-        <p>Most organizations run a system like this: it works, few people understand it, and a recurring manual process surrounds it. That is where agents deliver value first: clear rules, bounded judgment, and accountable human oversight.</p>
-        <p>This is not a pilot or a proof of concept. It is a production system, operated by AI agents today.</p>
+        <p>Most organizations run a system like this: it works, few people understand it, and a recurring manual job surrounds it. That's where agents deliver value first. Start with the repetitive work, then hand over the judgment calls once the team has earned trust.</p>
+        <p>This isn't a pilot or a proof of concept. It's a production system, run by AI agents today.</p>
       </div>
     </div>
   </div>
@@ -236,7 +201,7 @@
       <ul class="cs-sources">
         <li><a class="inline-link" href="https://marrspoints.com" target="_blank" rel="noopener">marrspoints.com</a><span>The live system</span></li>
         <li><a class="inline-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7442182612107878400/" target="_blank" rel="noopener">Max Automates the marrspoints Back-Office</a><span>LinkedIn, March 2026</span></li>
-        <li><a class="inline-link" href="/story/">Our story: how the agent team came together</a><span>Agentilis</span></li>
+        <li><a class="inline-link" href="/agents/">Meet James, Watts, Ken and Inman</a><span>Agentilis</span></li>
         <li><a class="inline-link" href="https://cahall-labs.com/the-intel-nuc-computers-aws-and-racing-cars/" target="_blank" rel="noopener">The Intel NUC Computers, AWS, and Racing Cars</a><span>The 2016 origin story</span></li>
         <li><a class="inline-link" href="https://cahall-labs.com/ted-cahall-receives-wdcr-scca-regional-executive-award/" target="_blank" rel="noopener">Ted Cahall Receives WDCR SCCA Regional Executive Award</a><span>2018</span></li>
       </ul>
@@ -245,7 +210,7 @@
 
 </div>
 
-<!-- 12. Call to action -->
+<!-- Call to action -->
 <div class="container">
   <div class="bottom-cta">
     <h2 class="bottom-cta__title">Which of your systems is ready for agents?</h2>
