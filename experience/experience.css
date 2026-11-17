@@ -42,6 +42,8 @@
   border-bottom: 1px solid var(--rule-strong);
   margin: 48px 0 8px;
 }
+.cs-numbers { padding: 56px 0 8px; }
+.cs-numbers .cs-glance { margin: 16px 0 48px; }
 .cs-glance__item { padding: 28px 24px; border-right: 1px solid var(--rule); }
 .cs-glance__item:last-child { border-right: none; }
 .cs-glance__num {
