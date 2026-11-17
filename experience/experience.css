@@ -189,6 +189,8 @@
   border: 1px solid var(--rule);
 }
 
+.cs-figure { margin: 32px 0 0; }
+
 /* Before / after */
 .cs-ba { width: 100%; border-collapse: collapse; font-family: 'Inter', sans-serif; }
 .cs-ba th {
