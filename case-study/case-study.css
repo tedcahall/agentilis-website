@@ -18,3 +18,6 @@
 .cs-card__fmt { font-size: 12px; margin-top: 8px; opacity: .7; }
 @media (max-width: 640px) { .cs-jd { grid-template-columns: 1fr; } .cs-jd dt { margin-top: 10px; } }
 
+
+/* Trial (Ted, Nov 22): full-width section, label above content. Snapshot Before/After only for now. */
+.cs-section--wide { grid-template-columns: 1fr; gap: 16px; }
