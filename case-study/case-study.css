@@ -24,3 +24,4 @@
 
 /* Trial (Ted, Nov 22): readable By the Numbers labels. Snapshot only for now. */
 .cs-numbers--legible .cs-glance__label { font-size: 14px; color: color-mix(in srgb, var(--text) 82%, var(--bg)); }
+.cs-numbers--legible .cs-glance__num { font-variant-numeric: lining-nums; }
