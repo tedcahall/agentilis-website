@@ -298,3 +298,43 @@
 @media (max-width: 960px) {
   .cs-hero-split { grid-template-columns: 1fr; gap: 32px; }
 }
+
+/* At a glance: scannable summary above the story */
+.cs-summary {
+  background: var(--card-bg);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin: 48px 0 8px;
+}
+.cs-summary .cs-section__label { padding-top: 0; margin-bottom: 8px; }
+.cs-summary__list { margin: 0; }
+.cs-summary__row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  padding: 14px 0;
+  border-top: 1px solid var(--rule);
+}
+.cs-summary__row:first-child { border-top: none; }
+.cs-summary__row dt {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primary);
+  padding-top: 3px;
+}
+.cs-summary__row dd {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.cs-summary__row dd.cs-summary__pending { color: var(--text-muted); font-style: italic; }
+@media (max-width: 640px) {
+  .cs-summary { padding: 22px 20px; }
+  .cs-summary__row { grid-template-columns: 1fr; gap: 4px; }
+}
