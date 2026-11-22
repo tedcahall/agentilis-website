@@ -338,3 +338,8 @@
   .cs-summary { padding: 22px 20px; }
   .cs-summary__row { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* Hub cards: client line, outcome headline, one-line result, tags */
+.cs-card__client { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-muted); }
+.cs-card .cs-tags { margin-top: 0; }
+.cs-card .cs-tag { font-size: 10px; color: var(--primary); border-color: var(--rule-strong); }
