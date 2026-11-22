@@ -21,3 +21,6 @@
 
 /* Trial (Ted, Nov 22): full-width section, label above content. Snapshot Before/After only for now. */
 .cs-section--wide { grid-template-columns: 1fr; gap: 16px; }
+
+/* Numbers box holding a sentence instead of a figure */
+.cs-glance__num--text { font-size: clamp(18px, 1.8vw, 22px); line-height: 1.35; }
