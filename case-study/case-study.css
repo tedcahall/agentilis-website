@@ -18,9 +18,3 @@
 .cs-card__fmt { font-size: 12px; margin-top: 8px; opacity: .7; }
 @media (max-width: 640px) { .cs-jd { grid-template-columns: 1fr; } .cs-jd dt { margin-top: 10px; } }
 
-/* Trial (Ted, Nov 22): higher-contrast Before/After table. Opt-in via .cs-ba--legible; only the Snapshot sample uses it for now. */
-.cs-ba--legible th { font-size: 13px; color: var(--primary); }
-.cs-ba--legible th.cs-ba__after { color: var(--primary); border-bottom: 2px solid var(--accent); }
-.cs-ba--legible td { font-size: 16px; }
-.cs-ba--legible td:first-child { color: color-mix(in srgb, var(--text) 78%, var(--bg)); }
-.cs-ba--legible td:last-child { color: var(--text); }
