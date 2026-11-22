@@ -22,5 +22,5 @@
 /* Trial (Ted, Nov 22): full-width section, label above content. Snapshot Before/After only for now. */
 .cs-section--wide { grid-template-columns: 1fr; gap: 16px; }
 
-/* Numbers box holding a sentence instead of a figure */
-.cs-glance__num--text { font-size: clamp(18px, 1.8vw, 22px); line-height: 1.35; }
+/* Trial (Ted, Nov 22): readable By the Numbers labels. Snapshot only for now. */
+.cs-numbers--legible .cs-glance__label { font-size: 14px; color: color-mix(in srgb, var(--text) 82%, var(--bg)); }
