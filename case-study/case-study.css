@@ -39,3 +39,6 @@
 .cs-section--norule { padding-bottom: 24px; }
 .cs-section--tight-top { padding-top: 24px; }
 .cs-section--tighter-top { padding-top: 8px; }
+/* 8 boxes = 2 rows of 4 */
+.cs-pain--boxes .cs-pain__item:nth-child(4n) { border-right: none; }
+.cs-pain--boxes .cs-pain__item:nth-child(n+5) { border-top: 1px solid var(--rule); }
