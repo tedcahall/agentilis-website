@@ -44,7 +44,7 @@
       <div>
         <div class="page-header__eyebrow"><a href="/case-study/" style="color:inherit;text-decoration:none">Case Studies</a></div>
         <h1 class="page-header__title">A Class Planner That Builds Every Set to the Rules, for Jazzercise NRV</h1>
-        <p class="page-header__sub">At Jazzercise NRV, a fitness studio in Virginia&#39;s New River Valley, instructors build new class sets all the time. A set is an ordered list of routines. Each position calls for a certain kind of routine, the class has to land on the clock, and the format&#39;s rules decide what can go where. It was all done by hand, about 90 minutes a week for each of the studio&#39;s 10 instructors. An AI agent team built a class planner instead. The instructor picks a class format and describes the feel. The planner builds a complete set, checks it against the rules, and hands it back to lock, swap, reorder and save.</p>
+        <p class="page-header__sub">At Jazzercise NRV, a fitness studio in Virginia&#39;s New River Valley, instructors build new class sets all the time. A set is an ordered list of routines. Each position calls for a certain kind of routine, the class has to land on the clock, and the format&#39;s rules decide what can go where. It was all done by hand, about 90 minutes a week for each of the studio&#39;s 10 instructors. An AI agent team built a class planner instead. The instructor picks a class format and describes the feel. The planner builds a complete set, checks it against the rules, and hands it back. The instructor can override any choice: lock, swap, reorder and save.</p>
         <div class="cs-tags">
           <span class="cs-tag">Operations and back office</span>
           <span class="cs-tag">Planning and scheduling</span>
@@ -65,7 +65,8 @@
           <tr><td>The slot pattern, the clock and the format&#39;s rules all kept in the instructor&#39;s head</td><td>25 rules checked by code on every generated set, with a retry when a set fails</td></tr>
           <tr><td>Counting recent routines and older routines by hand for every class</td><td>Freshness rules applied by release date, with a &quot;current&quot; badge on each recent routine</td></tr>
           <tr><td>Changing one routine meant rechecking the whole class</td><td>Swaps offer only routines that fit that slot, and drag and drop stays inside allowed blocks</td></tr>
-          <tr><td>Each new monthly collection tracked by hand</td><td>New collections imported by agents, and the catalog audited field by field against the official routine notes</td></tr>
+          <tr><td>Each new collection of routines tracked by hand</td><td>Agents load the 30 to 50 new routines that arrive every other month, and keep the catalog matched to the official routine notes</td></tr>
+          <tr><td>Making sure the songs flow from one to the next, by ear</td><td>The AI checks the feel of each song so the whole set flows</td></tr>
         </tbody>
       </table>
     </div>
@@ -86,8 +87,8 @@
         <div class="cs-glance__label">Rules checked by code on every generated set</div>
       </div>
       <div class="cs-glance__item">
-        <div class="cs-glance__num">2,461</div>
-        <div class="cs-glance__label">Catalog corrections in one audit against the official routine notes, with 0 failures</div>
+        <div class="cs-glance__num">30&ndash;50</div>
+        <div class="cs-glance__label">New routines loaded by agents every other month</div>
       </div>
     </div>
   </div>
@@ -99,10 +100,11 @@
         <li><div><div class="cs-steps__who">Read the feel the instructor describes in plain words, such as &quot;high-energy 90s pop&quot;</div></div></li>
         <li><div><div class="cs-steps__who">Place any routines the instructor pre-selected, up to half the slots in the class</div></div></li>
         <li><div><div class="cs-steps__who">Use an AI model to choose a routine for every remaining slot from the catalog, matched to the feel</div></div></li>
+        <li><div><div class="cs-steps__who">Check the feel of each song, so the whole set flows from start to finish</div></div></li>
         <li><div><div class="cs-steps__who">Check the set against all 25 rules: opener first, closer last, the cardio curve, strength grouping, freshness, equipment and length, and try again up to 3 times if it fails</div></div></li>
         <li><div><div class="cs-steps__who">Show the set with each routine&#39;s length, format, equipment, the reason it was chosen, and a chart of the class&#39;s energy curve</div></div></li>
         <li><div><div class="cs-steps__who">Let the instructor lock, swap, reorder and save, and check every edit against the slot it lands in</div></div></li>
-        <li><div><div class="cs-steps__who">Import each new monthly collection and keep the catalog matched to the official routine notes</div></div></li>
+        <li><div><div class="cs-steps__who">Load the 30 to 50 new routines that arrive every other month, and keep the catalog matched to the official routine notes</div></div></li>
       </ol>
     </div>
   </div>
@@ -112,9 +114,7 @@
       <div class="cs-body">
         <ul>
           <li><strong>Routines with a fixed place on the curve:</strong> some routines may only sit on the way down from the cardio peak. The planner allows at most one in the cardio block, and only in the last light-medium slot.</li>
-          <li><strong>A pre-selected routine that cannot fit:</strong> the planner names the routine and the reason, and asks the instructor to remove it and try again. It never drops a choice quietly.</li>
-          <li><strong>A catalog that drifts from the source:</strong> in one audit, 1,108 routines differed from the official routine notes. Agents logged every change, made 2,461 corrections with 0 failures, and re-checked: 0 differences remained.</li>
-          <li><strong>A slow answer from the AI model:</strong> after 120 seconds the instructor sees a clear &quot;try again&quot; message instead of a frozen screen, and the failure is logged for diagnosis.</li>
+          <li><strong>A catalog that drifts from the source:</strong> details such as each routine&#39;s movements, muscles worked and equipment had gone missing or out of date. Agents compared every routine with the official routine notes, filled in or fixed 2,461 details across 1,108 routines, then checked again: nothing was left to fix.</li>
         </ul>
       </div>
     </div>
@@ -123,7 +123,7 @@
     <div class="cs-section__label">Guardrail</div>
     <div>
       <div class="cs-body">
-        <p>The instructor decides what gets taught. The planner hands back a starting set, and every routine can be locked, swapped, reordered or removed. Edits are checked, so the opener and closer stay in place and a swap offers only routines that fit the slot. Class length is a warning, not a block: the instructor can accept it. The app is invite-only, and each instructor&#39;s saved sets are private. Agents build and test every change on a separate development copy, and the live app changes only when the owner approves the release.</p>
+        <p>The instructor decides what gets taught. The planner hands back a starting set, and the instructor can override any of it: every routine can be locked, swapped, reordered or removed. Edits are checked, so the opener and closer stay in place and a swap offers only routines that fit the slot. Class length is a warning, not a block: the instructor can accept it. The app is invite-only, and each instructor&#39;s saved sets are private. Agents build and test every change on a separate development copy, and the live app changes only when the owner approves the release.</p>
       </div>
     </div>
   </div>
