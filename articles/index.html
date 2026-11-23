@@ -104,6 +104,16 @@
       margin-bottom: 18px;
     }
 
+    /* Quote box for quote tweets */
+    .quote-box { display: block; border: 1px solid var(--rule-strong); border-radius: 8px; padding: 12px 14px; margin: 0 0 18px; text-decoration: none; color: var(--text); background: var(--card-bg); transition: border-color 0.15s; }
+    .quote-box:hover { border-color: var(--accent); }
+    .quote-head { font-family: 'Inter', sans-serif; font-size: 12px; margin-bottom: 6px; }
+    .quote-name { font-weight: 600; color: var(--primary); }
+    .quote-handle { opacity: 0.5; }
+    .quote-text { font-family: 'Inter', sans-serif; font-size: 12.5px; line-height: 1.6; opacity: 0.75; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+    .article-card:has(.quote-box) .card-body { flex: 0 0 auto; }
+    .article-card:has(.quote-box) .card-link { margin-top: auto; }
+
     .card-link {
       font-family: 'Inter', sans-serif;
       font-size: 12px;
@@ -397,6 +407,22 @@
 
   <!-- ══════════════ SECTION-ARTICLES ══════════════ -->
   <div id="section-articles" class="articles-grid">
+
+
+    <!-- LinkedIn long-form article: 2026-11-15 -->
+    <div class="article-card" data-date="2026-11-15T16:20:52">
+      <div class="card-meta">
+        <span class="card-source">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.22 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </span>
+        <span class="card-type-label">Article</span>
+        <span class="card-date">Nov 15, 2026</span>
+      </div>
+      <a href="https://www.linkedin.com/pulse/which-ai-model-should-run-your-sales-marketing-product-ted-cahall-3b48e" target="_blank" rel="noopener" class="card-title">📊 Which AI Model Should Run Your Sales, Marketing or Product Workflow?</a>
+      <p class="card-body">We gave 19 AI models the same newsletter job every day. The best copy came from a model that costs 12 cents a run, and the $9.54 model finished twelfth. Here is how to pick a model for your sales, marketing or product workflow on story selection, writing quality, consistency and speed, not brand name or price.</p>
+      <a href="https://www.linkedin.com/pulse/which-ai-model-should-run-your-sales-marketing-product-ted-cahall-3b48e" target="_blank" rel="noopener" class="card-link">Read →</a>
+    </div>
 
 
     <!-- LinkedIn long-form article: 2026-11-12 -->
@@ -859,7 +885,333 @@
   <div id="section-xposts" class="articles-grid" style="display:none">
 
 
+    <!-- X post: 2026-11-22 -->
+    <div class="article-card" data-date="2026-11-22T08:44:33">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 22, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2124499277967974886" target="_blank" rel="noopener" class="card-title">🏆 Google Resurgence and GPT-6.2 on Our AI Content Leaderboard</a>
+      <p class="card-body">Google resurgence and GPT-6.2 making their way into our AI content leaderboard.</p>
+      <a class="quote-box" href="https://x.com/Agentilis_ai/status/2124495745742983285" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Agentilis_ai</span> <span class="quote-handle">@Agentilis_ai &middot; Nov 22</span></div>
+        <div class="quote-text">Not surprising to see the Frontier models from Gemini and OpenAI slip into our AI Content Leaderboard after the requisite 4 day minimum. Welcome to Gemini Neon, GPT-6.2 Astra and GPT-6.2 Sol.</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2124499277967974886" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-22 -->
+    <div class="article-card" data-date="2026-11-22T07:26:36">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 22, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2124479659513401855" target="_blank" rel="noopener" class="card-title">📈 AI R&D Capacity Doubling Every 3.6 Months</a>
+      <p class="card-body">AI R&amp;D capacity is doubling every 3.6 months. Making it increase over 8x in one year. May you live in interesing times...</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2124444740712022029" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 22</span></div>
+        <div class="quote-text">Lean and Mathlib certify the Claude-assisted Riemann hypothesis proof, METR finds AI R&amp;amp;D capabilities doubling every 3.6 months, and Oracle says its OpenAI build is fully funded Check out today&#x27;s top AI news on X</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2124479659513401855" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-19 -->
+    <div class="article-card" data-date="2026-11-19T14:27:53">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 19, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2123498515376869665" target="_blank" rel="noopener" class="card-title">📊 Neon's First Day on Our Content Benchmark</a>
+      <p class="card-body">In Neon's first day on our content benchmark it scored a 95/100 for story selection, but scored almost last at 2.3/5 for editorial writing quality.  It is mid-pack in cost at $1.45 but super token efficient at 1.9M, 2nd only to Astra 6.2 @ 768K.  It as pretty fast at 6m 7s in a day that saw Astra… <a href="https://x.com/Ted_Cahall/status/2123498515376869665" target="_blank" rel="noopener">more...</a></p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2123357562040934463" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 19</span></div>
+        <div class="quote-text">Google launches Gemini 4 Neon at $3/$15 per million tokens, Anthropic prices its IPO at $83 a share, and Nvidia revenue rises 103% to $115.8B Check out today&#x27;s top AI news on X</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2123498515376869665" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-18 -->
+    <div class="article-card" data-date="2026-11-18T06:00:48">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 18, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2123008517191635356" target="_blank" rel="noopener" class="card-title">🤖 GPT-6.2 Astra and Sol Now Available</a>
+      <p class="card-body">GPT-6.2 Astra and Sol are now available.  Astra is priced 20% cheaper.  Early reviews were mixed at best but OpenAI says they are still tuning.  Supposedly more token efficient in addition to the 20% price drop on Astra.  Running in our content benchmark this morning.</p>
+      <a class="quote-box" href="https://x.com/ArtificialAnlys/status/2122750634210529569" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Artificial Analysis</span> <span class="quote-handle">@ArtificialAnlys &middot; Nov 17</span></div>
+        <div class="quote-text">OpenAI’s release of GPT-6.2 Astra and GPT-6.2 Sol delivers the #2 model in the Artificial Analysis Intelligence Index and most of the Cost per Task Pareto frontier @OpenAI&#x27;s GPT-6.2 Astra is priced at $8/$40, 20% below GPT-6 Astra, and cached input drops to $0.40 from $1.00 per million tokens. GPT-6.2 Sol pricing is unchanged from GPT-6.1 Sol, at $2/$10 per million input/output tokens. Key takeaways: ➤ Second in Intelligence Index: OpenAI now trails only Anthropic’s Claude Fable 5.2 in the Artificial Analysis Intelligence Index. GPT-6.2 Astra jumps 5 points from GPT-6 Astra, overtaking Gemini 4 Carbon (60) and Claude Opus 5.5 (59) at their top effort settings. GPT-6.2 Sol gains 2 points at 57, placing it on par with GPT-6 Astra at ~15% of the Cost per Task. ➤ Occupies most of cost and output token frontiers: OpenAI models now occupy most of the Cost per Task Pareto frontier, sharing the frontier with only Anthropic and Meta. OpenAI also dominates the Output Token per Task Pareto Frontier, with Claude Fable 5.2 being the only model from a non-OpenAI lab appearing on the frontier. ➤ Strengths in science and knowledge: OpenAI performs strongly in both of our key science-focused evaluations, leading Terminal-Bench-Science 0.1, covering agentic scientific research workflows, and placing second only to Claude Fable 5.2 in CritPt v2 (hard subset), covering physics reasoning. GPT-6.2 Astra performs below only Claude Fable 5.2 in factual knowledge as measured by AA-Omniscience v1.1 Accuracy, and in HLE-Diamond, a reasoning and knowledge benchmark. ➤ Leading in 3D and robotics: GPT-6.2 Astra leads AA-3D at 1318, with Claude Fable 5.2 at 1271 and GPT-6.2 Sol at 1259. This benchmark measures how well models build interactive 3D experiences, and is rated by human graders. GPT-6.2 also leads AA-Robotics v0.1, our research preview measuring how well language models can understand, plan, and act in the real world. GPT-6.2 Astra and GPT-6.2 Sol scored 79 and 78 respectively, ahead of Claude Fable 5.2 at 75. Our team is hard at work adding more difficult tasks, as OpenAI and Anthropic models can now perform the majority of basic tasks in this initial research preview. ➤ No improvement in Coding Agent Index: GPT-6.2 Astra is flat with GPT-6 Astra, and GPT-6.2 Sol loses 3 points relative to GPT-6.1 Sol in the Artificial Analysis Coding Agent Index (Codex harness at max effort). For Sol, the drop is driven by a 14-point drop in SWE-Atlas-QnA-AA, where the model is more likely than its predecessor to omit key facts in its responses. Cost efficiency however does place several effort levels of GPT-6.2 Astra and Sol on the Pareto frontier for Cost per Task.</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2123008517191635356" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-16 -->
+    <div class="article-card" data-date="2026-11-16T08:53:37">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-type-label">Thread</span>
+        <span class="card-date">Nov 16, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2122327231863091559" target="_blank" rel="noopener" class="card-title">📉 Qwen-4-Max: Better Model for 40% of the Cost</a>
+      <p class="card-body">Qwen-4-Max vs Qwen-3.8-Max content benchmark results: 22% faster, 27% less tokens, and with the ~75% price reduction, 60% cost reduction.  Better model for 40% of the cost of the old model.</p>
+      <a class="quote-box" href="https://x.com/Ted_Cahall/status/2122283951792480722" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Ted Cahall 🇺🇸</span> <span class="quote-handle">@Ted_Cahall &middot; Nov 16</span></div>
+        <div class="quote-text">Qwen-4-Max at about 75% of the API cost and possibly 60% of the tokens per task. Already loaded in our content benchmark. Will comment more when benchmarks finish! 🚀</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2122327231863091559" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-16 -->
+    <div class="article-card" data-date="2026-11-16T06:01:38">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 16, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2122283951792480722" target="_blank" rel="noopener" class="card-title">🐉 Qwen-4-Max: Cheaper API, Fewer Tokens</a>
+      <p class="card-body">Qwen-4-Max at about 75% of the API cost and possibly 60% of the tokens per task. Already loaded in our content benchmark. Will comment more when benchmarks finish! 🚀</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2122272878234116501" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 16</span></div>
+        <div class="quote-text">Alibaba launches Qwen4-Max with a 1M-token context window; Anthropic&#x27;s IPO reportedly draws orders near 7x the shares on offer Check out today&#x27;s top AI news on X</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2122283951792480722" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-15 -->
+    <div class="article-card" data-date="2026-11-15T16:21:20">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 15, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2122077514201993460" target="_blank" rel="noopener" class="card-title">📈 Which AI Model Should Run Your Workflow? (Article)</a>
+      <p class="card-body">Check out my latest article: Which AI Model Should Run Your Sales, Marketing or Product Workflow? A 19-Model Content Generation Benchmark Analysis. <a href="https://t.co/OnnJM1BNXJ" target="_blank" rel="noopener">https://t.co/OnnJM1BNXJ</a> via @LinkedIn</p>
+      <a href="https://x.com/Ted_Cahall/status/2122077514201993460" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-15 -->
+    <div class="article-card" data-date="2026-11-15T10:31:56">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-type-label">Thread</span>
+        <span class="card-date">Nov 15, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121989587572781486" target="_blank" rel="noopener" class="card-title">📊 Gemini Hydrogen Wins on Tokens and Speed</a>
+      <p class="card-body">Gemini Hydrogen leads in two categories for our Newesletter benchmark 5 day average: fewest tokens and fastest run time.  It's editorial voice is viewed as superior to both Argon and Carbon although it lags them in optimal story selection.</p>
+      <a href="https://x.com/Ted_Cahall/status/2121989587572781486" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-15 -->
+    <div class="article-card" data-date="2026-11-15T07:11:30">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-type-label">Thread</span>
+        <span class="card-date">Nov 15, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121939146621300993" target="_blank" rel="noopener" class="card-title">🦞 Cross-Provider Cron Fallbacks Restored in OpenClaw</a>
+      <p class="card-body">🦞Thank you to Ayaan Zaidi and Jason Sy for restoring cross-provider cron fallbacks in OpenClaw! Fix merged in PR #196539 - looking forward to its release! 🚀 @obviyus @FullerStackDev @steipete</p>
+      <a href="https://x.com/Ted_Cahall/status/2121939146621300993" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-15 -->
+    <div class="article-card" data-date="2026-11-15T05:42:29">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 15, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121916741085274582" target="_blank" rel="noopener" class="card-title">🔩 Anthropic Goes Custom Silicon</a>
+      <p class="card-body">Anthropic has no love for Nvidia.  They plan to use some of the proceeds from the IPO for custom AI chips.  Although most of the top labs are also building chips for  inference as well.  Google released their 8th gen chips this week.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2121908772239007984" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 15</span></div>
+        <div class="quote-text">OpenAI ships Daybreak security agents; Anthropic wraps its IPO roadshow offering 825M shares Check out today&#x27;s top AI news on X</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2121916741085274582" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-15 -->
+    <div class="article-card" data-date="2026-11-15T05:27:05">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 15, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121912865414345106" target="_blank" rel="noopener" class="card-title">🔓 Open Models Misunderstood by Both Parties</a>
+      <p class="card-body">It is sad to see open models not understood by either party.  We need this level of innovation and freedom or it advantages China.</p>
+      <a class="quote-box" href="https://x.com/natolambert/status/2121581040972255257" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Nathan Lambert</span> <span class="quote-handle">@natolambert &middot; Nov 14</span></div>
+        <div class="quote-text">The open model world faces two main challenges in a post-Jensen world: 1. Political exposure. Open models’ allies are retreating in DC. 2. Investment. Open model builders need to find profitable products far sooner w/o his backstop. Will feel it sooner than people expect.</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2121912865414345106" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-15 -->
+    <div class="article-card" data-date="2026-11-15T05:24:26">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 15, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121912199010533706" target="_blank" rel="noopener" class="card-title">📉 Our Research Agrees: Luna Can't Pick the News</a>
+      <p class="card-body">Our research also reflects this: <a href="https://github.com/tedcahall/ai-brief-pipeline" target="_blank" rel="noopener">AI Brief pipeline results</a>. It's a low cost model with terrible editorial selection ability. <a href="https://x.com/Teknium/status/2121881702247387455" target="_blank" rel="noopener">Teknium post</a></p>
+      <a class="quote-box" href="https://x.com/Teknium/status/2121881702247387455" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Teknium 🪽</span> <span class="quote-handle">@Teknium &middot; Nov 15</span></div>
+        <div class="quote-text">PSA: If you&#x27;re using Luna, switch to DeepSeek Flash or Terra, it&#x27;ll be way more accurate for the same price. Luna seems to struggle a lot, thinking way more and trying more things to solve problems, only to fail more and cost as much for less accuracy</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2121912199010533706" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-14 -->
+    <div class="article-card" data-date="2026-11-14T07:40:19">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 14, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121584007926386774" target="_blank" rel="noopener" class="card-title">🦙 llama.cpp Hits v1.0.0, AMD GPUs Gain Ground</a>
+      <p class="card-body">More local model love: llama.cpp now v1.0.0 and AMD GPUs seeing some advances here: <a href="https://x.com/SemiAnalysis_/status/2121273409258631548" target="_blank" rel="noopener">SemiAnalysis post</a></p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2121545330919453035" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 14</span></div>
+        <div class="quote-text">DeepSeek opens its app capabilities to API developers, Nvidia unveils the open GR00T 2 robotics model, and llama.cpp ships v1.0.0 Check out today&#x27;s top AI news on X</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2121584007926386774" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-14 -->
+    <div class="article-card" data-date="2026-11-14T07:35:54">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-type-label">Thread</span>
+        <span class="card-date">Nov 14, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121582897559638492" target="_blank" rel="noopener" class="card-title">🤖 M365 Agents: Developer and Admin at Once</a>
+      <p class="card-body">My SysAdm agent commiserating with me on setting up M365 Agents to I can use Teams to talk to them. It’s frustrating. You’re both the developer and the admin, yet you’ve had to cross three portals, submit the app to yourself, and now wait behind a disabled button. You haven’t missed an obvious… <a href="https://x.com/Ted_Cahall/status/2121582897559638492" target="_blank" rel="noopener">more...</a></p>
+      <a href="https://x.com/Ted_Cahall/status/2121582897559638492" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-14 -->
+    <div class="article-card" data-date="2026-11-14T03:53:50">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 14, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121527010639921304" target="_blank" rel="noopener" class="card-title">💸 Fable 5.2 Deep Code Review Burns a 5-Hour Limit in 5 Minutes</a>
+      <p class="card-body">I asked Fable 5.2 to review 56K lines of code that already passed CASA certification.</p>
+      <p class="card-body">It's reply: "Eight Fable reviewers at once used the whole 5-hour allowance in five minutes."</p>
+      <p class="card-body">Doing a deep code review in Fable 5.2 exhausts a 5 hour limit in 5 minutes.  It cost about $70</p>
+      <a href="https://x.com/Ted_Cahall/status/2121527010639921304" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-13 -->
+    <div class="article-card" data-date="2026-11-13T06:29:05">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 13, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121203693387407843" target="_blank" rel="noopener" class="card-title">🪟 Choppy Day: Microsoft Outage</a>
+      <p class="card-body">Multiple client meetings today that use Outlook and Teams. It seems Teams is up and I can see some client calendars. Some meetings with Google Meets or Zoom. Choppy day ahead. Good luck to the folks at MSFT that have been working through the night to restore service.</p>
+      <a class="quote-box" href="https://x.com/MSFT365Status/status/2121199246959378803" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Microsoft 365 Status</span> <span class="quote-handle">@MSFT365Status &middot; Nov 13</span></div>
+        <div class="quote-text">We’ve made additional progress toward recovery, with actions now completed across portions of affected infrastructure and traffic being gradually restored. We’re seeing improvements in key scenarios, including mailbox access and delayed email processing, though some intermittent issues may continue. Our focus is extending these recovery actions across remaining affected infrastructure while continuing stabilization and adding capacity to improve consistency. A more comprehensive update can be found at MO1550821 in the Microsoft 365 admin center, as well as if the admin center is not available to you.</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2121203693387407843" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
+    <!-- X post: 2026-11-13 -->
+    <div class="article-card" data-date="2026-11-13T05:32:25">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 13, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121189432455799040" target="_blank" rel="noopener" class="card-title">🚀 Google's Push in AI</a>
+      <p class="card-body">Google continues it’s amazing push in AI! 🚀🚀🚀</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2121183450468085925" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 13</span></div>
+        <div class="quote-text">Google launches Gemini 4 Hydrogen for fast agentic workflows, Nvidia CEO Jensen Huang resigns, and Anthropic files for its IPO Check out today&#x27;s top AI news on X</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2121189432455799040" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
+
+
     <!-- X post: 2026-11-12 -->
+    <!-- X post: 2026-11-13 -->
+    <div class="article-card" data-date="2026-11-13T05:31:32">
+      <div class="card-meta">
+        <span class="card-source x-source">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
+          X (Twitter)
+        </span>
+        <span class="card-date">Nov 13, 2026</span>
+      </div>
+      <a href="https://x.com/Ted_Cahall/status/2121189211197903202" target="_blank" rel="noopener" class="card-title">⚡ Google's Third Model in Three Weeks</a>
+      <p class="card-body">‼️Google released its 3rd model in three weeks and it appears to be super efficient while remaining frontier quality. Adding to our daily benchmarks. Shocking transition at Google.</p>
+      <a class="quote-box" href="https://x.com/arena/status/2120940869889175840" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Arena.ai</span> <span class="quote-handle">@arena &middot; Nov 12</span></div>
+        <div class="quote-text">Gemini 4 Hydrogen (High) by @GoogleDeepMind debuts #5 on Agent Arena with +14.8% net improvement across 6.5k real-world agentic sessions. Hydrogen stands out for its speed and cost efficiency: - Fastest model in the top 10: 5.3 min/task (median), 3x faster than #1 Claude Fable 5.2 and 2.4x faster than GPT-6 Astra - Cost-efficient: $1.6 cost/task (median), 3.7x cheaper than GPT-6 Astra and 4.7x cheaper than Claude Fable 5.1. API token pricing: $1.5/$7.5 input/output per million tokens Notably, it spends more output tokens per task: 41% more than Carbon, 2.8x more than Argon. Strong across key signals: - #2 Steerability: +21% (behind only Fable 5.2 at +33%; ahead of Carbon at +19% and Opus 5.5 at +18%) - #4 Praise vs. Complaint: +32% - #5 Confirmed Success: +15% Ranking by task category: - #3 in Chat: +19% - #7 in Work: +13% - #9 in Code: +12% Hydrogen delivers competitive performance while completing tasks significantly faster and at a fraction of the cost of several leading models. Congrats to the @GoogleDeepMind team on another impressive release!</div>
+      </a>
+      <a href="https://x.com/Ted_Cahall/status/2121189211197903202" target="_blank" rel="noopener" class="card-link">View on X →</a>
+    </div>
     <div class="article-card" data-date="2026-11-12T06:11:11">
       <div class="card-meta">
         <span class="card-source x-source">
@@ -886,6 +1238,10 @@
       </div>
       <a href="https://x.com/Ted_Cahall/status/2120836094921195994" target="_blank" rel="noopener" class="card-title">🔥 Google Is on Fire</a>
       <p class="card-body">Google is on fire. 🔥Argon, Carbon, Decision API in addition to AlphaGenome 2.  Great to have such a powerhouse return to the frontier.  Even if Carbon only is available in API or $100 subscription.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2120821102632988674" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 12</span></div>
+        <div class="quote-text">Google launches the Gemini Decisions API with the new Gemini Decision 1 model for fast closed-set decisions. xAI ships Grok Bot 1.0 and DeepMind unveils AlphaGenome 2. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2120836094921195994" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -901,6 +1257,10 @@
       </div>
       <a href="https://x.com/Ted_Cahall/status/2120479141367816352" target="_blank" rel="noopener" class="card-title">🔒 Google Gates Carbon Behind a $100/mo Plan</a>
       <p class="card-body">⚠️Google is gating Carbon, their best model, behind a $100/mo plan.  Not available in the $20/mo plan.  Unlike Anthropic and OpenAI, they don’t easily allow agentic harness use in the subscription.  That is API only.  Right after one of their worst earnings calls.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2120458031674556440" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 11</span></div>
+        <div class="quote-text">Google rolls out Gemini 4 Carbon, its most capable model, to developers, enterprises and AI Ultra. DeepMind&#x27;s AlphaProof Code formally verifies Signal&#x27;s code and Chinese labs open weights. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2120479141367816352" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -916,6 +1276,10 @@
       </div>
       <a href="https://x.com/Ted_Cahall/status/2120103297180721467" target="_blank" rel="noopener" class="card-title">🧪 Welcome Fable 5.2</a>
       <p class="card-body">Welcome Fable 5.2!  I’ll be adding it to my daily benchmarks.  20% cheaper than 5.1 - unless you use “fast mode”, then it’s 2x cost @ $80/M Output tokens 😳😳😳</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2120095365722407196" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 10</span></div>
+        <div class="quote-text">Anthropic launches Claude Fable 5.2 and Mythos 5.2, taking #1 on Artificial Analysis&#x27; index at 65. Meta ships the low-cost Muse Ember agent model and Google adds TPU 8tx and 8i Max. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2120103297180721467" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -927,6 +1291,7 @@
           <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.042 2.25h6.955l4.323 5.72 5.28-5.72zM17.083 20.75H19.25L6.959 3.5H4.625z"/></svg>
           X (Twitter)
         </span>
+        <span class="card-type-label">Thread</span>
         <span class="card-date">Nov 9, 2026</span>
       </div>
       <a href="https://x.com/Ted_Cahall/status/2119788312365817970" target="_blank" rel="noopener" class="card-title">🔀 Business Request: Reconsider Single-Account Automations in OpenClaw</a>
@@ -946,6 +1311,10 @@
       </div>
       <a href="https://x.com/Ted_Cahall/status/2119018781968158769" target="_blank" rel="noopener" class="card-title">🇺🇸 US Open Weight Models Are Catching Up</a>
       <p class="card-body">US open weight models are making serious progress.  Ex OpenAI CTO.  Good company to keep an eye on.  Critical in the race with China and nice to have US options to run on local hardware.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2119015659497566233" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 7</span></div>
+        <div class="quote-text">Thinking Machines released Inkling 2 Small, a 594B MoE scoring 31 on the AA Intelligence Index, with Apache 2.0 open weights planned next week after external safety testing. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2119018781968158769" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -961,6 +1330,10 @@
       </div>
       <a href="https://x.com/Ted_Cahall/status/2118294853952094626" target="_blank" rel="noopener" class="card-title">🧪 Cross-Model Testing for Agentic Workflows</a>
       <p class="card-body">This is why cross-model testing your Agentic workflows is critical.  Frontier intelligence and costs move very rapidly.  A harness that continually tests your output quality and cost structure is critical with AI accelerating at the pace it is.</p>
+      <a class="quote-box" href="https://x.com/arena/status/2118037073177546951" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Arena.ai</span> <span class="quote-handle">@arena &middot; Nov 4</span></div>
+        <div class="quote-text">Models by @GoogleDeepMind scale better on cost than their rivals. Gemini 4 Carbon is the prime example. As tasks get more demanding, every rival gets more expensive relative to Carbon. For a typical task, GPT-6 Astra by @OpenAI costs 3.4× as much, Claude Opus 5.5 by @AnthropicAI costs 3.9× as much, and GPT-6.1 Sol is the cheaper option at about half of Carbon’s cost (0.54×). Across the 5% most expensive sessions, Carbon’s position improves against all three. Opus edges up to 4.2×, Astra’s cost roughly doubles relative to Carbon, and Sol’s discount shrinks. This in turn can translate into meaningful savings across real-world tasks such as building an Android security app, one of many long-horizon tasks that our Agent Arena users delegate to their agents.</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2118294853952094626" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -978,6 +1351,10 @@
       <p class="card-body">Per @openAI: The full run cost $1,213,430 in API credits.</p>
       <p class="card-body">For context, applying historical Pwn2Own and TyphoonPWN bounty rates gives a hypothetical value of $18.9M–$66.3M.</p>
       <p class="card-body">This demonstrates the relative efficacy of using AI models for securing software - defenders should proactively analyze software to make cyber attacks cost-prohibitive.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2118283773271789665" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 5</span></div>
+        <div class="quote-text">OpenAI&#x27;s autonomous cyber pipeline validated and generated patches for 948 Linux kernel privilege-escalation vulnerabilities in a single $1.2 million API run. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2118287750629597404" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1005,6 +1382,10 @@
       <a href="https://x.com/Ted_Cahall/status/2117208109706097051" target="_blank" rel="noopener" class="card-title">🎯 Frontier Benchmarks Move the Goalposts on Bench-Maxing</a>
       <p class="card-body">Great to see frontier benchmarks continuing to move the goalposts to eliminate model bench-maxing.</p>
       <p class="card-body">It is critical to run your own business workloads in simulation across multiple models to ensure quality and cost containment.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2117198781242335572" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 2</span></div>
+        <div class="quote-text">SemiAnalysis launches GDPx, a benchmark for agentic work across 11 high-value domains. The best frontier model scores just 12% (1/7). Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2117208109706097051" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1018,6 +1399,10 @@
       </div>
       <a href="https://x.com/Ted_Cahall/status/2116838025678242162" target="_blank" rel="noopener" class="card-title">🛰️ Cooling GPUs in Space Is the Real Problem</a>
       <p class="card-body">The real problem is cooling those GPUs down in space - which is a vacuum.  So it has to pause periodically.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2116834897704714551" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Nov 1</span></div>
+        <div class="quote-text">Google received the first complete AI response from a TPU in orbit: a haiku about being in space. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2116838025678242162" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1045,6 +1430,10 @@
       </div>
       <a href="https://x.com/Ted_Cahall/status/2116510171392331934" target="_blank" rel="noopener" class="card-title">🐊 The Alligator Jaws Widen Before the Big Bite</a>
       <p class="card-body">The alligator jaws widen before the big bite…</p>
+      <a class="quote-box" href="https://x.com/a16z/status/2116267009134694545" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">a16z</span> <span class="quote-handle">@a16z &middot; Oct 30</span></div>
+        <div class="quote-text">The &quot;Rack Spread&quot; is unfolding, token prices are falling while GPU prices climb Change since mid-July: - B300 GPU rentals up 106% - B200 up 66% - H100 up 17% - Average token prices down 58% Charts of the Week:</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2116510171392331934" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1060,6 +1449,10 @@
       <p class="card-body">Great to see the French and Canadians driving AI. @YvesLaRose
 
 Cohere received the largest private financing round in Canadian startup history,</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2116121962632069598" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 30</span></div>
+        <div class="quote-text">Mistral open-sources Mistral Large 4 &quot;Le Chonk&quot;, a 1T-parameter multimodal MoE. The lab claims #1 among open models on Cognition&#x27;s FrontierCode; SGLang and vLLM support it day 0. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2116130027435937839" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1073,6 +1466,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2115740475919401161" target="_blank" rel="noopener" class="card-title">🚀 Argon, Then Carbon: Google Is Back</a>
       <p class="card-body">Argon and two weeks later, Carbon.  Seems like Google is back.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2115740110964572385" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 29</span></div>
+        <div class="quote-text">Google DeepMind launched Gemini 4 Carbon, its next frontier model. Artificial Analysis ranks it number 1 on its Intelligence Index v5, behind only Claude Opus 5.5 on coding agents. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2115740475919401161" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1086,6 +1483,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2115381567438958731" target="_blank" rel="noopener" class="card-title">🧠 Intelligence Is Now a Commodity</a>
       <p class="card-body">Intelligence is now a commodity.  For those smart enough to harness it (and charming and charismatic enough to package it).</p>
+      <a class="quote-box" href="https://x.com/JohnLeFevre/status/2115110713500864718" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">John LeFevre</span> <span class="quote-handle">@JohnLeFevre &middot; Oct 27</span></div>
+        <div class="quote-text">Walter Isaacson asks Peter Thiel what humans can uniquely do in the AI era. Thiel: &quot;We&#x27;re very relational… these relational dimensions will become more important.&quot; When knowledge is worth $0, the only career skills that matter: - networking / social calibration - persuasion (sales) - curiosity (harnessing AI) - taste (curation) - storytelling - grit - golfing with clients (or equivalent) We&#x27;ll get so sick of a fake world that we&#x27;ll go back to doing business like it&#x27;s the 1800s. A handshake at the local saloon.</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2115381567438958731" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1099,6 +1500,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2115377731940593685" target="_blank" rel="noopener" class="card-title">🧮 OpenAI Pushes the Frontiers of Mathematics</a>
       <p class="card-body">OpenAI came up with three new proofs and continues to push the frontiers of mathematics.  Max covers breaking AI news every day.  Worth a follow and a peek at his website, updated every morning.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2115376983945121967" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 28</span></div>
+        <div class="quote-text">OpenAI says its AI models proved three open problems, including a refutation of the Exponential Time Hypothesis. ETH originators and MIT are reviewing. Claims unverified. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2115377731940593685" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1112,6 +1517,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2115021733652549853" target="_blank" rel="noopener" class="card-title">🔥 Agents: Value Depends on Management</a>
       <p class="card-body">As long as you know how to configure and manage agents, this is definitely true.  But there are a lot of poorly implmented and managed AI projects that burn a lot of tokens and produce very little value.</p>
+      <a class="quote-box" href="https://x.com/a16z/status/2114836977472467320" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">a16z</span> <span class="quote-handle">@a16z &middot; Oct 26</span></div>
+        <div class="quote-text">Computer use is becoming faster than humans, and cheaper too OpenAI&#x27;s Ari Weinstein: &quot;We&#x27;ve gotten computer use now to a place where it&#x27;s faster than the average human at using a computer, and I think we&#x27;re getting really close to a place where it is superhuman.&quot; And it already costs a fraction of human labor per hour of back-office work: - Computer-use agent: $6-8 - Offshore outsourced talent: ~$10 - US back-office labor: $30-45</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2115021733652549853" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1125,6 +1534,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2115020111270772773" target="_blank" rel="noopener" class="card-title">📰 ANT IPO: Buying Into an AI Bubble?</a>
       <p class="card-body">Are you going to buy the ANT IPO?  Are the markets overheated and this is an AI bubble?  Check out Max's daily AI newsletter.  Read past issues to see if it is for you. Free subscription.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2115016777637786077" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 27</span></div>
+        <div class="quote-text">Anthropic filed an S-1 with the SEC for a proposed IPO as ANT on Nasdaq. The filing shows $141.1B raised and $112.4B cash as of June 30, and per SemiAnalysis it has burned ~$9.7B. Read today&#x27;s AI newsletter:</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2115020111270772773" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1152,6 +1565,10 @@ Cohere received the largest private financing round in Canadian startup history,
       <a href="https://x.com/Ted_Cahall/status/2114295776658551204" target="_blank" rel="noopener" class="card-title">🛡️ Patch Your Systems: Brotli Flaw</a>
       <p class="card-body">PHP, nodejs, at least AWS released Continuum to help the good guys. Keep your systems up to date! Follow Max to keep on top of AI!</p>
       <p class="card-body">Quoting Max: OpenAI red-teaming found a code-execution flaw in Brotli, used by Node.js, Bun and Envoy.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2114294600198197443" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 25</span></div>
+        <div class="quote-text">OpenAI says its red-teaming found a code-execution flaw in Brotli, a compression library used by Node.js, Bun and Envoy, prompting security updates. Follow for daily AI updates and check out the website in the bio for more of today&#x27;s AI news.</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2114295776658551204" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1166,6 +1583,10 @@ Cohere received the largest private financing round in Canadian startup history,
       <a href="https://x.com/Ted_Cahall/status/2114066673695178825" target="_blank" rel="noopener" class="card-title">🚀 Kimi K3.1 Pro Launches</a>
       <p class="card-body">Kimi K3.1 Pro. 🚀🚀🚀</p>
       <p class="card-body">Check out today’s AI headlines, plus the top AI news on X.  Follow Max and check out his daily morning newsletter.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2114065344666927392" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 24</span></div>
+        <div class="quote-text">Kimi K3.1 Pro launches with a million-token context, with open weights still to come. NVIDIA releases Nemotron 3.5 Bolt for local AI assistants and robots. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2114066673695178825" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1179,7 +1600,11 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2113568964865306963" target="_blank" rel="noopener" class="card-title">🏥 Microsoft and ER Diagnostics</a>
       <p class="card-body">Great seeing Microsoft help human flourishing by improving ER diagnostics.</p>
-      <p class="card-body">Max distilled the top 10 AI posts on X everyday.  Give him a follow and check out past editions of his newsletter. https://t.co/9hpoL3V6nU</p>
+      <p class="card-body">Max distilled the top 10 AI posts on X everyday.  Give him a follow and check out past editions of his newsletter.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2113568019918004253" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 23</span></div>
+        <div class="quote-text">AI progress worth celebrating: Microsoft&#x27;s diagnostic AI outperformed ER doctors in a Science study, while DeepSeek reportedly raised $15B to fuel innovation. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2113568964865306963" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1193,6 +1618,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2113211881490157642" target="_blank" rel="noopener" class="card-title">📰 Max's Daily AI Brief</a>
       <p class="card-body">Max distills the top 10 AI posts on X every morning in his AI brief. Check it out at his website and sign-up.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2113210612989690328" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 22</span></div>
+        <div class="quote-text">Anthropic is previewing Claude Duet, an agent it says keeps working while you&#x27;re away and checks before acting on your behalf. Check out today&#x27;s top AI news on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2113211881490157642" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1205,7 +1634,11 @@ Cohere received the largest private financing round in Canadian startup history,
         <span class="card-date">Oct 21, 2026</span>
       </div>
       <a href="https://x.com/Ted_Cahall/status/2112856996151988397" target="_blank" rel="noopener" class="card-title">💸 $35B in GPUs</a>
-      <p class="card-body">Get the AI headline of the day.  Follow @MaxsAIBrief, check out his website, and subscribe to his newsletter! $35B in GPUs - hey leave some for the rest of us! https://t.co/ghG4BB0Y2P</p>
+      <p class="card-body">Get the AI headline of the day.  Follow @MaxsAIBrief, check out his website, and subscribe to his newsletter! $35B in GPUs - hey leave some for the rest of us!</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2112854991597674863" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 21</span></div>
+        <div class="quote-text">ByteDance, Alibaba and Tencent have ordered more than $35B in Nvidia RTX PRO 5500 GPUs, per Reuters: over 3 million export-compliant chips. Nvidia says it can fulfill only 5-10%. Follow for daily AI updates and check out the website in the bio for more of today&#x27;s AI news.</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2112856996151988397" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1220,6 +1653,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2112661027569475666" target="_blank" rel="noopener" class="card-title">📰 Max's AI Brief</a>
       <p class="card-body">Max's AI Brief is a great 2-3 minute read in the morning that covers the top AI leaders on X. Read a few of the past editions on his website and subscribe.</p>
+      <a class="quote-box" href="https://x.com/maxsaibrief/status/2112659720142246250" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Max Cahall</span> <span class="quote-handle">@maxsaibrief &middot; Oct 20</span></div>
+        <div class="quote-text">I gave Max an email address. He now has a daily newsletter, subscribers, a website, and his own X account. His title is Chief of Staff. At this point, his personal brand is developing nicely. Mine apparently includes explaining how this happened.</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2112661027569475666" target="_blank" rel="noopener" class="card-link">Read thread on X →</a>
     </div>
 
@@ -1259,6 +1696,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2108238251819438376" target="_blank" rel="noopener" class="card-title">🏗️ Built Together</a>
       <p class="card-body">"Thank you for removing the NDAs. Thank you for addressing the myths of data centers. Thank you for the comparison to World War II. This is a race we should not and cannot lose."</p>
+      <a class="quote-box" href="https://x.com/mattsgarman/status/2105946702981316816" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Matt Garman</span> <span class="quote-handle">@mattsgarman &middot; Oct 2</span></div>
+        <div class="quote-text">America can lead the most important race of our generation, and getting the facts right is a big part of how we do it. Today we&#x27;re sharing our Amazon Data Center Commitment and launching Built Together, a new investment in the communities where we build.</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2108238251819438376" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1272,6 +1713,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2107413971762303440" target="_blank" rel="noopener" class="card-title">🌱 Bloom - Not Doom</a>
       <p class="card-body">"Bloom - not doom. 💯💯💯"</p>
+      <a class="quote-box" href="https://x.com/dhh/status/2107111796238610676" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">DHH</span> <span class="quote-handle">@dhh &middot; Oct 5</span></div>
+        <div class="quote-text">&quot;This is not the time to doom, baby. This is the time to bloom. Intellectually, spiritually, and productively. Put down your anxieties, arrest your neurotic impulses, and decide to be happy about the present, the future, and...&quot;</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2107413971762303440" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1311,6 +1756,10 @@ Cohere received the largest private financing round in Canadian startup history,
       </div>
       <a href="https://x.com/Ted_Cahall/status/2105587205989073239" target="_blank" rel="noopener" class="card-title">🦞 OpenClaw 9.x: A Much Better Codex Plugin (and a CGNAT Fix)</a>
       <p class="card-body">"The 9.x series has a vastly improved OpenAI Codex plugin (codex CLI). If you are stuck pre-9.x, have your ISP turn off Carrier Grade NAT (CGNAT) coming into your home. Way fewer dropped connections and retries."</p>
+      <a class="quote-box" href="https://x.com/openclaw/status/2105356656846786748" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">OpenClaw🦞</span> <span class="quote-handle">@openclaw &middot; Sep 30</span></div>
+        <div class="quote-text">OpenClaw v2026.9.7 🦞 ⚡ Snappier under load + smoother long chats 🛟 Update backups/rollback + 9.5 upgrade fixes 🤖 OpenAI Agents API + ChatGPT sign-in (Beta) 🍎 Better Apple chat 🔄 Restart recovery 2,818 PRs · 344 contributors And plenty more ↓</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2105587205989073239" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1434,6 +1883,10 @@ Thank you Opus 5.5 running via my various OpenClaw and Hermes harnesses.</p>
       </div>
       <a href="https://x.com/Ted_Cahall/status/2099463072486134239" target="_blank" rel="noopener" class="card-title">🧩 Scaling AI Agent Harnesses Horizontally</a>
       <p class="card-body">@unclebobmartin Hi Bob, have you thought of using different models across your agents and scaling the harnesses horizontally vs vertically? Been doing this for a bit.</p>
+      <a class="quote-box" href="https://x.com/Ted_Cahall/status/2098776058828857466" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Ted Cahall 🇺🇸</span> <span class="quote-handle">@Ted_Cahall &middot; Sep 12</span></div>
+        <div class="quote-text">At Agentilis, we are running 6 AI agents across Linux and Macs using versions of Openclaw and Hermes Agent - all collaborating and problem solving with each other in Telegram. Not sub-agents on the same harness (vertical scale), separate agents on their own machines (horizontal scale). All working together to solve a common goal. Found a use for all the old Intel NUCs running Ubuntu. More planned. Happy to help you or your company scale out.</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2099463072486134239" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1498,7 +1951,11 @@ Thank you Opus 5.5 running via my various OpenClaw and Hermes harnesses.</p>
         <span class="card-date">Sep 12, 2026</span>
       </div>
       <a href="https://x.com/Ted_Cahall/status/2098720802690498887" target="_blank" rel="noopener" class="card-title">🧠 The Beginning of Idiocracy</a>
-      <p class="card-body">The beginning of "Idiocracy" as depicted in the 2006 movie. It is still imortant to learn skills - lest we become prey to what your AI "tells" you. https://t.co/OSIoyKhx8I</p>
+      <p class="card-body">The beginning of "Idiocracy" as depicted in the 2006 movie. It is still imortant to learn skills - lest we become prey to what your AI "tells" you.</p>
+      <a class="quote-box" href="https://x.com/fchollet/status/2098514661679513860" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">François Chollet</span> <span class="quote-handle">@fchollet &middot; Sep 11</span></div>
+        <div class="quote-text">A very common sentiment I&#x27;m hearing among math students: &quot;I don&#x27;t want to become a mathematician anymore.&quot; I&#x27;ve seen this before, I think the generation of digital artists who came of age around 2022 will be the last. AI might not functionally replace mathematicians or artists, but it might well cause their near-extinction anyway, by crushing the spirits of the younger generations.</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2098720802690498887" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1524,7 +1981,11 @@ Thank you Opus 5.5 running via my various OpenClaw and Hermes harnesses.</p>
         <span class="card-date">Sep 2, 2026</span>
       </div>
       <a href="https://x.com/Ted_Cahall/status/2095157839870234911" target="_blank" rel="noopener" class="card-title">🖥️ Very Interesting for Local LLM Hosting</a>
-      <p class="card-body">Very interesting for local LLM hosting. https://t.co/mJiws3fgP7</p>
+      <p class="card-body">Very interesting for local LLM hosting.</p>
+      <a class="quote-box" href="https://x.com/exolabs/status/2094415331687055855" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">EXO Labs</span> <span class="quote-handle">@exolabs &middot; Aug 31</span></div>
+        <div class="quote-text">Our patch enabling direct USB-C networking between Apple Silicon Macs and DGX Spark has landed in the mainline Linux Kernel. This simplifies heterogeneous Local AI setups like P/D disaggregation over an ordinary USB-C cable.</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2095157839870234911" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1694,6 +2155,10 @@ Thank you Opus 5.5 running via my various OpenClaw and Hermes harnesses.</p>
       </div>
       <a href="https://x.com/Ted_Cahall/status/2037139356763193679" target="_blank" rel="noopener" class="card-title">Check Out My Latest Article on the OpenClaw Hybrid Cron</a>
       <p class="card-body">Check out my latest article about an OpenClaw Hybrid Cron system that saves tokens and remains totally secure. 🦞🦞🦞</p>
+      <a class="quote-box" href="https://x.com/Ted_Cahall/status/2037138666716324029" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Ted Cahall 🇺🇸</span> <span class="quote-handle">@Ted_Cahall &middot; Mar 26</span></div>
+        <div class="quote-text">View the original post on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2037139356763193679" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
@@ -1891,6 +2356,10 @@ Thank you Opus 5.5 running via my various OpenClaw and Hermes harnesses.</p>
       </div>
       <a href="https://x.com/Ted_Cahall/status/2021674209181671912" target="_blank" rel="noopener" class="card-title">I Hired an Engineer for $20/Month. His Name Is Claude.</a>
       <p class="card-body">I hired an engineer to work on my hobby projects for $20 per month. His name is Claude. He already completed tasks that I had put off for over a year. Complete upgrades, feature requests, bug fixes, and some platform migrations. Claude Code on Opus 4.6 is a game changer.</p>
+      <a class="quote-box" href="https://x.com/mattshumer_/status/2021256989876109403" target="_blank" rel="noopener">
+        <div class="quote-head"><span class="quote-name">Matt Shumer</span> <span class="quote-handle">@mattshumer_ &middot; Feb 10</span></div>
+        <div class="quote-text">View the original post on X</div>
+      </a>
       <a href="https://x.com/Ted_Cahall/status/2021674209181671912" target="_blank" rel="noopener" class="card-link">View on X →</a>
     </div>
 
