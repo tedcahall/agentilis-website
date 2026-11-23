@@ -27,3 +27,11 @@
 .cs-numbers--legible .cs-glance__num { font-variant-numeric: lining-nums; }
 .cs-glance-facts dd ul { margin: 0; padding-left: 1.1em; }
 .cs-glance-facts dd li { margin: 0 0 2px; }
+
+/* Trial (Ted, Nov 22): The Problem as a row of boxes, styled like By the Numbers. Legacy page only. */
+.cs-pain--boxes { grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); }
+.cs-pain--boxes .cs-pain__item { padding: 24px 22px; border-right: 1px solid var(--rule); }
+.cs-pain--boxes .cs-pain__item:last-child { border-right: none; }
+.cs-pain--boxes .cs-pain__item h3 { font-size: 19px; color: var(--primary); margin-bottom: 8px; }
+.cs-pain--boxes .cs-pain__item p { font-size: 16px; line-height: 1.55; color: color-mix(in srgb, var(--text) 85%, var(--bg)); }
+@media (max-width: 900px) { .cs-pain--boxes { grid-template-columns: repeat(2, 1fr); } .cs-pain--boxes .cs-pain__item:nth-child(2) { border-right: none; } }
