@@ -1,0 +1,44 @@
+/* Case Studies preview additions (Ogilvy, Nov 22, 2026). Builds on /experience/experience.css. */
+.cs-format-ribbon { background: #1f2937; color: #fbbf24; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; padding: 10px 0; text-align: center; }
+.cs-format-ribbon a { color: #fde68a; }
+.cs-todo { display: inline-block; background: #fef3c7; color: #92400e; border: 1px dashed #d97706; border-radius: 4px; padding: 1px 6px; font-size: .9em; font-style: normal; }
+.cs-todo-block { background: #fffbeb; border: 1px dashed #d97706; border-radius: 6px; padding: 14px 16px; color: #92400e; margin: 12px 0; }
+.cs-glance-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px 24px; margin: 8px 0 32px; padding: 20px 0; border-top: 1px solid rgba(0,0,0,.08); border-bottom: 1px solid rgba(0,0,0,.08); }
+.cs-glance-facts dt { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; opacity: .6; margin-bottom: 4px; }
+.cs-glance-facts dd { margin: 0; font-weight: 600; }
+.cs-pain { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 8px; }
+.cs-pain__item h3 { font-size: 17px; margin: 0 0 6px; }
+.cs-pain__item p { margin: 0; }
+.cs-jd { display: grid; grid-template-columns: 180px 1fr; gap: 10px 24px; margin: 8px 0; }
+.cs-jd dt { font-weight: 700; }
+.cs-jd dd { margin: 0; }
+.cs-hub-group { margin: 40px 0 12px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; opacity: .65; }
+.cs-card--soon { opacity: .55; cursor: default; }
+.cs-card--soon .cs-card__link { font-style: italic; }
+.cs-card__fmt { font-size: 12px; margin-top: 8px; opacity: .7; }
+@media (max-width: 640px) { .cs-jd { grid-template-columns: 1fr; } .cs-jd dt { margin-top: 10px; } }
+
+
+/* Trial (Ted, Nov 22): full-width section, label above content. Snapshot Before/After only for now. */
+.cs-section--wide { grid-template-columns: 1fr; gap: 16px; }
+
+/* Trial (Ted, Nov 22): readable By the Numbers labels. Snapshot only for now. */
+.cs-numbers--legible .cs-glance__label { font-size: 14px; color: color-mix(in srgb, var(--text) 82%, var(--bg)); }
+.cs-numbers--legible .cs-glance__num { font-variant-numeric: lining-nums; }
+.cs-glance-facts dd ul { margin: 0; padding-left: 1.1em; }
+.cs-glance-facts dd li { margin: 0 0 2px; }
+
+/* Trial (Ted, Nov 22): The Problem as a row of boxes, styled like By the Numbers. Legacy page only. */
+.cs-pain--boxes { grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); }
+.cs-pain--boxes .cs-pain__item { padding: 24px 22px; border-right: 1px solid var(--rule); }
+.cs-pain--boxes .cs-pain__item:last-child { border-right: none; }
+.cs-pain--boxes .cs-pain__item h3 { font-size: 19px; color: var(--primary); margin-bottom: 8px; }
+.cs-pain--boxes .cs-pain__item p { font-size: 16px; line-height: 1.55; color: color-mix(in srgb, var(--text) 85%, var(--bg)); }
+@media (max-width: 900px) { .cs-pain--boxes { grid-template-columns: repeat(2, 1fr); } .cs-pain--boxes .cs-pain__item:nth-child(2) { border-right: none; } }
+.cs-section--norule { border-bottom: none; }
+.cs-section--norule { padding-bottom: 24px; }
+.cs-section--tight-top { padding-top: 24px; }
+.cs-section--tighter-top { padding-top: 8px; }
+/* 8 boxes = 2 rows of 4 */
+.cs-pain--boxes .cs-pain__item:nth-child(4n) { border-right: none; }
+.cs-pain--boxes .cs-pain__item:nth-child(n+5) { border-top: 1px solid var(--rule); }
