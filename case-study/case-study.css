@@ -36,3 +36,5 @@
 .cs-pain--boxes .cs-pain__item p { font-size: 16px; line-height: 1.55; color: color-mix(in srgb, var(--text) 85%, var(--bg)); }
 @media (max-width: 900px) { .cs-pain--boxes { grid-template-columns: repeat(2, 1fr); } .cs-pain--boxes .cs-pain__item:nth-child(2) { border-right: none; } }
 .cs-section--norule { border-bottom: none; }
+.cs-section--norule { padding-bottom: 24px; }
+.cs-section--tight-top { padding-top: 24px; }
