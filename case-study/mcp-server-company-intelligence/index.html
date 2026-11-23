@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentilis | Case Study: A Production MCP Server for Company Intelligence</title>
+  <meta name="description" content="A company research pipeline turned into a production MCP server, so any agent can deliver an intelligence report on request.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/case-study/cs-base.css">
+  <link rel="stylesheet" href="/case-study/case-study.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR2JH7LK2F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JR2JH7LK2F');
+  </script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/case-study/">Case Studies</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/agents/">Agents</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <div class="page-header__eyebrow"><a href="/case-study/" style="color:inherit;text-decoration:none">Case Studies</a></div>
+        <h1 class="page-header__title">A Production MCP Server That Puts Company Intelligence in Every Agent&#39;s Hands</h1>
+        <p class="page-header__sub">The company intelligence reports started as Python code run by hand, one company at a time, on one machine. Rebuilding the pipeline as a Model Context Protocol (MCP) server put it behind an agent. Now anyone on the team, in the US or Europe, asks for a report in plain language from a laptop or a phone, and the agent runs it, tracks it and delivers the finished PDF. The reports feed marketing materials, prospect research and a free 30-minute AI assessment call.</p>
+        <div class="cs-tags">
+          <span class="cs-tag">MCP server</span>
+          <span class="cs-tag">AI agents</span>
+          <span class="cs-tag">Research automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="cs-section cs-section--wide">
+    <div class="cs-section__label">Before and After</div>
+    <div>
+      <table class="cs-ba">
+        <thead><tr><th>Before</th><th class="cs-ba__after">After</th></tr></thead>
+        <tbody>
+          <tr><td>Reports run by hand from a command line, one at a time</td><td>An agent requests reports over MCP, and several run in parallel</td></tr>
+          <tr><td>Only someone at the right machine could run a report</td><td>The team, in the US and Europe, asks an agent from anywhere, including a phone</td></tr>
+          <tr><td>The server version lagged months behind the command-line version</td><td>One shared pipeline: a report requested by an agent is identical to one run by hand</td></tr>
+          <tr><td>A different format meant running the research again</td><td>Any saved report re-rendered in seconds as PDF, Word, PowerPoint or Markdown</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="cs-numbers cs-numbers--legible">
+    <div class="cs-section__label">By the Numbers</div>
+    <div class="cs-glance">
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">15</div>
+        <div class="cs-glance__label">MCP tools available to any agent: 10 for research data, 5 for reports</div>
+      </div>
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">4-6 min</div>
+        <div class="cs-glance__label">From an agent&#39;s request to a finished 25-page report</div>
+      </div>
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">4 hours</div>
+        <div class="cs-glance__label">Of engineering to bring the MCP server to production</div>
+      </div>
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">23</div>
+        <div class="cs-glance__label">Automated tests guarding sign-in, downloads and pipeline parity</div>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">Why MCP</div>
+    <div>
+      <div class="cs-body">
+        <ul>
+          <li><strong>Agents can use it.</strong> MCP is the standard way for AI agents to call tools. Any MCP-capable agent can request a report, so the research is available to the whole agent team.</li>
+          <li><strong>The reports go to work.</strong> Marketing materials, prospect research and preparation for the free 30-minute AI assessment call all draw on them.</li>
+          <li><strong>Work happens in parallel.</strong> Several reports run at once, and nobody waits on one person or one machine.</li>
+          <li><strong>Access from anywhere.</strong> A request typed into a phone chat is enough. The agent sends the finished report back in the same conversation.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">How It Works</div>
+    <div>
+      <ol class="cs-steps">
+        <li><div><div class="cs-steps__who">A team member asks an agent for a report, in plain language, from a laptop or phone</div></div></li>
+        <li><div><div class="cs-steps__who">The agent calls the MCP server, which starts the job and returns a job ID immediately</div></div></li>
+        <li><div><div class="cs-steps__who">The server gathers the data from nine sources, has Claude write the analysis, and renders the report, using the same pipeline as the command line</div></div></li>
+        <li><div><div class="cs-steps__who">The agent checks the job status, then downloads the finished report</div></div></li>
+        <li><div><div class="cs-steps__who">The agent delivers the report back in the chat</div></div></li>
+        <li><div><div class="cs-steps__who">Any saved report can be re-rendered in another format in seconds, with no new research cost</div></div></li>
+      </ol>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">Under the Hood</div>
+    <div>
+      <div class="cs-body">
+        <ul>
+          <li><strong>FastMCP 4,</strong> upgraded from version 3, serving MCP over streamable HTTP</li>
+          <li><strong>Non-blocking jobs:</strong> a report runs in the background while the agent keeps working</li>
+          <li><strong>Persistent job history</strong> that survives restarts, plus tools to list and download past reports</li>
+          <li><strong>A model switch:</strong> Claude Opus 5.5 by default, with other models available per request</li>
+          <li><strong>One pipeline core</strong> shared by the MCP server, the command line and the batch runner</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">Guardrail</div>
+    <div>
+      <div class="cs-body">
+        <p>Every call needs a secret token, except a basic health check, and rejected calls are logged without exposing the token. File downloads are tested against path-traversal attacks. A test fails if the MCP server, the command line and the batch runner ever drift apart, so a report from an agent is always the same report.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">What It Means for You</div>
+    <div>
+      <h2 class="cs-section__title">Which of your tools should your agents be able to use?</h2>
+      <div class="cs-body">
+        <p>A script that one person runs by hand helps one person. The same capability behind an MCP server becomes a service every agent and every employee can use, from anywhere, in parallel.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">Read More</div>
+    <div>
+      <ul class="cs-sources">
+        <li><a class="inline-link" href="/case-study/company-intelligence-report/">Company intelligence reports in minutes</a><span>Agentilis</span></li>
+        <li><a class="inline-link" href="/case-study/agentic-product-development/">Agentic product development</a><span>Agentilis</span></li>
+        <li><a class="inline-link" href="/agents/">Meet the agents</a><span>Agentilis</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Which of your systems is ready for automation?</h2>
+    <p class="bottom-cta__sub">Thirty minutes with Ted. No pitch deck. Just a straight conversation about where AI fits in your business.</p>
+    <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+    <div class="footer-legal">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <span>&nbsp;|&nbsp;</span>
+      <a href="/terms-conditions/">Terms and Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){ e.stopPropagation(); btn.classList.toggle('open'); menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ btn.classList.remove('open'); menu.classList.remove('open'); }); });
+    document.addEventListener('click', function(e){ if(!btn.contains(e.target) && !menu.contains(e.target)){ btn.classList.remove('open'); menu.classList.remove('open'); } });
+  }
+})();
+</script>
+</body>
+</html>
