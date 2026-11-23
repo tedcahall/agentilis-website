@@ -58,7 +58,7 @@
   </div>
 </div>
 <div class="container">
-  <div class="cs-todo-block"><strong>Ted to confirm:</strong> the CASA outcome. Has the lab passed it, or issued a Letter of Validation? Ken and James have no record of the result. The page below makes no claim either way.</div>
+  <div class="cs-todo-block"><strong>Ted to confirm:</strong> the CASA outcome. James&#39;s records say it passed on the first attempt, less than a week after submission. Once confirmed, this box comes out and the result goes on the page.</div>
   <div class="cs-section cs-section--wide">
     <div class="cs-section__label">Before and After</div>
     <div>
@@ -67,7 +67,8 @@
         <tbody>
           <tr><td>A new app with no security testing</td><td>Weekly automated scans, plus full authenticated penetration tests for every user role</td></tr>
           <tr><td>A full admin scan ran 6+ hours, ran out of memory and never finished</td><td>A dedicated scan server finishes it in 15 to 21 minutes</td></tr>
-          <tr><td>5 failed security checks on the admin scan</td><td>Down to 1 after three rounds of fixes in about a day, and that one was in the scan setup, not the app</td></tr>
+          <tr><td>5 failed security checks on the admin scan</td><td>Down to 1 after three rounds of fixes in about a day, and that one was resolved the next day</td></tr>
+          <tr><td>A 15-page security questionnaire</td><td>Every answer checked against the code. 7 gaps found and built before submission</td></tr>
           <tr><td>A long CASA specification to interpret</td><td>A 14-step plan, a plain-English summary of the spec, and every requirement walked through with the owner</td></tr>
         </tbody>
       </table>
@@ -85,12 +86,12 @@
         <div class="cs-glance__label">Failed checks on the admin scan, in about one day of fixes</div>
       </div>
       <div class="cs-glance__item">
-        <div class="cs-glance__num">139</div>
-        <div class="cs-glance__label">Security checks passed on the full admin scan</div>
+        <div class="cs-glance__num">7</div>
+        <div class="cs-glance__label">Compliance gaps found and closed before submission</div>
       </div>
       <div class="cs-glance__item">
-        <div class="cs-glance__num">4</div>
-        <div class="cs-glance__label">User roles, each scanned while signed in</div>
+        <div class="cs-glance__num">7,000</div>
+        <div class="cs-glance__label">Lines of security code added, with 40 new tests</div>
       </div>
     </div>
   </div>
@@ -104,7 +105,8 @@
         <li><div><div class="cs-steps__who">Every finding was logged with its fix, and every false positive with the reason, ready for the CASA assessor</div></div></li>
         <li><div><div class="cs-steps__who">Ken read the CASA specification, wrote a 14-step plan, and compared assessment labs on price and process</div></div></li>
         <li><div><div class="cs-steps__who">Ken and James walked the owner through every CASA security requirement and changed the code to comply</div></div></li>
-        <li><div><div class="cs-steps__who">Changes for CASA included multi-factor sign-in for admins, logs scrubbed of tokens, dependency scanning, encrypted backups, and Gmail access cut to the minimum permissions</div></div></li>
+        <li><div><div class="cs-steps__who">James answered the 15-page CASA questionnaire, checking every claim against the code. 7 gaps were found and built before submission</div></div></li>
+        <li><div><div class="cs-steps__who">Changes for CASA included Gmail access cut to read and send only, account deletion with a 30-day grace period, automatic deletion of mail data after 180 days, an audited reason before staff can view a mailbox, sign-in lockout and rate limits, two-step sign-in for staff, sessions ended on password change, logs scrubbed of tokens, encrypted backups, and a dependency scan with zero known vulnerabilities</div></div></li>
       </ol>
     </div>
   </div>
