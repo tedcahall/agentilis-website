@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PREVIEW ONLY (branch case-studies-preview). Not linked from the live nav. Remove noindex at launch. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Agentilis | Case Study: A REST API for a Legacy Java System</title>
+  <meta name="description" content="A REST API added to a decade-old Java system by an agent team, proven by replaying three seasons of race history.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/experience/experience.css">
+  <link rel="stylesheet" href="/case-study/case-study.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR2JH7LK2F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JR2JH7LK2F');
+  </script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/case-study/">Case Studies</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/agents/">Agents</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="cs-format-ribbon">Preview branch &middot; Format C: The Snapshot &middot; <a href="/case-study/">all formats</a></div>
+
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <div class="page-header__eyebrow"><a href="/case-study/" style="color:inherit;text-decoration:none">Case Studies</a> &middot; Format C: The Snapshot</div>
+        <h1 class="page-header__title">A REST API for a Decade-Old Java System, Proven Against Three Seasons of Race History</h1>
+        <p class="page-header__sub">The race-weekend agents ran on screen-scraping. They built URLs by hand, logged into admin pages, and parsed the HTML to find out what had happened at the track. It worked, until a page changed. So the agent team added a real REST API to the legacy Java admin tool. No rewrite. Then we replayed three seasons of past race weekends through it, to prove it got the same answers.</p>
+        <div class="cs-tags">
+          <span class="cs-tag">Software engineering</span>
+          <span class="cs-tag">API design</span>
+          <span class="cs-tag">Regression testing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="cs-todo-block"><strong>Ted to confirm:</strong> has a live race weekend run on the API yet? James's records say the API is deployed in production, but as of September the race weekends still ran on the old scraper. The page below makes no claim either way.</div>
+  <div class="cs-section cs-section--wide">
+    <div class="cs-section__label">Before and After</div>
+    <div>
+      <table class="cs-ba">
+        <thead><tr><th>Before</th><th class="cs-ba__after">After</th></tr></thead>
+        <tbody>
+          <tr><td>Agents built URLs by hand and parsed HTML pages</td><td>A JSON REST API with 28 documented operations and an OpenAPI spec</td></tr>
+          <tr><td>Any change to an admin page could break race processing</td><td>A published contract the code is tested against on every change</td></tr>
+          <tr><td>A failed message could silently lose a race session</td><td>Repeatable API calls, each one read back and checked</td></tr>
+          <tr><td>Business rules lived in an agent&#39;s memory: one Heat or two, VIR&#39;s two qualifying sets, duplicate sessions</td><td>Rules written down and covered by 138 automated tests</td></tr>
+          <tr><td>Changes tested for real at the next race weekend</td><td>Changes tested by replaying past seasons against a clean database</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="cs-numbers cs-numbers--legible">
+    <div class="cs-section__label">By the Numbers</div>
+    <div class="cs-glance">
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">28</div>
+        <div class="cs-glance__label">API operations added to the legacy Java app</div>
+      </div>
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">3</div>
+        <div class="cs-glance__label">Seasons of race weekends replayed through the API, 2024 to 2026</div>
+      </div>
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">138</div>
+        <div class="cs-glance__label">Automated tests, up from 19 when the replays started</div>
+      </div>
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">12+</div>
+        <div class="cs-glance__label">Defects found by the replays and fixed before race day</div>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">What the Agents Did</div>
+    <div>
+      <ol class="cs-steps">
+        <li><div><div class="cs-steps__who">James wrote the API spec first. No code until the spec was approved</div></div></li>
+        <li><div><div class="cs-steps__who">James built the API inside the existing Java app, sharing its database and code. No rewrite</div></div></li>
+        <li><div><div class="cs-steps__who">Ken locked it down: anyone can read, but only our own machines, with a secret token, can write</div></div></li>
+        <li><div><div class="cs-steps__who">Guido built the operator tool that runs a whole race weekend through the API</div></div></li>
+        <li><div><div class="cs-steps__who">Watts built the first test harness and the browser tests that guard the public pages</div></div></li>
+        <li><div><div class="cs-steps__who">Each replay started from a clean pre-season database and ran real weekends through the API, in race order</div></div></li>
+        <li><div><div class="cs-steps__who">The results were compared against the published results from those weekends</div></div></li>
+        <li><div><div class="cs-steps__who">Every mismatch became a fix and a new test</div></div></li>
+      </ol>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">Guardrail</div>
+    <div>
+      <div class="cs-body">
+        <p>The replays never touched production. Every run started from a clean copy of the pre-season database, and loading that copy was the only direct database write allowed. Everything else went through the API, the same way a race weekend does. Race Monitor&#39;s rate limits were respected with a throttle, a backoff and the ability to resume.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">What It Means for You</div>
+    <div>
+      <h2 class="cs-section__title">Which of your systems are your agents scraping instead of talking to?</h2>
+      <div class="cs-body">
+        <p>Agents can work through any screen a person can. A real API makes them faster and safer, and the agents can build that API themselves, without a rewrite. Your own history becomes the test suite.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">Read More</div>
+    <div>
+      <ul class="cs-sources">
+        <li><a class="inline-link" href="/case-study/legacy-system-modernization/">The legacy Java system, modernized</a><span>Agentilis</span></li>
+        <li><a class="inline-link" href="/case-study/live-race-results/">Live race results at the track</a><span>Agentilis</span></li>
+        <li><a class="inline-link" href="/case-study/csv-to-system-of-record/">Automated CSV processing of the official results</a><span>Agentilis</span></li>
+        <li><a class="inline-link" href="https://marrspoints.com">marrspoints.com</a><span>The live system</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Which of your systems is ready for automation?</h2>
+    <p class="bottom-cta__sub">Thirty minutes with Ted. No pitch deck. Just a straight conversation about where AI fits in your business.</p>
+    <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+    <div class="footer-legal">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <span>&nbsp;|&nbsp;</span>
+      <a href="/terms-conditions/">Terms and Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){ e.stopPropagation(); btn.classList.toggle('open'); menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ btn.classList.remove('open'); menu.classList.remove('open'); }); });
+    document.addEventListener('click', function(e){ if(!btn.contains(e.target) && !menu.contains(e.target)){ btn.classList.remove('open'); menu.classList.remove('open'); } });
+  }
+})();
+</script>
+</body>
+</html>
