@@ -47,7 +47,7 @@
       <div>
         <div class="page-header__eyebrow"><a href="/case-study/" style="color:inherit;text-decoration:none">Case Studies</a> &middot; Format C: The Snapshot</div>
         <h1 class="page-header__title">Live Race Results at the Track for the Washington DC Region SCCA</h1>
-        <p class="page-header__sub">On race weekends, results from every qualifying session, heat and feature race had to be pulled from the live timing system, matched to the right run group, loaded and published while racing was still going on. 24 to 27 times a weekend depending on the number of run groups that weekend. By hand. Between my own races. Now an agent team does all of it, and I just race.</p>
+        <p class="page-header__sub">On race weekends, results from every qualifying session, heat and feature race had to be pulled from the live timing system, matched to the right run group, loaded and published while racing was still going on. 24 to 27 times a weekend depending on the number of run groups that weekend. By hand, at the track, while racing continued. Now an agent team does all of it, with no human in the loop.</p>
         <div class="cs-tags">
           <span class="cs-tag">Back-office automation</span>
           <span class="cs-tag">Live operations</span>
@@ -64,10 +64,10 @@
       <table class="cs-ba">
         <thead><tr><th>Before</th><th class="cs-ba__after">After</th></tr></thead>
         <tbody>
-          <tr><td>Hours every day at the track on a laptop, logging into the admin tool after every session. <span class="cs-todo">Ted to write</span> (how many hours a day?)</td><td>Zero. The agents do all of it, and I race.</td></tr>
+          <tr><td>Hours every day at the track on a laptop, logging into the admin tool after every session. <span class="cs-todo">Ted to write</span> (how many hours a day?)</td><td>Zero. The agents do all of it.</td></tr>
           <tr><td>Results posted whenever someone had a free minute between sessions</td><td>Results posted within minutes of each group leaving the track</td></tr>
           <tr><td>One person who knew every step</td><td>An agent team: Ken runs the monitor, Inman processes and publishes</td></tr>
-          <tr><td>Mistakes caught by whoever happened to look</td><td>Every session confirmed on the live site, with a summary texted to me</td></tr>
+          <tr><td>Mistakes caught by whoever happened to look</td><td>Every session confirmed on the live site, with a summary sent to the system owner</td></tr>
         </tbody>
       </table>
     </div>
@@ -89,7 +89,7 @@
       </div>
       <div class="cs-glance__item">
         <div class="cs-glance__num">0</div>
-        <div class="cs-glance__label">Hours I spend on results at the track</div>
+        <div class="cs-glance__label">Hours of human time spent on results at the track</div>
       </div>
     </div>
   </div>
@@ -104,7 +104,7 @@
         <li><div><div class="cs-steps__who">Pulls the results and matches them to the right run group and race</div></div></li>
         <li><div><div class="cs-steps__who">Merges them into the points database, matching every driver by SCCA number</div></div></li>
         <li><div><div class="cs-steps__who">Rebuilds the class standings on marrspoints.com</div></div></li>
-        <li><div><div class="cs-steps__who">Confirms the results landed, retries if they didn't, and texts me a summary</div></div></li>
+        <li><div><div class="cs-steps__who">Confirms the results landed, retries if they didn't, and texts the system owner a summary</div></div></li>
       </ol>
     </div>
   </div>
@@ -112,7 +112,7 @@
     <div class="cs-section__label">Guardrail</div>
     <div>
       <div class="cs-body">
-        <p>A group is never processed while it is still on track. Timing systems sometimes release early, partial results, and publishing those is worse than waiting five minutes. Live results are marked provisional. The official results follow after the weekend through a separate, <a class="inline-link" href="/case-study/csv-to-system-of-record/">fully automated path</a>. Nothing fails silently: if a step fails, it retries, and I get a message.</p>
+        <p>A group is never processed while it is still on track. Timing systems sometimes release early, partial results, and publishing those is worse than waiting five minutes. Live results are marked provisional. The official results follow after the weekend through a separate, <a class="inline-link" href="/case-study/csv-to-system-of-record/">fully automated path</a>. Nothing fails silently: if a step fails, it retries, and the system owner is notified.</p>
       </div>
     </div>
   </div>
