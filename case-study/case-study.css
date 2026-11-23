@@ -38,3 +38,4 @@
 .cs-section--norule { border-bottom: none; }
 .cs-section--norule { padding-bottom: 24px; }
 .cs-section--tight-top { padding-top: 24px; }
+.cs-section--tighter-top { padding-top: 8px; }
