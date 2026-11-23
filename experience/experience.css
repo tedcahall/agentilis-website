@@ -347,8 +347,10 @@
 /* Case-study header: headline full width, then descriptor (left) and a compact At a Glance box (right) */
 .page-header--case { padding: 48px 0 56px; }
 .page-header__title.cs-title-fit { font-size: clamp(26px, 3.1vw, 40px); margin-bottom: 28px; }
-.cs-head-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
-.cs-head-grid .page-header__sub { max-width: none; }
+.cs-head-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: stretch; }
+.cs-head-grid .page-header__sub { max-width: none; font-size: 16px; line-height: 1.65; }
+.cs-head-grid__text { display: flex; flex-direction: column; }
+.cs-head-grid__text .cs-tags { margin-top: auto; padding-top: 20px; }
 .cs-head-grid__text .page-header__sub + .page-header__sub { margin-top: 14px; }
 .cs-summary--hero {
   background: color-mix(in srgb, var(--bg) 7%, transparent);
