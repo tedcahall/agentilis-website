@@ -27,12 +27,15 @@
     .btn-ghost:hover { background: color-mix(in srgb, var(--bg) 10%, transparent); }
     .alt-ctas .btn-primary, .alt-ctas .btn-ghost { text-transform: none; letter-spacing: 0.01em; }
 
-    .alt-help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
-    .alt-help-col { background: var(--bg); padding: 24px 24px 8px; }
+    .help-table { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, auto); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+    .help-col { display: grid; grid-row: span 3; grid-template-rows: subgrid; gap: 2px; }
+    .help-cell { background: var(--bg); padding: 24px; }
+    .help-cell--head { background: var(--card-bg); }
+    .help-cell--head .alt-help-col__tag { margin-bottom: 0; }
+    .help-cell--link { display: block; transition: background 0.15s; }
+    .help-cell--link:hover { background: var(--card-bg); }
     .alt-help-col__group { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; line-height: 1.1; color: var(--primary); margin-bottom: 4px; }
     .alt-help-col__tag { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
-    .alt-service { display: block; border-top: 1px solid var(--rule); padding: 16px 0; transition: opacity 0.15s; }
-    .alt-service:hover { opacity: 0.65; }
     .alt-service__name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
     .alt-service__name span { color: var(--accent); font-size: 16px; margin-left: 6px; }
     .alt-service__desc { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.65; color: var(--text); opacity: 0.75; }
@@ -58,7 +61,9 @@
       .alt-wide { max-width: 1400px; }
     }
     @media (max-width: 960px) {
-      .alt-help-grid, .alt-cards { grid-template-columns: 1fr; }
+      .help-table { grid-template-columns: 1fr; grid-template-rows: none; }
+      .help-col { grid-row: auto; grid-template-rows: auto; }
+      .alt-cards { grid-template-columns: 1fr; }
       .alt-why-grid { grid-template-columns: 1fr; gap: 32px; }
     }
     @media (max-width: 640px) {
@@ -132,43 +137,49 @@
       <div class="section__label">How We Help</div>
       <h2 class="section__title">Three ways to work together.</h2>
     </div>
-    <div class="alt-help-grid">
-      <div class="alt-help-col">
-        <div class="alt-help-col__group">Advise</div>
-        <p class="alt-help-col__tag">Build your personal command of AI.</p>
-        <a href="/services/#executive-ai-advisory" class="alt-service">
+    <div class="help-table">
+      <section class="help-col" aria-labelledby="help-advise">
+        <div class="help-cell help-cell--head">
+          <h3 class="alt-help-col__group" id="help-advise">Advise</h3>
+          <p class="alt-help-col__tag">Build your personal or corporate command of AI.</p>
+        </div>
+        <a href="/services/#executive-ai-advisory" class="help-cell help-cell--link">
           <div class="alt-service__name">Executive AI Advisory<span>&rarr;</span></div>
-          <p class="alt-service__desc">Scheduled one-on-one sessions, weekly, biweekly, or monthly, that build your personal command of AI.</p>
+          <p class="alt-service__desc">One-on-one sessions, weekly, biweekly, or monthly, that build your personal command of AI.</p>
         </a>
-        <a href="/services/#ai-on-call" class="alt-service">
-          <div class="alt-service__name">AI On Call<span>&rarr;</span></div>
-          <p class="alt-service__desc">Direct access to a team that works in AI every day, for urgent questions and special projects.</p>
+        <a href="/services/#ai-discovery" class="help-cell help-cell--link">
+          <div class="alt-service__name">AI Discovery<span>&rarr;</span></div>
+          <p class="alt-service__desc">A prepared working session with your leaders that finds and scopes your three best AI programs.</p>
         </a>
-      </div>
-      <div class="alt-help-col">
-        <div class="alt-help-col__group">Transform</div>
-        <p class="alt-help-col__tag">Move your organization, not just your tools.</p>
-        <a href="/services/#ai-transformation" class="alt-service">
-          <div class="alt-service__name">AI Transformation<span>&rarr;</span></div>
-          <p class="alt-service__desc">Leading your organization, people, and operating model through the shift to AI.</p>
-        </a>
-        <a href="/services/#ai-process-re-engineering" class="alt-service">
-          <div class="alt-service__name">AI Process Re-Engineering<span>&rarr;</span></div>
+      </section>
+      <section class="help-col" aria-labelledby="help-accelerate">
+        <div class="help-cell help-cell--head">
+          <h3 class="alt-help-col__group" id="help-accelerate">Accelerate</h3>
+          <p class="alt-help-col__tag">Turn your best AI ideas into working programs.</p>
+        </div>
+        <a href="/services/#ai-process-engineering" class="help-cell help-cell--link">
+          <div class="alt-service__name">AI Process Engineering<span>&rarr;</span></div>
           <p class="alt-service__desc">Redesigning specific workflows end to end so AI removes cost and delay.</p>
         </a>
-      </div>
-      <div class="alt-help-col">
-        <div class="alt-help-col__group">Build</div>
-        <p class="alt-help-col__tag">Put working AI into production.</p>
-        <a href="/services/#agentic-ai-projects" class="alt-service">
+        <a href="/services/#ai-program-development" class="help-cell help-cell--link">
+          <div class="alt-service__name">AI Program Development<span>&rarr;</span></div>
+          <p class="alt-service__desc">Turning a scoped idea into a funded program with an owner, a plan, and a measure of success.</p>
+        </a>
+      </section>
+      <section class="help-col" aria-labelledby="help-automate">
+        <div class="help-cell help-cell--head">
+          <h3 class="alt-help-col__group" id="help-automate">Automate</h3>
+          <p class="alt-help-col__tag">Put agents to work and measure what they deliver.</p>
+        </div>
+        <a href="/services/#agentic-ai-projects" class="help-cell help-cell--link">
           <div class="alt-service__name">Agentic AI Projects<span>&rarr;</span></div>
-          <p class="alt-service__desc">Design and delivery of agent solutions on OpenClaw, Hermes Agent, and other frameworks.</p>
+          <p class="alt-service__desc">Design and delivery of agent solutions, in the cloud or on your own servers.</p>
         </a>
-        <a href="/services/#private-and-local-ai" class="alt-service">
-          <div class="alt-service__name">Private and Local AI<span>&rarr;</span></div>
-          <p class="alt-service__desc">Hardware selection, pricing, and setup of AI models that run on your servers. Sensitive data stays in-house.</p>
+        <a href="/services/#ai-kpi-monitoring-and-management" class="help-cell help-cell--link">
+          <div class="alt-service__name">AI KPI Monitoring and Management<span>&rarr;</span></div>
+          <p class="alt-service__desc">Tracking what your AI delivers, and managing it so the results hold up.</p>
         </a>
-      </div>
+      </section>
     </div>
   </div>
 </section>
