@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Agentilis | Case Study: A Class Planner Built to the Rules for Jazzercise NRV</title>
+  <meta name="description" content="An AI class planner for Jazzercise NRV instructors. It builds a full class set from 1,144 routines and checks it against 25 rules, then the instructor edits and saves.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/case-study/cs-base.css">
+  <link rel="stylesheet" href="/case-study/case-study.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR2JH7LK2F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JR2JH7LK2F');
+  </script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/case-study/">Case Studies</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/agents/">Agents</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header-band">
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <div class="page-header__eyebrow"><a href="/case-study/" style="color:inherit;text-decoration:none">Case Studies</a></div>
+        <h1 class="page-header__title">A Class Planner That Builds Every Set to the Rules, for Jazzercise NRV</h1>
+        <p class="page-header__sub">At Jazzercise NRV, a fitness studio in Virginia&#39;s New River Valley, instructors build new class sets all the time. A set is an ordered list of routines. Each position calls for a certain kind of routine, the class has to land on the clock, and the format&#39;s rules decide what can go where. It was all done by hand, about 90 minutes a week for each of the studio&#39;s 10 instructors. An AI agent team built a class planner instead. The Jazzercise instructor picks a class format and describes the feel. The planner builds a complete set, checks it against the rules, and hands it back. The instructor can override any choice: lock, swap, reorder and save.</p>
+        <div class="cs-tags">
+          <span class="cs-tag">Operations and back office</span>
+          <span class="cs-tag">Planning and scheduling</span>
+          <span class="cs-tag">Rules engine</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="cs-section cs-section--wide">
+    <div class="cs-section__label">Before and After</div>
+    <div>
+      <table class="cs-ba">
+        <thead><tr><th>Before</th><th class="cs-ba__after">After</th></tr></thead>
+        <tbody>
+          <tr><td>About 90 minutes a week per instructor, building each set by hand, one routine at a time, from a large catalog</td><td>The instructor picks a format and describes a feel, and the planner builds the full set</td></tr>
+          <tr><td>The slot pattern, the clock and the format&#39;s rules all kept in the instructor&#39;s head</td><td>25 rules checked by code on every generated set before the instructor sees it</td></tr>
+          <tr><td>Counting recent routines and older routines by hand for every class</td><td>Freshness rules applied by release date, with a &quot;current&quot; badge on each recent routine</td></tr>
+          <tr><td>Changing one routine meant rechecking the whole class</td><td>Swaps offer only routines that fit that slot, and drag and drop stays inside allowed blocks</td></tr>
+          <tr><td>Each new collection of routines tracked by hand</td><td>Agents load the 30 to 50 new routines that arrive every other month, and keep the catalog matched to the official routine notes</td></tr>
+          <tr><td>Making sure the songs flow from one to the next, by ear</td><td>The AI checks the feel of each song so the whole set flows</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="cs-numbers cs-numbers--legible">
+    <div class="cs-section__label">By the Numbers</div>
+    <div class="cs-glance">
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">1,144</div>
+        <div class="cs-glance__label">Routines in the catalog the planner chooses from</div>
+      </div>
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">15 hrs</div>
+        <div class="cs-glance__label">Of hand planning a week before the planner: 90 minutes for each of 10 instructors</div>
+      </div>
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">25</div>
+        <div class="cs-glance__label">Rules checked by code on every generated set</div>
+      </div>
+      <div class="cs-glance__item">
+        <div class="cs-glance__num">30&ndash;50</div>
+        <div class="cs-glance__label">New routines loaded by agents every other month</div>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">What the Agents Do</div>
+    <div>
+      <ol class="cs-steps">
+        <li><div><div class="cs-steps__who">Load the class format the instructor picks, with its slot pattern, length and equipment</div></div></li>
+        <li><div><div class="cs-steps__who">Read the feel the instructor describes in plain words, such as &quot;high-energy 90s pop&quot;</div></div></li>
+        <li><div><div class="cs-steps__who">Place any routines the instructor pre-selected, up to half the slots in the class</div></div></li>
+        <li><div><div class="cs-steps__who">Use an AI model to choose a routine for every remaining slot from the catalog, matched to the feel</div></div></li>
+        <li><div><div class="cs-steps__who">Check the feel of each song, so the whole set flows from start to finish</div></div></li>
+        <li><div><div class="cs-steps__who">Check the set against all 25 rules: opener first, closer last, the cardio curve, strength grouping, freshness, equipment and length, and rebuild any set that misses a rule</div></div></li>
+        <li><div><div class="cs-steps__who">Show the set with each routine&#39;s length, format, equipment, the reason it was chosen, and a chart of the class&#39;s energy curve</div></div></li>
+        <li><div><div class="cs-steps__who">Let the instructor lock, swap, reorder and save, and check every edit against the slot it lands in</div></div></li>
+        <li><div><div class="cs-steps__who">Load the 30 to 50 new routines that arrive every other month, and keep the catalog matched to the official routine notes</div></div></li>
+      </ol>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">The Hard Cases</div>
+    <div>
+      <div class="cs-body">
+        <ul>
+          <li><strong>Routines with a fixed place on the curve:</strong> some routines may only sit on the way down from the cardio peak. The planner allows at most one in the cardio block, and only in the last light-medium slot.</li>
+          <li><strong>A catalog that drifts from the source:</strong> details such as each routine&#39;s movements, muscles worked and equipment had gone missing or out of date. Agents compared every routine with the official routine notes, filled in or fixed 2,461 details across 1,108 routines, then checked again: nothing was left to fix.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">Guardrail</div>
+    <div>
+      <div class="cs-body">
+        <p>The instructor decides what gets taught. The planner hands back a starting set, and the instructor can override any of it: every routine can be locked, swapped, reordered or removed. Edits are checked, so the opener and closer stay in place and a swap offers only routines that fit the slot. Class length is a warning, not a block: the instructor can accept it. The app is invite-only, and each instructor&#39;s saved sets are private. Agents build and test every change on a separate development copy, and the live app changes only when the owner approves the release.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">What It Means for You</div>
+    <div>
+      <h2 class="cs-section__title">Which planning job in your business lives in one person&#39;s head?</h2>
+      <div class="cs-body">
+        <p>Schedules, rosters, menus and class plans all follow a rulebook and still need judgment. Agents can write the rules into code, build a first draft that already passes them, and leave the final say with the person who knows the work.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cs-section">
+    <div class="cs-section__label">Read More</div>
+    <div>
+      <ul class="cs-sources">
+        <li><a class="inline-link" href="/case-study/agentic-product-development/">Agentic product development, built in days</a><span>Agentilis</span></li>
+        <li><a class="inline-link" href="/case-study/receipts-to-the-books/">Receipts and invoices, from every inbox to the books</a><span>Agentilis</span></li>
+        <li><a class="inline-link" href="/agents/">Meet the agents</a><span>Agentilis</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Which of your systems is ready for automation?</h2>
+    <p class="bottom-cta__sub">Thirty minutes with Ted. No pitch deck. Just a straight conversation about where AI fits in your business.</p>
+    <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+    <div class="footer-legal">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <span>&nbsp;|&nbsp;</span>
+      <a href="/terms-conditions/">Terms and Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){ e.stopPropagation(); btn.classList.toggle('open'); menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ btn.classList.remove('open'); menu.classList.remove('open'); }); });
+    document.addEventListener('click', function(e){ if(!btn.contains(e.target) && !menu.contains(e.target)){ btn.classList.remove('open'); menu.classList.remove('open'); } });
+  }
+})();
+</script>
+</body>
+</html>
