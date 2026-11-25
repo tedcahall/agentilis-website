@@ -46,6 +46,9 @@
     .svc__label { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin: 8px 0 4px; }
     .svc__list { list-style: none; margin-bottom: 20px; }
     .svc__list li { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text); opacity: 0.75; padding: 8px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 12px; }
+    .svc__work { display: grid; grid-template-columns: 5px max-content minmax(0, 1fr); column-gap: 12px; }
+    .svc__work li { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; }
+    .svc__work strong { white-space: nowrap; }
     .svc__list li::before { content: ''; width: 5px; height: 5px; background: var(--accent); flex-shrink: 0; margin-top: 9px; }
     .svc__best { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text); opacity: 0.85; margin-top: auto; padding-top: 4px; }
     .svc__best strong { color: var(--accent); font-weight: 700; }
@@ -229,11 +232,11 @@
           <p>We design the agents, connect them to your systems, test them, and keep them running. They escalate to a human when judgment is needed. When data should never leave the building, we select, price, and set up private models on hardware you own.</p>
         </div>
         <div class="svc__label">Where agents work</div>
-        <ul class="svc__list">
+        <ul class="svc__list svc__work">
           <li><strong>Front office:</strong> inquiries, lead qualification, scheduling, and follow-up</li>
           <li><strong>Back office:</strong> reporting, approvals, vendor communications, invoices, and reconciliation</li>
-          <li><strong>Go-to-market:</strong> prospect research, personalized outreach, and pipeline follow-through</li>
-          <li><strong>Private and local:</strong> open-source models on your own servers, so sensitive data stays in-house</li>
+          <li><strong>Marketing:</strong> prospect research, personalized outreach, and pipeline follow-through</li>
+          <li><strong>Local AI:</strong> open-source models on your own servers, so sensitive data stays in-house</li>
         </ul>
         <p class="svc__best"><strong>Best for:</strong> Companies ready to move from a pilot to agents that run in production every day, including those in regulated industries.</p>
       </div>
