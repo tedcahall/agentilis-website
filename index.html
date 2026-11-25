@@ -18,7 +18,7 @@
   <style>
     /* Home page styles */
     /* Home page styles */
-    .alt-body { max-width: 760px; }
+    .alt-body { max-width: none; }
     .alt-body p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.8; color: var(--text); opacity: 0.78; margin-bottom: 20px; }
     .alt-body p:last-child { margin-bottom: 0; }
     .alt-body__sub { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--primary); margin: 32px 0 12px; }
@@ -60,7 +60,7 @@
     .mk-copy p.mk-lede{font-size:17.5px;line-height:1.5;max-width:none;margin-bottom:14px;opacity:.95}.mk-copy p.mk-by{font-size:15px;margin-bottom:3px}
     .mk-copy h1{font-size:clamp(34px,3.05vw,50px);line-height:1.08;margin-bottom:14px}.mk-copy h1 i{font-style:normal;color:#f3e2bd;white-space:nowrap}.mk-copy h1 u{text-decoration:none;color:#a9d8c4;white-space:nowrap}
     .mk-copy p{font-size:17px;margin-bottom:22px;max-width:27em}.mk-btn{padding:15px 26px}.mk-copy p{margin-bottom:8px}.mk-copy p.mk-co{display:flex;flex-wrap:wrap;gap:4px 0;font:700 clamp(17px,1.5vw,22px)/1.3 'Playfair Display',serif;color:#f3e2bd;opacity:1;margin-bottom:24px;max-width:none}.mk-co span+span:before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:#7A9E8E;margin:0 12px;vertical-align:middle}
-    .nine{position:relative;z-index:15;max-width:1340px;margin:-64px auto 0;padding:0 24px}
+    .nine{position:relative;z-index:15;max-width:1340px;margin:var(--ov,-24px) auto 0;padding:0 24px}
     .nine h2{font:600 12px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#c8ddd8;margin:0 0 12px;position:absolute;top:-28px}
     .nine__g{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,auto);gap:0 14px}
     .nb{display:grid;grid-row:span 3;grid-template-rows:subgrid;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 14px 40px rgba(24,36,44,.16);--c:#2C3E4A;transition:transform .25s,box-shadow .25s}
@@ -73,12 +73,13 @@
     .mv{transform-origin:24px 24px;transition:transform .5s}.nb__c:hover .mv{transform:rotate(45deg)}.nb__c:hover .spin{transform:rotate(120deg)}.needle{transform-origin:24px 34px}.nb__c:hover .needle{transform:rotate(28deg)}.dash{stroke-dasharray:4 4}.nb__c:hover .dash{transform:none;animation:da .6s linear infinite}@keyframes da{to{stroke-dashoffset:-16}}
     .exp{background:#22313b;color:#FAFAF7;margin-top:56px;padding:64px 0}
     .exp__top{display:grid;grid-template-columns:1fr;gap:0;align-items:center}.exp__top img{width:230px;height:270px;object-fit:cover;object-position:50% 12%;border-radius:4px;border:3px solid #f3e2bd}
-    .exp h2{font:700 clamp(34px,4vw,52px)/1.08 'Playfair Display',serif;margin:6px 0 14px}.exp p{font:400 17px/1.65 Inter,sans-serif;max-width:640px;margin:0 0 14px;opacity:.9}.exp .section__label{color:#f3e2bd}.exp__l{font:600 14px Inter,sans-serif;color:#f3e2bd;border-bottom:1px solid}
+    .exp h2{font:700 clamp(34px,4vw,52px)/1.08 'Playfair Display',serif;margin:6px 0 14px}.exp p{font:400 17px/1.65 Inter,sans-serif;max-width:none;margin:0 0 14px;opacity:.9}.exp .section__label{color:#f3e2bd}.exp__l{font:600 14px Inter,sans-serif;color:#f3e2bd;border-bottom:1px solid}
     .exp__co{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);margin:48px 0 0;padding:0;border-top:2px solid #f3e2bd55}.exp__co li{position:relative;padding:22px 18px 0 0;font-family:Inter,sans-serif}.exp__co li:before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:#f3e2bd}
     .exp__co b{display:block;font:700 24px 'Playfair Display',serif}.exp__co span{display:block;font-size:14px;margin-top:5px;opacity:.92}.exp__co em{display:block;font-style:normal;font-size:14px;color:#a9d8c4;margin-top:3px}
     .exp__n{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:46px;padding-top:28px;border-top:1px solid rgba(255,255,255,.16)}.exp__n b{display:block;font:700 36px 'Playfair Display',serif;color:#f3e2bd}.exp__n span{font:400 13px/1.45 Inter,sans-serif;opacity:.86;display:block}
     @media(max-width:980px){.nine__g{grid-template-columns:1fr;grid-template-rows:none;gap:14px}.nb{grid-row:auto;grid-template-rows:auto}.exp__co,.exp__n{grid-template-columns:1fr 1fr;gap:22px}.exp__co{border:0}}
-    @media(max-width:760px){.mk-hero{height:700px}.mk-copy{top:auto;bottom:84px;transform:none;margin:0}.mk-copy h1{font-size:28px}.mk-copy p.mk-co{font-size:15.5px;margin-bottom:16px}.mk-copy p.mk-lede{font-size:15.5px;margin-bottom:10px}.mk-co span+span:before{margin:0 7px!important}.mk-copy p{font-size:15.5px;margin-bottom:16px}.nine{margin-top:-44px}.exp__top{grid-template-columns:1fr;gap:24px}}
+    @media(max-width:760px){.mk-hero{height:700px}.mk-copy{top:auto;bottom:84px;transform:none;margin:0}.mk-copy h1{font-size:28px}.mk-copy p.mk-co{font-size:15.5px;margin-bottom:16px}.mk-copy p.mk-lede{font-size:15.5px;margin-bottom:10px}.mk-co span+span:before{margin:0 7px!important}.mk-copy p{font-size:15.5px;margin-bottom:16px}.exp__top{grid-template-columns:1fr;gap:24px}}
+    @media(min-width:981px) and (max-height:710px),(min-width:981px) and (max-width:1100px) and (max-height:790px){.mk-hero{height:442px}}
     @media(prefers-reduced-motion:reduce){.nb,.mv{transition:none!important}}
     .deep{scroll-margin-top:24px}
     .section.brief{background:#22313b;color:var(--bg);margin-top:8px}.brief__in{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}.brief .section__label{color:#f3e2bd}.brief .section__title{color:var(--bg)}.brief p{font:400 17px/1.6 Inter,sans-serif;opacity:.9;max-width:560px;margin:12px 0 0}
@@ -110,7 +111,7 @@
 <div class="nine"><h2>Three ways to work together</h2><div class="nine__g"><section class="nb nb1"><div class="nb__h"><h3>Advise</h3><p>Build your personal or corporate command of AI.</p></div><a class="nb__c" href="#d-executive-ai-advisory" data-d="d-executive-ai-advisory"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path class="mv" d="M30 18l-4 10-10 4 4-10z"/></svg><span><b>Executive AI Advisory</b><em>One-on-one sessions, weekly, biweekly, or monthly, that build your personal command of AI.</em></span></a><a class="nb__c" href="#d-ai-discovery" data-d="d-ai-discovery"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="21" cy="21" r="12"/><path d="M30 30l10 10"/><path class="mv" d="M21 14v4M21 24v4M14 21h4M24 21h4"/></svg><span><b>AI Discovery</b><em>A prepared working session with your leaders that finds and scopes your three best AI programs.</em></span></a></section><section class="nb nb2"><div class="nb__h"><h3>Accelerate</h3><p>Identify how to move faster from idea to results with AI.</p></div><a class="nb__c" href="#d-ai-process-engineering" data-d="d-ai-process-engineering"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="12" height="10"/><rect x="30" y="30" width="12" height="10"/><path class="mv dash" d="M18 13h12a6 6 0 0 1 6 6v11"/><circle cx="12" cy="35" r="5"/><path d="M17 35h13"/></svg><span><b>AI Process Engineering</b><em>Redesigning specific workflows end to end so AI removes cost and delay.</em></span></a><a class="nb__c" href="#d-ai-program-development" data-d="d-ai-program-development"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 40c8 0 6-12 14-12s6-12 14-12"/><path class="mv" d="M34 24V8l9 4-9 4"/><circle cx="6" cy="40" r="2.5"/><circle cx="20" cy="28" r="2.5"/></svg><span><b>AI Program Development</b><em>Turning a scoped idea into a funded program with an owner, a plan, and a measure of success.</em></span></a></section><section class="nb nb3"><div class="nb__h"><h3>Automate</h3><p>Transform your business processes and prove it pays off.</p></div><a class="nb__c" href="#d-agentic-ai-projects" data-d="d-agentic-ai-projects"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="6"/><g class="mv spin"><circle cx="24" cy="7" r="3.5"/><circle cx="9" cy="33" r="3.5"/><circle cx="39" cy="33" r="3.5"/><path d="M24 11v7M12 31l7-4M36 31l-7-4"/></g></svg><span><b>Agentic AI Projects</b><em>Design and delivery of agent solutions, in the cloud or on your own servers.</em></span></a><a class="nb__c" href="#d-ai-kpi-monitoring-and-management" data-d="d-ai-kpi-monitoring-and-management"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 34a18 18 0 0 1 36 0"/><path class="mv needle" d="M24 34l9-12"/><circle cx="24" cy="34" r="2.5"/><path d="M11 24l3 2M24 16v4M37 24l-3 2"/></svg><span><b>AI KPI Monitoring and Management</b><em>Tracking what your AI programs deliver, and managing them so the results hold up.</em></span></a></section></div></div><section class="exp"><div class="container"><div class="exp__top"><div><div class="section__label">Founder</div><h2>Experience you can't prompt.</h2><p>AI can draft a strategy. It cannot tell you what happens when 3,700 people have to carry it out. Ted Cahall has run companies, technology, and teams at that scale, and still designs software today.</p><a class="exp__l" href="/founder/">Read Ted's story &rarr;</a></div></div>
 <ol class="exp__co"><li><b>CNET</b><span>CTO</span><em>Conceived Apache Solr</em></li><li><b>AOL</b><span>BU President, then CTO</span><em>3,700 staff</em></li><li><b>Microsoft</b><span>CVP, global head of MSN</span><em>More than 1,000 staff</em></li><li><b>Digital River</b><span>COO</span><em>1,800 staff</em></li></ol>
 <div class="exp__n"><div><b>20+</b><span>Years as a C-level executive</span></div><div><b>$1.1B</b><span>P&amp;L responsibility</span></div><div><b>3</b><span>Public companies as a named executive officer</span></div><div><b>2</b><span>US patents</span></div><div><b>30+</b><span>AI agents in production</span></div><div><b>70%</b><span>Reduction in AI API costs by moving workloads to open-source models</span></div></div></div></section><section class="section"><div class="container"><div class="section-head"><div class="section__label">In Detail</div>
-<h2 class="section__title">How each service works.</h2></div><div class="deeps"><details class="deep" id="d-executive-ai-advisory"><summary>Executive AI Advisory</summary><div class="deep__in">
+<h2 class="section__title">How each service works.</h2></div><div class="deeps"><details class="deep" name="services" id="d-executive-ai-advisory"><summary>Executive AI Advisory</summary><div class="deep__in">
         <p>Scheduled one-on-one sessions, weekly, biweekly, or monthly, that build your personal command of AI.</p>
         <div>
           <p>AI changes every week. Your board, your team, and your competitors all have opinions about it. We help you form your own. Each session covers what changed, what it means for your business, and what you should do about it.</p>
@@ -122,7 +123,7 @@
           <li>A short briefing on what changed in AI since last time, and why it matters to you</li>
           <li>A sounding board for strategy, vendors, budgets, and hiring</li>
         </ul>
-        <p><strong>Best for:</strong> CEOs and senior executives who want a trusted voice in the room before committing to an AI direction.</p></div></details><details class="deep" id="d-ai-discovery"><summary>AI Discovery</summary><div class="deep__in">
+        <p><strong>Best for:</strong> CEOs and senior executives who want a trusted voice in the room before committing to an AI direction.</p></div></details><details class="deep" name="services" id="d-ai-discovery"><summary>AI Discovery</summary><div class="deep__in">
         <p>A prepared working session with your leadership team that finds and scopes your three best AI programs.</p>
         <div>
           <p>Most companies do not lack AI ideas. They lack a way to choose. Before we meet, we research your business, send your CEO a questionnaire, and talk with two or three of your leaders. We arrive with a list of 10 to 15 ideas.</p>
@@ -134,7 +135,7 @@
           <li>A ranked backlog of the ideas you did not pick</li>
           <li>A walkthrough of the results with your leadership team</li>
         </ul>
-        <p><strong>Best for:</strong> Leadership teams with plenty of AI ideas and no agreement on which ones to fund first.</p></div></details><details class="deep" id="d-ai-process-engineering"><summary>AI Process Engineering</summary><div class="deep__in">
+        <p><strong>Best for:</strong> Leadership teams with plenty of AI ideas and no agreement on which ones to fund first.</p></div></details><details class="deep" name="services" id="d-ai-process-engineering"><summary>AI Process Engineering</summary><div class="deep__in">
         <p>Redesigning specific workflows end to end so AI removes cost and delay.</p>
         <div>
           <p>AI does not have to reach every department to deliver company-wide results. We pick the workflows that matter most and map how the work really happens today: the handoffs, approval chains, data entry loops, and reconciliation cycles that eat your team's time.</p>
@@ -146,7 +147,7 @@
           <li>A before and after model of cost and cycle time</li>
           <li>A redesigned process, ready to build and pilot in one department</li>
         </ul>
-        <p><strong>Best for:</strong> Operations leaders who know where the friction is and want to prove the model in one area before scaling.</p></div></details><details class="deep" id="d-ai-program-development"><summary>AI Program Development</summary><div class="deep__in">
+        <p><strong>Best for:</strong> Operations leaders who know where the friction is and want to prove the model in one area before scaling.</p></div></details><details class="deep" name="services" id="d-ai-program-development"><summary>AI Program Development</summary><div class="deep__in">
         <p>Turning a scoped idea into a funded program with an owner, a plan, and a measure of success.</p>
         <div>
           <p>A good idea is not a program. A program has a business case, an owner, a budget, the right data, and rules for where AI may act alone and where a person decides. We build that structure with you, so the work survives past the pilot.</p>
@@ -158,7 +159,7 @@
           <li>A phased roadmap covering data, tools, vendors, people, and budget</li>
           <li>Operating model, governance, and change leadership</li>
         </ul>
-        <p><strong>Best for:</strong> Mid-market and enterprise organizations ready to go beyond pilots and make AI part of how they operate.</p></div></details><details class="deep" id="d-agentic-ai-projects"><summary>Agentic AI Projects</summary><div class="deep__in">
+        <p><strong>Best for:</strong> Mid-market and enterprise organizations ready to go beyond pilots and make AI part of how they operate.</p></div></details><details class="deep" name="services" id="d-agentic-ai-projects"><summary>Agentic AI Projects</summary><div class="deep__in">
         <p>Design and delivery of agent solutions on OpenClaw, Hermes Agent, and other frameworks, in the cloud or on your own servers.</p>
         <div>
           <p>Your front office should never sleep, never forget, and never drop a lead. Your back office is where margin lives. Agents can do the work in both, around the clock, and scale without adding headcount.</p>
@@ -171,7 +172,7 @@
           <li><strong>Go-to-market:</strong> prospect research, personalized outreach, and pipeline follow-through</li>
           <li><strong>Private and local:</strong> open-source models on your own servers, so sensitive data stays in-house</li>
         </ul>
-        <p><strong>Best for:</strong> Companies ready to move from a pilot to agents that run in production every day, including those in regulated industries.</p></div></details><details class="deep" id="d-ai-kpi-monitoring-and-management"><summary>AI KPI Monitoring and Management</summary><div class="deep__in">
+        <p><strong>Best for:</strong> Companies ready to move from a pilot to agents that run in production every day, including those in regulated industries.</p></div></details><details class="deep" name="services" id="d-ai-kpi-monitoring-and-management"><summary>AI KPI Monitoring and Management</summary><div class="deep__in">
         <p>Tracking what your AI programs deliver, and managing them so the results hold up.</p>
         <div>
           <p>Launch day is not the finish line. Models change, costs drift, and a process that worked in March can quietly stop working in June. We define the KPIs for each AI program, set the baseline, and track performance against it.</p>
@@ -328,8 +329,11 @@ function stage(id,draw){const c=document.getElementById(id),x=c.getContext('2d')
  (function f(n){if(vis)draw(x,W,H,Math.max(0,(n-t0)/1000),m);requestAnimationFrame(f)})(t0)}
 const lerp=(a,b,t)=>a+(b-a)*t,clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),ease=t=>1-Math.pow(1-clamp(t),3),ss=(a,b,x)=>{x=clamp((x-a)/(b-a));return x*x*(3-2*x)};
 function rng(s){return()=>{s=(s*16807)%2147483647;return s/2147483647}}
+const nine=document.querySelector('.nine'),nh=document.querySelector('.nb__h'),lift=()=>nine.style.setProperty('--ov',(-nh.offsetHeight/3).toFixed(1)+'px');lift();new ResizeObserver(lift).observe(nh);
 document.querySelectorAll('[data-d]').forEach(a=>a.addEventListener('click',()=>{const e=document.getElementById(a.dataset.d);e&&(e.open=true)}));
 
+// services accordion: opening one shuts the others, and the opened title stays on screen
+const deeps=[...document.querySelectorAll('.deep')];deeps.forEach(d=>d.addEventListener('toggle',()=>{if(!d.open)return;deeps.forEach(o=>{if(o!==d)o.open=false});if(d.getBoundingClientRect().top<0)d.scrollIntoView()}));
 function openHash(){const e=location.hash&&document.getElementById(location.hash.slice(1));if(e&&e.tagName==='DETAILS'){e.open=true;e.scrollIntoView()}}addEventListener('hashchange',openHash);openHash();
 // Agent names and roles, shuffled on every load so no agent has a fixed place, on a turning sphere
 const A=[['Howie','React Native Engineer'],['Nova','UI/UX Design'],['Rowan','Operations'],['Reed','Deployment'],['Riley','Market Research'],['Max','Chief of Staff'],['Ogilvy','Marketing'],['Vignelli','Design'],['James','Java Engineer'],['Guido','Python Engineer'],['Watts','QA'],['Gantt','Project Manager'],['Ken','Systems'],['Argus','Security'],['Luca','Accounting'],['Cicero','Legal'],['Inman','Back Office']];for(let i=A.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[A[i],A[j]]=[A[j],A[i]]}
@@ -340,7 +344,7 @@ const L=[];for(let i=0;i<26;i++)L.push({e:Math.floor(R()*E.length),t:R(),s:.35+R
 const stars=[];for(let i=0;i<150;i++)stars.push([R(),R(),R()]);
 const copyEl=document.querySelector('.mk-copy');const LB=A.map(()=>({al:0,s:0,bx:null}));let lt=0;
 const ov=(a,b,p=4)=>a[0]<b[0]+b[2]+p&&b[0]<a[0]+a[2]+p&&a[1]<b[1]+b[3]+p&&b[1]<a[1]+a[3]+p;
-stage('c',(x,W,H,t,m)=>{const dt=Math.min(.1,Math.max(.001,t-lt));lt=t;const mob=W<760,foot=mob?0:64,HH=mob?300:H-foot,cx=mob?W/2:Math.min(W*.725,W/2+400),cy=mob?HH*.5+22:HH*.545,S=(mob?108:HH*.415)*ease(t/1.8),ry=t*.13+(m.on?(m.x-.5)*.4:0),rx=.3+(m.on?(m.y-.5)*.25:0);
+stage('c',(x,W,H,t,m)=>{const dt=Math.min(.1,Math.max(.001,t-lt));lt=t;const mob=W<760,foot=mob?0:34,HH=mob?300:H-foot,cx=mob?W/2:Math.min(W*.725,W/2+400),cy=mob?HH*.5+22:HH*.545,S=(mob?108:Math.max(406,H-64)*.415)*.85*ease(t/1.8),ry=t*.13+(m.on?(m.x-.5)*.4:0),rx=.3+(m.on?(m.y-.5)*.25:0);
  const g=x.createRadialGradient(cx,cy,0,cx,cy,W*.6);g.addColorStop(0,'#42606f');g.addColorStop(.45,'#2C3E4A');g.addColorStop(1,'#1b2830');x.fillStyle=g;x.fillRect(0,0,W,H);
  stars.forEach(s=>{x.globalAlpha=.08+.22*s[2]*(.6+.4*Math.sin(t*1.3+s[0]*40));x.fillStyle='#c8ddd8';x.fillRect(s[0]*W,s[1]*H,1.5,1.5)});x.globalAlpha=1;
  const Q=P.map(p=>{let X=p.x*Math.cos(ry)+p.z*Math.sin(ry),Z=-p.x*Math.sin(ry)+p.z*Math.cos(ry),Y=p.y*Math.cos(rx)-Z*Math.sin(rx);Z=p.y*Math.sin(rx)+Z*Math.cos(rx);const k=1/(1.55-Z*.42)*1.5;return{X:cx+X*S*k,Y:cy+Y*S*k,Z,k}});
