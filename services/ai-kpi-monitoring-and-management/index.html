@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentilis | AI KPI Monitoring and Management</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/site.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR2JH7LK2F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JR2JH7LK2F');
+  </script>
+  <style>
+    /* Services page styles */
+    .alt-wide { max-width: 1400px; }
+    .page-header__sub { max-width: 720px; }
+
+    /* Jump path: Advise > Transform > Build */
+    .svc-path { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); border-bottom: 1px solid var(--rule); }
+    .svc-path a { background: var(--bg); padding: 22px 28px; display: block; transition: background 0.15s; }
+    .svc-path a:hover { background: var(--card-bg); }
+    .svc-path__step { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .svc-path__name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--primary); line-height: 1.1; }
+    .svc-path__name span { color: var(--accent); font-size: 18px; margin-left: 6px; }
+    .svc-path__desc { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+
+    .svc-intro { max-width: 760px; }
+    .svc-intro p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.8; color: var(--text); opacity: 0.75; margin-bottom: 16px; }
+
+    /* Group sections */
+    .svc-group { scroll-margin-top: 110px; }
+    .svc-group__head { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: end; margin-bottom: 32px; }
+    .svc-group__name { font-family: 'Playfair Display', serif; font-size: clamp(48px, 6vw, 72px); font-weight: 700; line-height: 1; letter-spacing: -0.02em; color: var(--primary); }
+    .svc-group__lede { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; font-style: italic; color: var(--primary); margin-bottom: 10px; line-height: 1.35; }
+    .svc-group__intro { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.75; color: var(--text); opacity: 0.75; }
+
+    .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+    .svc { background: var(--bg); padding: 36px 36px 32px; scroll-margin-top: 110px; display: flex; flex-direction: column; }
+    .svc__title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.15; margin-bottom: 14px; }
+    .svc__hook { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.55; color: var(--primary); margin-bottom: 16px; }
+    .svc__body p { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.75; color: var(--text); opacity: 0.75; margin-bottom: 14px; }
+    .svc__label { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin: 8px 0 4px; }
+    .svc__list { list-style: none; margin-bottom: 20px; }
+    .svc__list li { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text); opacity: 0.75; padding: 8px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 12px; }
+    .svc__work { display: grid; grid-template-columns: 5px max-content minmax(0, 1fr); column-gap: 12px; }
+    .svc__work li { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; }
+    .svc__work strong { white-space: nowrap; }
+    .svc__list li::before { content: ''; width: 5px; height: 5px; background: var(--accent); flex-shrink: 0; margin-top: 9px; }
+    .svc__best { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text); opacity: 0.85; margin-top: auto; padding-top: 4px; }
+    .svc__best strong { color: var(--accent); font-weight: 700; }
+
+    .svc-proof { margin-top: 20px; padding: 18px 24px; background: var(--card-bg); border-left: 3px solid var(--accent); font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.65; color: var(--text); }
+    .svc-proof strong { color: var(--primary); }
+
+    @media (max-width: 960px) {
+      .svc-path { grid-template-columns: 1fr; }
+      .svc-group__head { grid-template-columns: 1fr; gap: 12px; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .svc { padding: 28px 24px; }
+    }
+  
+    .svc__more { margin-top: 16px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; }
+    .svc__more a { color: var(--primary); border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+    .sp-top { display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: start; }
+    .sp-top .svc__body p { font-size: 16px; line-height: 1.8; }
+    .sp-top .svc__best { margin-top: 20px; font-size: 15px; }
+    .sp-h2 { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 700; color: var(--primary); margin-bottom: 30px; line-height: 1.15; }
+    .sp-deps { columns: 2; column-gap: 64px; }
+    .sp-dep { break-inside: avoid; padding: 0 0 34px; }
+    .sp-dep h3 { font-family: 'Playfair Display', serif; font-size: 23px; font-weight: 700; color: var(--primary); line-height: 1.2; margin-bottom: 8px; }
+    .sp-dep p { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.75; color: var(--text); opacity: 0.8; }
+    .sp-links { list-style: none; margin-top: 10px; }
+    .sp-links a { display: inline-block; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; line-height: 1.5; color: var(--primary); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; padding: 3px 0; }
+    .sp-crumb a { color: inherit; }
+    @media (max-width: 960px) { .sp-top { grid-template-columns: 1fr; gap: 28px; } .sp-deps { columns: 1; } .sp-h2 { font-size: 26px; } }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="site-nav__inner">
+      <a href="/" class="wordmark">Agentilis</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/" class="active">Services</a></li>
+        <li><a href="/case-study/">Case Studies</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/agents/">Agents</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header-band"><div class="container"><div class="page-header">
+<div class="page-header__eyebrow sp-crumb"><a href="/services/#automate">Services: Automate</a></div>
+<h1 class="page-header__title">AI KPI Monitoring and Management</h1><p class="page-header__sub">Tracking what your AI programs deliver, and managing them so the results can hold up.</p></div></div></div>
+<section class="section" style="border-top:none"><div class="container"><div class="sp-top"><div><div class="svc__body">
+          <p>Launch day is not the finish line. Models change, costs drift, and a process that worked in March can quietly stop working in June. We define the KPIs for each AI program, set the baseline, and track performance against it.</p>
+          <p>Then we manage what the numbers show. We tune agents and prompts, adjust model choices to control cost, review the exceptions that went to a person, and recommend what to expand, fix, or stop.</p>
+        </div><p class="svc__best"><strong>Best for:</strong> Companies with AI in production that want proof it is paying off and someone accountable for keeping it that way.</p></div><div><div class="svc__label">What you get</div><ul class="svc__list">
+          <li>A KPI scorecard for each program: business results, quality, cost, and adoption</li>
+          <li>Monitoring and alerts when an agent falls outside its limits</li>
+          <li>A regular performance review with clear recommendations</li>
+        </ul></div></div></div></section>
+<section class="section"><div class="container"><h2 class="sp-h2">What we can track</h2><div class="sp-deps"><div class="sp-dep"><h3>Sales</h3><p>We can track response time, follow-up completed, and meetings booked. If lead quality slips, we can look into why and adjust the agent.</p></div>
+<div class="sp-dep"><h3>Marketing</h3><p>We can track output, approval rate, and cost per finished piece. If more drafts come back for edits, we can retune the prompts and the rules.</p></div>
+<div class="sp-dep"><h3>Customer service</h3><p>We can track resolution rate, time to answer, satisfaction, and how often a person steps in. Each handoff may show what to fix next.</p></div>
+<div class="sp-dep"><h3>Finance</h3><p>We can track documents processed, exceptions, mismatches, and cost per transaction. Alerts can go out when a number leaves its limits.</p></div>
+<div class="sp-dep"><h3>Operations</h3><p>We can track cycle time, volume, error rate, and hours returned to the team. Results can be compared with a baseline set before launch.</p></div>
+<div class="sp-dep"><h3>HR</h3><p>We can track time to schedule, onboarding steps completed, and questions answered. Reviews can also check that people are making the decisions reserved for them.</p></div>
+<div class="sp-dep"><h3>IT and software</h3><p>We can track uptime, model cost, failed runs, and test results. When a model changes or a cheaper one might do, we can test it before switching.</p></div>
+<div class="sp-dep"><h3>Legal and compliance</h3><p>We can track reviews completed, items escalated, and agent actions outside the rules. A record can be kept, so you can answer when someone asks.</p></div></div></div></section>
+<div class="container">
+  <div class="bottom-cta">
+    <h2 class="bottom-cta__title">Not sure where to start?</h2>
+    <p class="bottom-cta__sub">Start with a conversation. Bring a question, a project, or a business challenge.</p>
+    <a href="/contact/" class="btn-primary">Schedule a 30-Minute Conversation</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <span class="footer-wordmark">Agentilis</span>
+      <span class="footer-tagline">Characterized by action.</span>
+      <span class="footer-copy">&copy; 2026 Agentilis</span>
+    </div>
+    <div class="footer-legal">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <span>&nbsp;|&nbsp;</span>
+      <a href="/terms-conditions/">Terms and Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

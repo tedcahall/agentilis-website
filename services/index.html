@@ -62,6 +62,21 @@
       .svc-grid { grid-template-columns: 1fr; }
       .svc { padding: 28px 24px; }
     }
+  
+    .svc__more { margin-top: 16px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; }
+    .svc__more a { color: var(--primary); border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+    .sp-top { display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: start; }
+    .sp-top .svc__body p { font-size: 16px; line-height: 1.8; }
+    .sp-top .svc__best { margin-top: 20px; font-size: 15px; }
+    .sp-h2 { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 700; color: var(--primary); margin-bottom: 30px; line-height: 1.15; }
+    .sp-deps { columns: 2; column-gap: 64px; }
+    .sp-dep { break-inside: avoid; padding: 0 0 34px; }
+    .sp-dep h3 { font-family: 'Playfair Display', serif; font-size: 23px; font-weight: 700; color: var(--primary); line-height: 1.2; margin-bottom: 8px; }
+    .sp-dep p { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.75; color: var(--text); opacity: 0.8; }
+    .sp-links { list-style: none; margin-top: 10px; }
+    .sp-links a { display: inline-block; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; line-height: 1.5; color: var(--primary); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; padding: 3px 0; }
+    .sp-crumb a { color: inherit; }
+    @media (max-width: 960px) { .sp-top { grid-template-columns: 1fr; gap: 28px; } .sp-deps { columns: 1; } .sp-h2 { font-size: 26px; } }
   </style>
 </head>
 <body>
@@ -89,7 +104,7 @@
     <div class="page-header">
       <div class="page-header__eyebrow">Services</div>
       <h1 class="page-header__title">AI Transformation Journey</h1>
-      <p class="page-header__sub">Three ways to work together. Start with advice, change how your organization works, or put agents into production. Most clients start with a conversation and end up doing all three.</p>
+      <p class="page-header__sub">Three ways to work together. Start with advice, change how your organization works, or put agents into production. You can start with a conversation and end up doing all three.</p>
     </div>
   </div>
 </div>
@@ -135,32 +150,14 @@
       <div class="svc" id="executive-ai-advisory">
         <h2 class="svc__title">Executive AI Advisory</h2>
         <p class="svc__hook">Scheduled one-on-one sessions, weekly, biweekly, or monthly, that build your personal command of AI.</p>
-        <div class="svc__body">
-          <p>AI changes every week. Your board, your team, and your competitors all have opinions about it. We help you form your own. Each session covers what changed, what it means for your business, and what you should do about it.</p>
-          <p>You bring the questions. The vendor pitch on your desk. The article your board chair forwarded. The project that is over budget. You leave with a clear point of view and the confidence to lead the conversation.</p>
-        </div>
-        <div class="svc__label">What you get</div>
-        <ul class="svc__list">
-          <li>A standing session on your calendar, at the cadence you choose</li>
-          <li>A short briefing on what changed in AI since last time, and why it matters to you</li>
-          <li>A sounding board for strategy, vendors, budgets, and hiring</li>
-        </ul>
         <p class="svc__best"><strong>Best for:</strong> CEOs and senior executives who want a trusted voice in the room before committing to an AI direction.</p>
+        <p class="svc__more"><a href="/services/executive-ai-advisory/">Explore this service &rarr;</a></p>
       </div>
       <div class="svc" id="ai-discovery">
         <h2 class="svc__title">AI Discovery</h2>
         <p class="svc__hook">A Discovery sized to your company, to find your AI opportunities and decide where to start.</p>
-        <div class="svc__body">
-          <p>Most leadership teams have tried a chatbot. Few have seen an agent at work, or know how it differs from an AI automation. An automation follows steps set in advance, with AI handling some of them. An agent gets a goal, works out the steps, and brings in a person when judgment is needed. We start by making that clear, using your own business.</p>
-          <p>No two companies need the same Discovery. Yours might cover one team and one process, or the whole company. So before we propose one, we hold a free one-hour Discovery assessment to understand the opportunity and how big your Discovery should be.</p>
-        </div>
-        <div class="svc__label">How it works</div>
-        <ul class="svc__list">
-          <li><span><strong>Discovery assessment, one hour, free:</strong> we learn about your business and size the discovery engagement deliverable</span></li>
-          <li><span><strong>Your proposal:</strong> a written scope and price, based on what we learned</span></li>
-          <li><span><strong>Your Discovery:</strong> the work you approve, ending with your best opportunities and where to start</span></li>
-        </ul>
         <p class="svc__best"><strong>Best for:</strong> Leadership teams that know AI will be a strategic advantage in their business and want to see which opportunities to prioritize before they commit to building anything.</p>
+        <p class="svc__more"><a href="/services/ai-discovery/">Explore this service &rarr;</a></p>
       </div>
     </div>
     <div class="svc-proof"><strong>In practice:</strong> ongoing advisory calls with executives at a real estate hardware &amp; software firm and a national hospitality company.</div>
@@ -180,33 +177,15 @@
     <div class="svc-grid">
       <div class="svc" id="ai-process-engineering">
         <h2 class="svc__title">AI Process Engineering</h2>
-        <p class="svc__hook">Redesigning specific workflows end to end so AI removes cost and delay.</p>
-        <div class="svc__body">
-          <p>AI does not have to reach every department to deliver company-wide results. We pick the workflows that matter most and map how the work really happens today: the handoffs, approval chains, data entry loops, and reconciliation cycles that eat your team's time.</p>
-          <p>Then we redesign the process around agents and people working together. Sales ops. Finance. HR. Customer success. Legal review. We define what the right output looks like, so you can tell when the new process is working.</p>
-        </div>
-        <div class="svc__label">What you get</div>
-        <ul class="svc__list">
-          <li>End-to-end maps of your critical workflows</li>
-          <li>A before and after model of cost and cycle time</li>
-          <li>A redesigned process, ready to build and pilot in one department</li>
-        </ul>
+        <p class="svc__hook">Redesigning specific workflows end to end so AI can remove cost and delay.</p>
         <p class="svc__best"><strong>Best for:</strong> Operations leaders who know where the friction is and want to prove the model in one area before scaling.</p>
+        <p class="svc__more"><a href="/services/ai-process-engineering/">Explore this service &rarr;</a></p>
       </div>
       <div class="svc" id="ai-program-development">
         <h2 class="svc__title">AI Program Development</h2>
         <p class="svc__hook">Turning a scoped idea into a funded program with an owner, a plan, and a measure of success.</p>
-        <div class="svc__body">
-          <p>A good idea is not a program. A program has a business case, an owner, a budget, the right data, and rules for where AI may act alone and where a person decides. We build that structure with you, so the work survives past the pilot.</p>
-          <p>We also help your leaders bring the organization along. We reshape roles, set governance, and plan the rollout. AI that people resist does not deliver results.</p>
-        </div>
-        <div class="svc__label">What you get</div>
-        <ul class="svc__list">
-          <li>A business case with the KPIs that define success</li>
-          <li>A phased roadmap covering data, tools, vendors, people, and budget</li>
-          <li>Operating model, governance, and change leadership</li>
-        </ul>
         <p class="svc__best"><strong>Best for:</strong> Mid-market and enterprise organizations ready to go beyond pilots and make AI part of how they operate.</p>
+        <p class="svc__more"><a href="/services/ai-program-development/">Explore this service &rarr;</a></p>
       </div>
     </div>
     <div class="svc-proof"><strong>In practice:</strong> for the Washington DC Region of the SCCA, we refactored a points scoring system with agentic coding and automated race weekend processing of live results through agentic workflows.</div>
@@ -219,7 +198,7 @@
     <div class="svc-group__head">
       <div class="svc-group__name">Automate</div>
       <div>
-        <p class="svc-group__lede">Agentic AI is not a chatbot. It is a team that does the work.</p>
+        <p class="svc-group__lede">Agentic AI is not a chatbot. It can be a team that does the work.</p>
         <p class="svc-group__intro">We do not hand you a slide deck and leave. We build it, run it, and stand behind it. We know how because our own company runs on it.</p>
       </div>
     </div>
@@ -227,33 +206,14 @@
       <div class="svc" id="agentic-ai-projects">
         <h2 class="svc__title">Agentic AI Projects</h2>
         <p class="svc__hook">Design and delivery of agent solutions on OpenClaw, Hermes Agent, and other frameworks, in the cloud or on your own servers.</p>
-        <div class="svc__body">
-          <p>Your front office should never sleep, never forget, and never drop a lead. Your back office is where margin lives. Agents can do the work in both, around the clock, and scale without adding headcount.</p>
-          <p>We design the agents, connect them to your systems, test them, and keep them running. They escalate to a human when judgment is needed. When data should never leave the building, we select, price, and set up local AI models on hardware you own.</p>
-        </div>
-        <div class="svc__label">Where agents work</div>
-        <ul class="svc__list svc__work">
-          <li><strong>Front office:</strong> inquiries, lead qualification, scheduling, and follow-up</li>
-          <li><strong>Back office:</strong> reporting, approvals, vendor emails, invoices, and reconciliation</li>
-          <li><strong>Marketing:</strong> prospect research, personalized outreach, and pipeline follow-up</li>
-          <li><strong>Local AI:</strong> open-source models on your servers, so sensitive data stays in-house</li>
-        </ul>
         <p class="svc__best"><strong>Best for:</strong> Companies ready to move from a pilot to agents that run in production every day, including those in regulated industries.</p>
+        <p class="svc__more"><a href="/services/agentic-ai-projects/">Explore this service &rarr;</a></p>
       </div>
       <div class="svc" id="ai-kpi-monitoring-and-management">
         <h2 class="svc__title">AI KPI Monitoring and Management</h2>
-        <p class="svc__hook">Tracking what your AI programs deliver, and managing them so the results hold up.</p>
-        <div class="svc__body">
-          <p>Launch day is not the finish line. Models change, costs drift, and a process that worked in March can quietly stop working in June. We define the KPIs for each AI program, set the baseline, and track performance against it.</p>
-          <p>Then we manage what the numbers show. We tune agents and prompts, adjust model choices to control cost, review the exceptions that went to a person, and recommend what to expand, fix, or stop.</p>
-        </div>
-        <div class="svc__label">What you get</div>
-        <ul class="svc__list">
-          <li>A KPI scorecard for each program: business results, quality, cost, and adoption</li>
-          <li>Monitoring and alerts when an agent falls outside its limits</li>
-          <li>A regular performance review with clear recommendations</li>
-        </ul>
+        <p class="svc__hook">Tracking what your AI programs deliver, and managing them so the results can hold up.</p>
         <p class="svc__best"><strong>Best for:</strong> Companies with AI in production that want proof it is paying off and someone accountable for keeping it that way.</p>
+        <p class="svc__more"><a href="/services/ai-kpi-monitoring-and-management/">Explore this service &rarr;</a></p>
       </div>
     </div>
     <div class="svc-proof"><strong>In practice:</strong> We run three different local models on Nvidia DGX Spark clusters and Mac Studio servers. We can help run dedicated cloud instances or local AI on consumer-grade hardware. Our agents handle research, newsletters, scheduling, billing, software development, and cloud operations.</div>
