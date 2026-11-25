@@ -332,9 +332,9 @@ document.querySelectorAll('[data-d]').forEach(a=>a.addEventListener('click',()=>
 
 function openHash(){const e=location.hash&&document.getElementById(location.hash.slice(1));if(e&&e.tagName==='DETAILS'){e.open=true;e.scrollIntoView()}}addEventListener('hashchange',openHash);openHash();
 // 1. Always on: the real first 12 agents, plus the rest of the team, as a turning sphere of working nodes
-const A=[['Max','Chief of Staff'],['Ogilvy','Marketing'],['Vignelli','Design'],['James','Java Engineer'],['Guido','Python Engineer'],['Watts','QA'],['Gantt','Project Manager'],['Ken','Systems'],['Argus','Security'],['Luca','Accounting'],['Cicero','Legal'],['Inman','Back Office']];
+const OURS=8,A=[['Graves','Chief of Staff'],['Riley','Marketing'],['Howie','Engineering'],['Pam','Project Manager'],['Nova','UI/UX Design'],['Rowan','Operations'],['Reed','Deployment'],['Sammie','Business Law'],['Max','Chief of Staff'],['Ogilvy','Marketing'],['Vignelli','Design'],['James','Java Engineer'],['Guido','Python Engineer'],['Watts','QA'],['Gantt','Project Manager'],['Ken','Systems'],['Argus','Security'],['Luca','Accounting'],['Cicero','Legal'],['Inman','Back Office']];
 const N=34,R=rng(7),P=[];for(let i=0;i<N;i++){const y=1-2*(i+.5)/N,r=Math.sqrt(1-y*y),a=i*2.399963;P.push({x:Math.cos(a)*r,y,z:Math.sin(a)*r,g:0})}
-const idx=[3];while(idx.length<12){let b=-1,bd=-1;P.forEach((p,i)=>{const d=Math.min(...idx.map(k=>(p.x-P[k].x)**2+(p.y-P[k].y)**2+(p.z-P[k].z)**2));if(d>bd&&Math.abs(p.y)<.93){bd=d;b=i}});idx.push(b)}idx.forEach((k,i)=>P[k].a=A[i]);
+const idx=[3];while(idx.length<A.length){let b=-1,bd=-1;P.forEach((p,i)=>{const d=Math.min(...idx.map(k=>(p.x-P[k].x)**2+(p.y-P[k].y)**2+(p.z-P[k].z)**2));if(d>bd&&Math.abs(p.y)<.93){bd=d;b=i}});idx.push(b)}idx.forEach((k,i)=>P[k].a=A[i]);
 const E=[];for(let i=0;i<N;i++){const d=P.map((p,j)=>[j,(p.x-P[i].x)**2+(p.y-P[i].y)**2+(p.z-P[i].z)**2]).sort((a,b)=>a[1]-b[1]).slice(1,5);d.forEach(([j])=>{if(i<j||!E.some(e=>e[0]==j&&e[1]==i))E.push([i,j])})}
 const L=[];for(let i=0;i<26;i++)L.push({e:Math.floor(R()*E.length),t:R(),s:.35+R()*.5,f:R()>.5});
 const stars=[];for(let i=0;i<150;i++)stars.push([R(),R(),R()]);
@@ -354,11 +354,11 @@ stage('c',(x,W,H,t,m)=>{const dt=Math.min(.1,Math.max(.001,t-lt));lt=t;const mob
  // labels: nearest first, each keeps its side unless it would touch another name
  const copy=copyEl,cr=copy.getBoundingClientRect(),hr=copy.parentElement.getBoundingClientRect(),taken=mob?[]:[[cr.left-hr.left,cr.top-hr.top,cr.width,cr.height]];let shown=0;
  const fs=mob?13.5:17,rs=mob?10:11.5;
- idx.map((k,i)=>({q:Q[k],i})).sort((a,b)=>b.q.Z-a.q.Z).forEach(({q,i})=>{const l=LB[i],f=(q.Z+1)/2;x.font=`700 ${fs}px "Playfair Display",serif`;const w1=x.measureText(A[i][0]).width;x.font=`500 ${rs}px Inter,sans-serif`;const w=Math.max(w1,x.measureText(A[i][1]).width),h=fs+rs+6,o=11;
+ idx.map((k,i)=>({q:Q[k],i})).sort((a,b)=>(b.q.Z+(b.i<OURS?3:0))-(a.q.Z+(a.i<OURS?3:0))).forEach(({q,i})=>{const l=LB[i],f=(q.Z+1)/2;l.r=l.r?f>.44:f>.54;x.font=`700 ${fs}px "Playfair Display",serif`;const w1=x.measureText(A[i][0]).width;x.font=`500 ${rs}px Inter,sans-serif`;const w=l.r?Math.max(w1,x.measureText(A[i][1]).width):w1,h=fs+(l.r?rs+6:4),o=11;
   const out=q.X>=cx?[0,1,2,3]:[1,0,2,3],pos=s=>s==0?[q.X+o,q.Y-h/2,w,h]:s==1?[q.X-o-w,q.Y-h/2,w,h]:s==2?[q.X-w/2,q.Y+o-1,w,h]:[q.X-w/2,q.Y-o-h,w,h],good=s=>{const b=pos(s);return b[0]>6&&b[0]+w<W-6&&b[1]>(mob?58:54)&&b[1]+h<HH-2&&!taken.some(z=>ov(b,z))};
   let want=0;if(good(l.s))want=1;else if(l.al<.06){const s=out.find(good);if(s!==undefined){l.s=s;want=1}}
   const tgt=want?(f>.5?1:.55+.45*f*2):0;l.al+=(tgt-l.al)*Math.min(1,dt*(want?5:14));const b=pos(l.s);if(want)taken.push(b);const al=l.al*clamp((t-1)/.8);if(al<.03)return;if(al>.5){shown++}
-  const an=l.s==0?'left':l.s==1?'right':'center',tx=l.s==0?b[0]:l.s==1?b[0]+w:q.X;x.textAlign=an;x.globalAlpha=al;x.shadowColor='#1b2830';x.shadowBlur=7;x.fillStyle='#FAFAF7';x.font=`700 ${fs}px "Playfair Display",serif`;x.fillText(A[i][0],tx,b[1]+fs-1);x.fillStyle='#bfd8cd';x.font=`500 ${rs}px Inter,sans-serif`;x.fillText(A[i][1],tx,b[1]+h-3);x.shadowBlur=0;x.globalAlpha=1});
+  const an=l.s==0?'left':l.s==1?'right':'center',tx=l.s==0?b[0]:l.s==1?b[0]+w:q.X;x.textAlign=an;x.globalAlpha=al;x.shadowColor='#1b2830';x.shadowBlur=7;x.fillStyle='#FAFAF7';x.font=`700 ${fs}px "Playfair Display",serif`;x.fillText(A[i][0],tx,b[1]+fs-1);x.fillStyle='#bfd8cd';x.font=`500 ${rs}px Inter,sans-serif`;l.r&&x.fillText(A[i][1],tx,b[1]+h-3);x.shadowBlur=0;x.globalAlpha=1});
  x.textAlign='left';});
 </script>
 <script>
